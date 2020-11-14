@@ -1,0 +1,24 @@
+.btn {
+    @apply px-8 py-3 rounded;
+    text-decoration: none !important;
+
+    &:focus {
+        @apply shadow-outline;
+    }
+
+    &-default {
+        @apply bg-gray-300 text-gray-900;
+
+        &:hover {
+            @apply bg-gray-700 text-white;
+        }
+    }
+
+    &-submit {
+        @apply bg-blue-600 text-white;
+
+        &:hover {
+            @apply bg-blue-900;
+        }
+    }
+}

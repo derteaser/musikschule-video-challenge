@@ -1,0 +1,17 @@
+Title: Anmelden
+
+----
+
+Alert: E-Mail-Adresse unbekannt oder Passwort falsch
+
+----
+
+Username: E-Mail-Adresse
+
+----
+
+Password: Passwort
+
+----
+
+Button: Anmelden

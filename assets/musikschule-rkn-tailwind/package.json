@@ -14,7 +14,7 @@
     "postcss-cli": "^7.1.2",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.3",
-    "simple-icons": "^3.12.4",
+    "simple-icons": "^3.13.0",
     "tailwindcss": "^1.9.6",
     "tailwindcss-aspect-ratio": "^3.0.0",
     "tailwindcss-brand-colors": "^0.2.0",

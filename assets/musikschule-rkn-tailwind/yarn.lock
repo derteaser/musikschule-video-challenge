@@ -4238,10 +4238,10 @@ tailwindcss-brand-colors@^0.2.0:
   resolved "https://registry.yarnpkg.com/tailwindcss-brand-colors/-/tailwindcss-brand-colors-0.2.0.tgz#08908cf6e02cf28a470dd05cc09f2a7872e9e330"
   integrity sha512-xkg+j1vyf9OpYkt06AWBspp4e+vehd3hUgqGzrU8rG0uL3EQgI1WZI4CcHv2OS2ibCR1lM9HHYqdTN4C5H3yzQ==
 
-tailwindcss-debug-screens@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/tailwindcss-debug-screens/-/tailwindcss-debug-screens-1.1.0.tgz#06fece005d925e33a384309995af3900faeccb8b"
-  integrity sha512-5gZ0I0WJR0EF+fhY5cQJnriQDfzgv5HUd0p0qDNPTUkcc9HpfAlLZ/WXWvQnWKtkd0tQOPbwEaM5/LUIC8kAAQ==
+tailwindcss-debug-screens@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-debug-screens/-/tailwindcss-debug-screens-2.0.0.tgz#81f9ec4d1f8aaf53c448a644e5923322f96df992"
+  integrity sha512-L8hvCJ+3D7IlZ2DE5zEzAJCEvSI92bH8aoAlRfJ5oILzsHT/G5oqvIBBuvt8t/NnhkIxzRl8xDDf405WI709RA==
 
 tailwindcss-elevation@^0.3.5:
   version "0.3.5"

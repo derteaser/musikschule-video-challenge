@@ -36,7 +36,7 @@ use Kirby\Cms\Page;
     </div>
 
     <div class="flex justify-end mt-4">
-      <button class="px-4 py-2 bg-gray-800 text-gray-200 rounded hover:bg-gray-700 focus:outline-none focus:bg-gray-700">Speichern</button>
+      <button class="btn btn-submit">Speichern</button>
     </div>
   </form>
 </div>

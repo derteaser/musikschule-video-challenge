@@ -4,7 +4,6 @@ const minifyCSS = require('gulp-csso');
 const rename = require('gulp-rename');
 const env = require('gulp-env');
 const svgSprite = require('gulp-svg-sprite');
-const svgmin = require('gulp-svgmin');
 const googleWebFonts = require('gulp-google-webfonts');
 
 
@@ -22,7 +21,7 @@ gulp.task('dev-css', function () {
 });
 
 gulp.task('prod-css', function () {
-  const envs = env.set({
+  env.set({
     NODE_ENV: 'production'
   });
   return gulp
@@ -41,7 +40,6 @@ gulp.task('prod-css', function () {
 gulp.task('copy-js-tools', function () {
   return gulp.src([
     'node_modules/lazysizes/lazysizes.min.js',
-    'node_modules/timeago.js/dist/timeago.full.min.js',
     'node_modules/alpinejs/dist/alpine.js',
     'node_modules/alpinejs/dist/alpine-ie11.js',
     'node_modules/axios/dist/axios.min.js'
@@ -50,7 +48,7 @@ gulp.task('copy-js-tools', function () {
 });
 
 gulp.task('icons', function () {
-  config = {
+  const config = {
     mode: {
       symbol: {
         dest: '.',
@@ -65,7 +63,12 @@ gulp.task('icons', function () {
     'node_modules/heroicons/outline/logout.svg',
     'node_modules/heroicons/outline/menu.svg',
     'node_modules/heroicons/outline/x.svg',
+
     // Alerts
+    'node_modules/heroicons/solid/check-circle.svg',
+    'node_modules/heroicons/solid/exclamation-circle.svg',
+    'node_modules/heroicons/solid/information-circle.svg',
+    'node_modules/heroicons/solid/question-mark-circle.svg',
 
     // Directions
 

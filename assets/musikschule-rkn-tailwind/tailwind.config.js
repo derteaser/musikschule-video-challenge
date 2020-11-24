@@ -6,10 +6,6 @@ module.exports = {
       'dist/**/*.js',
     ],
   },
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
   theme: {
     aspectRatio: {
       none: 0,
@@ -34,7 +30,7 @@ module.exports = {
         '"Noto Color Emoji"',
       ]
     },
-    typography: {
+    /*typography: {
       default: {
         css: {
           color: '#191818',
@@ -46,25 +42,20 @@ module.exports = {
           },
         },
       },
-    },
+    },*/
     extend: {
-      'colors': {
+      /*'colors': {
         'cdu-orange': {
           'dark': '#cd6726',
           'medium': '#d27e27',
           'light': '#dea826',
         },
-      },
+      },*/
       height: {
         'screen/2': '50vh',
         'screen/3': 'calc(100vh / 3)',
         'screen/4': 'calc(100vh / 4)',
         'screen/5': 'calc(100vh / 5)',
-      },
-      spacing: {
-        '72': '18rem',
-        '84': '21rem',
-        '96': '24rem',
       },
       screens: {
         'print': {'raw': 'print'},
@@ -72,13 +63,10 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/custom-forms'),
     require('@tailwindcss/typography'),
     require('tailwindcss-debug-screens'),
-    require("tailwindcss-brand-colors"),
     require('tailwindcss-responsive-embed'),
     require('tailwindcss-aspect-ratio'),
     require("tailwindcss-padding-safe")(),
-    require('tailwindcss-elevation')([]),
   ],
 }

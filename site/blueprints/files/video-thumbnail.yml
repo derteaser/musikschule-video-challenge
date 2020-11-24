@@ -1,0 +1,7 @@
+title: Bild
+icon: image
+
+options:
+  changeName: false
+  replace: false
+  delete: false

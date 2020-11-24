@@ -3,7 +3,7 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: auto;
-	src: local('Karla'), local('Karla-Regular'), url(fonts/Karla-normal-400.woff) format('woff');
+	src: url(fonts/Karla-normal-400.woff) format('woff');
 	unicode-range: U+0-10FFFF;
 }
 
@@ -12,7 +12,7 @@
 	font-style: normal;
 	font-weight: 700;
 	font-display: auto;
-	src: local('Karla Bold'), local('Karla-Bold'), url(fonts/Karla-normal-700.woff) format('woff');
+	src: url(fonts/Karla-normal-700.woff) format('woff');
 	unicode-range: U+0-10FFFF;
 }
 

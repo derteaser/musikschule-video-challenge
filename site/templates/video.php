@@ -21,9 +21,7 @@ $creator = $page->creator()->toUser();
       <div class="mt-4">
         <div class="flex items-center">
           <div class="flex items-center">
-            <?php if ($avatar = $creator->avatar()): ?>
-              <img src="<?= $avatar->url() ?>" class="h-10 object-cover rounded-full" alt="Avatar">
-            <?php endif ?>
+            <?php snippet('avatar', ['user' => $creator]) ?>
             <a href="#" class="mx-2 text-gray-700 font-semibold"><?= $creator->name() ?></a>
           </div>
           <span class="mx-1 text-gray-600 text-xs"><?= $page->created()->toDate('d.m.Y') ?></span>

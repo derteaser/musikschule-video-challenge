@@ -44,6 +44,7 @@ $myVideos = collection('videos/my');
 
       <div class="flex justify-end mt-4">
         <button type="submit" class="btn btn-submit">Speichern</button>
+        <a href="<?= $page->url() ?>" class="btn btn-default ml-2">Abbrechen</a>
       </div>
     </form>
   </div>
@@ -68,19 +69,21 @@ $myVideos = collection('videos/my');
     <div class="grid grid-cols-1 gap-6 container mx-auto my-12">
       <?php /** @var VideoPage $videoPage */ foreach ($myVideos as $videoPage): ?>
         <div class="bg-white overflow-hidden shadow-md rounded-lg">
-          <a href="<?= $page->url() ?>?id=<?= $videoPage->slug() ?>">
-            <div class="flex flex-row items-center">
-              <img class="w-64 h-32 object-cover" src="<?= $videoPage->images()->first()->url() ?>" alt="Video">
-              <div class="p-6">
-                <h1 class="block text-gray-800 font-semibold text-2xl mt-2 hover:text-gray-600 hover:underline"><?= $videoPage->title() ?></h1>
-                <div class="mt-4">
-                  <div class="flex items-center">
-                    <span class="mx-1 text-gray-600 text-xs"><?= $videoPage->created()->toDate('d.m.Y') ?></span>
-                  </div>
+          <div class="flex flex-row items-center">
+            <img class="w-64 h-32 object-cover" src="<?= $videoPage->images()->first()->url() ?>" alt="Video">
+            <div class="p-6 flex-grow">
+              <h1 class="block text-gray-800 font-semibold text-2xl mt-2 hover:text-gray-600 hover:underline"><?= $videoPage->title() ?></h1>
+              <div class="mt-4">
+                <div class="flex items-center">
+                  <span class="mx-1 text-gray-600 text-xs"><?= $videoPage->created()->toDate('d.m.Y') ?></span>
                 </div>
               </div>
             </div>
-          </a>
+            <div class="p-6 flex-shrink-0">
+              <a href="<?= $page->url() ?>?id=<?= $videoPage->slug() ?>" class="btn btn-submit">Bearbeiten</a>
+              <button class="btn btn-default ml-2 px-3"><?php snippet('icon', ['name' => 'dots-horizontal', 'cssClasses' => 'w-4 h-4']) ?></button>
+            </div>
+          </div>
         </div>
       <?php endforeach ?>
     </div>

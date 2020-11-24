@@ -39,15 +39,8 @@ $logo = asset('/assets/musikschule-rkn-tailwind/dist/img/musikschule-rkn-logo.pn
             <a href="/logout" class="mx-4 hidden lg:block text-gray-600 hover:text-gray-700 focus:text-gray-700" aria-label="logout">
               <?php snippet('icon', ['name' => 'logout', 'cssClasses' => 'h-6 w-6 fill-current']) ?>
             </a>
-          <?php endif ?>
-
-          <?php if ($kirby->user()): ?>
             <a href="<?= page('profile')->url() ?>" class="flex items-center focus:outline-none">
-              <span class="h-8 w-8 overflow-hidden rounded-full border-2 border-gray-400 flex-shrink-0">
-                <?php if ($avatar = $kirby->user()->avatar()): ?>
-                  <img src="<?= $avatar->url() ?>" class="h-full w-full object-cover" alt="avatar">
-                <?php endif ?>
-              </span>
+              <?php snippet('avatar') ?>
               <span class="mx-2 text-sm text-gray-700 font-medium"><?= $kirby->user()->name() ?? $kirby->user()->email() ?></span>
             </a>
           <?php endif ?>

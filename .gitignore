@@ -45,3 +45,5 @@ vendor/*
 kirby/*
 kirby
 site/plugins/*
+!site/plugins/add-video/*
+!site/plugins/user-stuff/*

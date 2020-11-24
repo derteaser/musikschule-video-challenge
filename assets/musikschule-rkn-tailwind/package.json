@@ -4,7 +4,7 @@
   "author": "Jens Kuesters",
   "license": "MIT",
   "dependencies": {
-    "@tailwindcss/typography": "^0.2.0",
+    "@tailwindcss/typography": "^0.3.0",
     "alpinejs": "^2.7.2",
     "autoprefixer": "^10.0.2",
     "axios": "^0.21.0",
@@ -14,10 +14,10 @@
     "postcss-cli": "^8.3.0",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^5.0.1",
-    "simple-icons": "^3.12.4",
+    "simple-icons": "^3.13.0",
     "tailwindcss": "^2.0.1",
     "tailwindcss-aspect-ratio": "^3.0.0",
-    "tailwindcss-debug-screens": "^1.1.0",
+    "tailwindcss-debug-screens": "^2.0.0",
     "tailwindcss-padding-safe": "^1.0.5",
     "tailwindcss-responsive-embed": "^1.0.0"
   },

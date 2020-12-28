@@ -7,7 +7,7 @@
     "@tailwindcss/typography": "^0.3.0",
     "alpinejs": "^2.8.0",
     "autoprefixer": "^10.0.4",
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "heroicons": "^0.4.2",
     "lazysizes": "^5.2.2",
     "postcss": "^8.2.1",

@@ -57,16 +57,16 @@
         },
         {
             "name": "cloudinary/cloudinary_php",
-            "version": "2.0.0-beta8",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cloudinary/cloudinary_php.git",
-                "reference": "8411fb9a56f6b00d94e0008d66bb32432d07a621"
+                "reference": "0492abb43bdd0234bf64b131dd4212816ef4542a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/8411fb9a56f6b00d94e0008d66bb32432d07a621",
-                "reference": "8411fb9a56f6b00d94e0008d66bb32432d07a621",
+                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/0492abb43bdd0234bf64b131dd4212816ef4542a",
+                "reference": "0492abb43bdd0234bf64b131dd4212816ef4542a",
                 "shasum": ""
             },
             "require": {
@@ -102,8 +102,8 @@
                     "homepage": "https://github.com/cloudinary/cloudinary_php/graphs/contributors"
                 }
             ],
-            "description": "Cloudinary PHP SDK v2",
-            "homepage": "https://github.com/cloudinary/cloudinary_php/tree/2.0.0-beta",
+            "description": "Cloudinary PHP SDK",
+            "homepage": "https://github.com/cloudinary/cloudinary_php",
             "keywords": [
                 "cdn",
                 "cloud",
@@ -114,9 +114,9 @@
             "support": {
                 "email": "info@cloudinary.com",
                 "issues": "https://github.com/cloudinary/cloudinary_php/issues",
-                "source": "https://github.com/cloudinary/cloudinary_php/tree/2.0.0-beta8"
+                "source": "https://github.com/cloudinary/cloudinary_php/tree/2.0.1"
             },
-            "time": "2020-11-30T05:36:54+00:00"
+            "time": "2021-01-31T17:48:40+00:00"
         },
         {
             "name": "filp/whoops",
@@ -1428,9 +1428,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "cloudinary/cloudinary_php": 10
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

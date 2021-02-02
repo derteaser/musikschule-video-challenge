@@ -2,6 +2,7 @@
 
 use Cloudinary\Asset\Video;
 use Cloudinary\Cloudinary;
+use Cloudinary\Configuration\Configuration;
 use Cloudinary\Transformation\Format;
 use Cloudinary\Transformation\Resize;
 use Kirby\Cms\Field;
@@ -58,17 +59,17 @@ class VideoPage extends Page {
      */
     private function cloudinary(): Cloudinary {
         $site = $this->site();
-
-        return new Cloudinary([
-            'account' => [
+        $configuration = Configuration::instance([
+            'cloud' => [
                 'cloud_name' => $site->cloudinary_cloud_name()->toString(),
                 'api_key' => $site->cloudinary_key()->toString(),
                 'api_secret' => $site->cloudinary_secret()->toString(),
-                'url' => [
-                    'secure' => true
-                ]
+            ],
+            'url' => [
+                'secure' => true
             ]
         ]);
+        return new Cloudinary($configuration);
     }
 
     /**

@@ -22,9 +22,9 @@
     "source": "https://github.com/getkirby/starterkit"
   },
   "require": {
-    "php": ">=7.1.0",
-    "getkirby/cms": "^3.0",
-    "cloudinary/cloudinary_php": "^2.0.0-beta"
+    "php": ">=7.4.0",
+    "getkirby/cms": "^3.5",
+    "cloudinary/cloudinary_php": "^2.0.0"
   },
   "config": {
     "optimize-autoloader": true

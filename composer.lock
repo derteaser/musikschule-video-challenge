@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "997c59f8e9a7de67d0f8b5884dd26525",
+    "content-hash": "aa77c63676c18163edcdd647fd7d3449",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -57,16 +57,16 @@
         },
         {
             "name": "cloudinary/cloudinary_php",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cloudinary/cloudinary_php.git",
-                "reference": "0492abb43bdd0234bf64b131dd4212816ef4542a"
+                "reference": "40affe78b0846c24b2ed645ed7d5ac3636444b3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/0492abb43bdd0234bf64b131dd4212816ef4542a",
-                "reference": "0492abb43bdd0234bf64b131dd4212816ef4542a",
+                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/40affe78b0846c24b2ed645ed7d5ac3636444b3c",
+                "reference": "40affe78b0846c24b2ed645ed7d5ac3636444b3c",
                 "shasum": ""
             },
             "require": {
@@ -114,9 +114,9 @@
             "support": {
                 "email": "info@cloudinary.com",
                 "issues": "https://github.com/cloudinary/cloudinary_php/issues",
-                "source": "https://github.com/cloudinary/cloudinary_php/tree/2.0.1"
+                "source": "https://github.com/cloudinary/cloudinary_php/tree/2.0.2"
             },
-            "time": "2021-01-31T17:48:40+00:00"
+            "time": "2021-02-11T00:30:34+00:00"
         },
         {
             "name": "filp/whoops",
@@ -1432,7 +1432,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.1.0"
+        "php": ">=7.4.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"

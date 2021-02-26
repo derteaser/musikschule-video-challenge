@@ -57,16 +57,16 @@
         },
         {
             "name": "cloudinary/cloudinary_php",
-            "version": "2.0.2",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cloudinary/cloudinary_php.git",
-                "reference": "40affe78b0846c24b2ed645ed7d5ac3636444b3c"
+                "reference": "b3f3a8b54e8f6eac8bc12229e6ea03090269a7ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/40affe78b0846c24b2ed645ed7d5ac3636444b3c",
-                "reference": "40affe78b0846c24b2ed645ed7d5ac3636444b3c",
+                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/b3f3a8b54e8f6eac8bc12229e6ea03090269a7ec",
+                "reference": "b3f3a8b54e8f6eac8bc12229e6ea03090269a7ec",
                 "shasum": ""
             },
             "require": {
@@ -114,9 +114,9 @@
             "support": {
                 "email": "info@cloudinary.com",
                 "issues": "https://github.com/cloudinary/cloudinary_php/issues",
-                "source": "https://github.com/cloudinary/cloudinary_php/tree/2.0.2"
+                "source": "https://github.com/cloudinary/cloudinary_php/tree/2.0.4"
             },
-            "time": "2021-02-11T00:30:34+00:00"
+            "time": "2021-02-25T06:30:58+00:00"
         },
         {
             "name": "filp/whoops",
@@ -1249,16 +1249,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.22.0",
+            "version": "v1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "f377a3dd1fde44d37b9831d68dc8dea3ffd28e13"
+                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f377a3dd1fde44d37b9831d68dc8dea3ffd28e13",
-                "reference": "f377a3dd1fde44d37b9831d68dc8dea3ffd28e13",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/5232de97ee3b75b0360528dae24e73db49566ab1",
+                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1",
                 "shasum": ""
             },
             "require": {
@@ -1309,7 +1309,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.22.1"
             },
             "funding": [
                 {
@@ -1325,7 +1325,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-07T16:49:33+00:00"
+            "time": "2021-01-22T09:19:47+00:00"
         },
         {
             "name": "teapot/status-code",

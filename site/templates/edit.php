@@ -33,12 +33,12 @@ $myVideos = collection('videos/my');
         </div>
         <div>
           <label class="text-gray-700" for="title">Titel</label>
-          <input id="title" type="text" class="w-full mt-2 px-4 py-2 block rounded bg-white text-gray-800 border border-gray-300 focus:border-blue-500 focus:outline-none focus:shadow-outline" value="<?= $editVideo->title() ?>" required>
+          <input id="title" name="title" type="text" class="w-full mt-2 px-4 py-2 block rounded bg-white text-gray-800 border border-gray-300 focus:border-blue-500 focus:outline-none focus:shadow-outline" value="<?= $editVideo->title() ?>" required>
         </div>
 
         <div>
           <label class="text-gray-700" for="text">Beschreibung</label>
-          <textarea id="text" type="email" class="w-full mt-2 px-4 py-2 block rounded bg-white text-gray-800 border border-gray-300 focus:border-blue-500 focus:outline-none focus:shadow-outline" rows="10" required><?= trim($editVideo->text()) ?></textarea>
+          <textarea id="text" name="text" class="w-full mt-2 px-4 py-2 block rounded bg-white text-gray-800 border border-gray-300 focus:border-blue-500 focus:outline-none focus:shadow-outline" rows="10" required><?= trim($editVideo->text()) ?></textarea>
         </div>
       </div>
 
@@ -72,7 +72,7 @@ $myVideos = collection('videos/my');
           <div class="flex flex-row items-center">
             <img class="w-64 h-32 object-cover" src="<?= $videoPage->images()->first()->url() ?>" alt="Video">
             <div class="p-6 flex-grow">
-              <h1 class="block text-gray-800 font-semibold text-2xl mt-2 hover:text-gray-600 hover:underline"><?= $videoPage->title() ?></h1>
+              <h1 class="block text-gray-800 font-semibold text-2xl mt-2"><?= $videoPage->title() ?></h1>
               <div class="mt-4">
                 <div class="flex items-center">
                   <span class="mx-1 text-gray-600 text-xs"><?= $videoPage->created()->toDate('d.m.Y') ?></span>

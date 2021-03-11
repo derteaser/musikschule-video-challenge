@@ -60,6 +60,7 @@ gulp.task('icons', function () {
 
   return gulp.src([
     // Navigation
+    'node_modules/heroicons/outline/adjustments.svg',
     'node_modules/heroicons/solid/dots-horizontal.svg',
     'node_modules/heroicons/outline/logout.svg',
     'node_modules/heroicons/outline/menu.svg',

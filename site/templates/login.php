@@ -9,7 +9,7 @@ $logo = asset('/assets/musikschule-rkn-tailwind/dist/img/musikschule-rkn-logo.pn
 <?php snippet('header') ?>
 
 <?php if ($error): ?>
-  <div class="alert"><?= $page->alert()->html() ?></div>
+  <?php snippet('alerts/error', ['text' => $page->alert()->html()]) ?>
 <?php endif ?>
   <div class="min-h-screen flex items-center">
     <div class="flex flex-1 max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden lg:max-w-4xl">
@@ -27,7 +27,7 @@ $logo = asset('/assets/musikschule-rkn-tailwind/dist/img/musikschule-rkn-logo.pn
         <div class="mt-4">
           <div class="flex justify-between">
             <label class="block text-gray-600 text-sm font-medium mb-2" for="loginPassword"><?= $page->password()->html() ?></label>
-            <a href="#" class="text-xs text-gray-500 hover:underline">Forget Password?</a>
+            <a href="#" class="text-xs text-gray-500 hover:underline">Passwort vergessen?</a>
           </div>
 
           <input id="loginPassword" class="bg-white text-gray-700 border border-gray-300 rounded py-2 px-4 block w-full focus:border-blue-500 focus:outline-none focus:shadow-outline" type="password" name="password" value="<?= esc(get('password')) ?>" required>
@@ -40,7 +40,7 @@ $logo = asset('/assets/musikschule-rkn-tailwind/dist/img/musikschule-rkn-logo.pn
         <div class="mt-4 flex items-center justify-between">
           <span class="border-b w-1/5 md:w-1/4"></span>
 
-          <a href="#" class="text-xs text-gray-500 uppercase hover:underline">or sign up</a>
+          <a href="#" class="text-xs text-gray-500 uppercase hover:underline">oder neu registrieren</a>
 
           <span class="border-b w-1/5 md:w-1/4"></span>
         </div>

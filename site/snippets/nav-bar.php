@@ -36,12 +36,17 @@ $logo = asset('/assets/musikschule-rkn-tailwind/dist/img/musikschule-rkn-logo.pn
 
         <div class="flex items-center mt-4 lg:mt-0">
           <?php if ($kirby->user()): ?>
-            <a href="/logout" class="mx-4 hidden lg:block text-gray-600 hover:text-gray-700 focus:text-gray-700" aria-label="logout">
+            <?php if ($kirby->user()->role()->permissions()->for('access', 'panel')): ?>
+              <a href="<?= $kirby->url('panel') ?>" class="mr-4 hidden lg:block text-gray-500 hover:text-gray-800 focus:text-gray-800">
+                <?php snippet('icon', ['name' => 'adjustments', 'cssClasses' => 'h-6 w-6 fill-current']) ?>
+              </a>
+            <?php endif ?>
+            <a href="/logout" class="mr-4 hidden lg:block text-gray-500 hover:text-gray-800 focus:text-gray-800" aria-label="logout">
               <?php snippet('icon', ['name' => 'logout', 'cssClasses' => 'h-6 w-6 fill-current']) ?>
             </a>
-            <a href="<?= page('profile')->url() ?>" class="flex items-center focus:outline-none">
+            <a href="<?= page('profile')->url() ?>" class="flex items-center focus:outline-none group">
               <?php snippet('avatar') ?>
-              <span class="mx-2 text-sm text-gray-700 font-medium"><?= $kirby->user()->name() ?? $kirby->user()->email() ?></span>
+              <span class="mx-2 text-sm text-gray-600 font-medium group-hover:text-gray-800"><?= $kirby->user()->name() ?? $kirby->user()->email() ?></span>
             </a>
           <?php endif ?>
         </div>

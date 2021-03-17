@@ -57,16 +57,16 @@
         },
         {
             "name": "cloudinary/cloudinary_php",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cloudinary/cloudinary_php.git",
-                "reference": "247bfce06e09737720ab91b26bcca2449ba25359"
+                "reference": "71f6f3289e3e17bf7c69bc378d0d69596e530f79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/247bfce06e09737720ab91b26bcca2449ba25359",
-                "reference": "247bfce06e09737720ab91b26bcca2449ba25359",
+                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/71f6f3289e3e17bf7c69bc378d0d69596e530f79",
+                "reference": "71f6f3289e3e17bf7c69bc378d0d69596e530f79",
                 "shasum": ""
             },
             "require": {
@@ -114,9 +114,9 @@
             "support": {
                 "email": "info@cloudinary.com",
                 "issues": "https://github.com/cloudinary/cloudinary_php/issues",
-                "source": "https://github.com/cloudinary/cloudinary_php/tree/2.1.0"
+                "source": "https://github.com/cloudinary/cloudinary_php/tree/2.1.1"
             },
-            "time": "2021-03-10T19:11:57+00:00"
+            "time": "2021-03-17T00:47:44+00:00"
         },
         {
             "name": "filp/whoops",

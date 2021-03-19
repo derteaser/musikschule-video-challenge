@@ -1,9 +1,0 @@
-Title: Video bearbeiten
-
-----
-
-Text: 
-
-----
-
-Viewpermissions: student, admin

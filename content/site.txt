@@ -1,7 +1,0 @@
-Title: Musikschule Rhein-Kreis Neuss Video Contest
-----
-Cloudinary_cloud_name: musikschule-rkn-video-contest
-----
-Cloudinary_key: 653565857227528
-----
-Cloudinary_secret: 9d5MsGLSewuYct0mD9iFPkOvUvA

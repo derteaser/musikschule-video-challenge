@@ -1,9 +1,0 @@
-label: Zugriffsberechtigung
-type: multiselect
-help: Nur Benutzer mit der entsprechenden Rolle erhalten Zugriff. Ist keine Rolle gewählt, können alle Nutzer auf die Seite zugreifen.
-options: query
-query:
-  fetch: kirby.roles
-  text: "{{ item.title }}"
-  value: "{{ item.id }}"
-search: false

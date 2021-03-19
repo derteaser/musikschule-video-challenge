@@ -1,9 +1,0 @@
-Title: Videos ansehen
-
-----
-
-Text: 
-
-----
-
-Viewpermissions: teacher, admin

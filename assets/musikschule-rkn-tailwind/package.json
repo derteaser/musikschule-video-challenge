@@ -15,7 +15,7 @@
     "postcss-import": "^14.0.0",
     "postcss-nested": "^5.0.2",
     "simple-icons": "^4.15.0",
-    "tailwindcss": "^2.0.2",
+    "tailwindcss": "^2.0.4",
     "tailwindcss-aspect-ratio": "^3.0.0",
     "tailwindcss-debug-screens": "^2.0.0",
     "tailwindcss-padding-safe": "^1.0.5",

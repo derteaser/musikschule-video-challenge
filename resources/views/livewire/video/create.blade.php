@@ -4,10 +4,10 @@
             uploadWidget: null,
             init: function() {
                 this.uploadWidget = cloudinary.createUploadWidget({
-                    cloudName: 'musikschule-rkn-video-contest',
+                    cloudName: '{{ Str::after(config('cloudinary.cloud_url'),'@') }}',
                     multiple: false,
                     sources: ['local', 'camera', 'dropbox'],
-                    uploadPreset: 'video-contest',
+                    uploadPreset: '{{ config('cloudinary.upload_preset') }}',
                 }, (error, result) => {
                     if (result.event === "success") {
                         const publicId = result.info.public_id;

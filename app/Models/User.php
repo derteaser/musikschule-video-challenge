@@ -22,6 +22,7 @@ use Laravel\Sanctum\HasApiTokens;
  * @property string $email
  * @property string $profile_photo_url
  * @property \Illuminate\Support\Carbon|null $email_verified_at
+ * @property \Illuminate\Support\Carbon $birthday
  * @property string $password
  * @property string|null $two_factor_secret
  * @property string|null $two_factor_recovery_codes
@@ -78,6 +79,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'birthday',
     ];
 
     /**
@@ -99,6 +101,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'birthday' => 'datetime:Y-m-d',
     ];
 
     /**
@@ -112,5 +115,9 @@ class User extends Authenticatable
 
     public function videos(): HasMany {
         return $this->hasMany(Video::class);
+    }
+
+    public function age(): int {
+        return $this->birthday->age;
     }
 }

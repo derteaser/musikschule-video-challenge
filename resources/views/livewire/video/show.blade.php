@@ -10,7 +10,7 @@
             <div class="flex items-center">
                 <div class="flex items-center">
                     <img class="h-8 w-8 rounded-full object-cover" src="{{ $video->user()->profile_photo_url }}" alt="{{ $video->user()->name }}" />
-                    <span class="mx-2 text-gray-700 font-semibold">{{ $video->user()->name }}</span>
+                    <span class="mx-2 text-gray-700 font-semibold">{{ $video->user()->name }} ({{ $video->user()->age() }})</span>
                 </div>
                 <span class="mx-1 text-gray-600 text-xs">{{ $video->created_at->format('d.m.Y') }}</span>
             </div>

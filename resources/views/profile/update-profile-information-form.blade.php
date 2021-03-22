@@ -66,12 +66,22 @@
             <x-jet-input-error for="email" class="mt-2" />
         </div>
 
-        <!-- Birthday -->
-        <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="birthday" value="{{ __('Birthday') }}" />
-            <x-date-picker id="birthday" type="text" class="mt-1 block w-full" wire:model.defer="state.birthday" />
-            <x-jet-input-error for="birthday" class="mt-2" />
-        </div>
+        <!-- fields only necessary for contestants -->
+        @if (Auth::user()->can('create video'))
+            <!-- Birthday -->
+            <div class="col-span-6 sm:col-span-4">
+                <x-jet-label for="birthday" value="{{ __('Birthday') }}" />
+                <x-date-picker id="birthday" type="text" class="mt-1 block w-full" wire:model.defer="state.birthday" />
+                <x-jet-input-error for="birthday" class="mt-2" />
+            </div>
+
+            <!-- Instrument -->
+            <div class="col-span-6 sm:col-span-4">
+                <x-jet-label for="musical_instrument_id" value="{{ __('Musical Instrument') }}" />
+                <x-instrument-select id="musical_instrument_id" class="mt-1 block w-full" wire:model.defer="state.musical_instrument_id" />
+                <x-jet-input-error for="musical_instrument_id" class="mt-2" />
+            </div>
+        @endif
     </x-slot>
 
     <x-slot name="actions">

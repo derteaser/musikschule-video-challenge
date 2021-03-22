@@ -23,9 +23,15 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
-            'birthday' => ['required', 'date', 'date_format:Y-m-d'],
             'photo' => ['nullable', 'image', 'max:1024'],
         ])->validateWithBag('updateProfileInformation');
+
+        if ($user->can('create video')) {
+            Validator::make($input, [
+                'birthday' => ['required', 'date', 'date_format:Y-m-d'],
+                'musical_instrument_id' => ['required', 'integer'],
+            ])->validateWithBag('updateProfileInformation');
+        }
 
         if (isset($input['photo'])) {
             $user->updateProfilePhoto($input['photo']);
@@ -39,6 +45,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
                 'name' => $input['name'],
                 'email' => $input['email'],
                 'birthday' => $input['birthday'],
+                'musical_instrument_id' => $input['musical_instrument_id'],
             ])->save();
         }
     }
@@ -56,6 +63,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             'name' => $input['name'],
             'email' => $input['email'],
             'birthday' => $input['birthday'],
+            'musical_instrument_id' => $input['musical_instrument_id'],
             'email_verified_at' => null,
         ])->save();
 

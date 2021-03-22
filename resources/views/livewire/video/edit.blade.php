@@ -16,7 +16,7 @@
         </div>
 
         <div class="flex justify-end mt-4">
-            <button type="submit" class="btn btn-submit">Speichern</button>
+            <x-jet-button>Speichern</x-jet-button>
             <a href="{{ route('dashboard-own-video') }}" class="btn btn-default ml-2">Abbrechen</a>
         </div>
     </form>

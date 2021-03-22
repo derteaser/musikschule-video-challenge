@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -21,6 +20,8 @@ use Laravel\Sanctum\HasApiTokens;
  * @package App\Models
  * @property int $id
  * @property string $name
+ * @property string $nickname
+ * @property string $city
  * @property string $email
  * @property string $profile_photo_url
  * @property \Illuminate\Support\Carbon|null $email_verified_at
@@ -119,11 +120,24 @@ class User extends Authenticatable
         return $this->hasOne(Video::class);
     }
 
+    public function displayName(): string {
+        return $this->nickname ?? $this->name;
+    }
+
     public function musicalInstrument(): BelongsTo {
         return $this->belongsTo(MusicalInstrument::class);
     }
 
     public function age(): int {
         return $this->birthday->age;
+    }
+
+    /**
+     * Get the default profile photo URL if no profile photo has been uploaded.
+     *
+     * @return string
+     */
+    protected function defaultProfilePhotoUrl(): string {
+        return 'https://ui-avatars.com/api/?name='.urlencode($this->displayName()).'&color=7F9CF5&background=EBF4FF';
     }
 }

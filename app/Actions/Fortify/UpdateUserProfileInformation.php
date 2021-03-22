@@ -32,6 +32,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             Validator::make($input, [
                 'birthday' => ['required', 'date', 'date_format:Y-m-d'],
                 'musical_instrument_id' => ['required', 'integer'],
+                'teacher' => ['required', 'string', 'max:255'],
             ])->validateWithBag('updateProfileInformation');
         }
 
@@ -49,6 +50,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
                 'email' => $input['email'],
                 'city' => $input['city'],
                 'birthday' => $input['birthday'],
+                'teacher' => $input['teacher'],
                 'musical_instrument_id' => $input['musical_instrument_id'],
             ])->save();
         }
@@ -69,6 +71,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             'email' => $input['email'],
             'city' => $input['city'],
             'birthday' => $input['birthday'],
+            'teacher' => $input['teacher'],
             'musical_instrument_id' => $input['musical_instrument_id'],
             'email_verified_at' => null,
         ])->save();

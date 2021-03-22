@@ -22,6 +22,7 @@ use Laravel\Sanctum\HasApiTokens;
  * @property string $name
  * @property string $nickname
  * @property string $city
+ * @property string $teacher
  * @property string $email
  * @property string $profile_photo_url
  * @property \Illuminate\Support\Carbon|null $email_verified_at

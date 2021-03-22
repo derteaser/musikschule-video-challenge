@@ -95,6 +95,13 @@
                 <x-instrument-select id="musical_instrument_id" class="mt-1 block w-full" wire:model.defer="state.musical_instrument_id" />
                 <x-jet-input-error for="musical_instrument_id" class="mt-2" />
             </div>
+
+            <!-- Teacher -->
+            <div class="col-span-6 sm:col-span-4">
+                <x-jet-label for="teacher" value="{{ __('Teacher') }}" />
+                <x-jet-input id="teacher" type="text" class="mt-1 block w-full" wire:model.defer="state.teacher" />
+                <x-jet-input-error for="teacher" class="mt-2" />
+            </div>
         @endif
     </x-slot>
 

@@ -21,7 +21,7 @@
 
             <div class="mt-4">
                 <x-jet-label for="birthday" value="{{ __('Birthday') }}" />
-                <x-date-picker id="birthday" class="block mt-1 w-full" type="email" name="email" :value="old('birthday', '2010-01-01')" required />
+                <x-date-picker id="birthday" class="block mt-1 w-full" name="birthday" :value="old('birthday', '2010-01-01')" required />
             </div>
 
             <div class="mt-4">

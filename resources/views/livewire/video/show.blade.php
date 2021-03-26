@@ -2,7 +2,7 @@
     @livewire('video.player', ['video' => $video])
     <div class="p-6">
         <div>
-            <h1 class="block text-gray-800 font-semibold text-2xl my-2 hover:text-gray-600 hover:underline">{{ $video->name }}</h1>
+            <h1 class="block text-gray-800 font-semibold text-2xl my-2">{{ $video->name }}</h1>
             <div class="prose my-2">{!! nl2br($video->description) !!}</div>
         </div>
 

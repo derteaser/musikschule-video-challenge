@@ -5,19 +5,13 @@
         </x-slot>
 
         <x-slot name="description">
-
+            {{ __('This will permanently delete this video. Afterwards the user will be able to upload a new one.') }}
         </x-slot>
 
         <x-slot name="content">
-            <div class="max-w-xl text-sm text-gray-600">
-                {{ __('This will permanently delete this video. Afterwards the user will be able to upload a new one.') }}
-            </div>
-
-            <div class="mt-5">
-                <x-jet-danger-button wire:click="confirmVideoDeletion" wire:loading.attr="disabled">
-                    {{ __('Delete Video') }}
-                </x-jet-danger-button>
-            </div>
+            <x-jet-danger-button wire:click="confirmVideoDeletion" wire:loading.attr="disabled">
+                {{ __('Delete Video') }}
+            </x-jet-danger-button>
 
             <!-- Delete User Confirmation Modal -->
             <x-jet-dialog-modal wire:model="confirmingVideoDeletion">

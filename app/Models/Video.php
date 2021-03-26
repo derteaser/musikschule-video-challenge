@@ -19,6 +19,7 @@ use Illuminate\Support\Carbon;
  * @property string $name
  * @property string $description
  * @property string $cloudinary_public_id
+ * @property bool $isHidden
  * @property int $user_id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at

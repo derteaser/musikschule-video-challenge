@@ -17,6 +17,10 @@
 
             @isset ($video)
                 @livewire('video.show', ['video' => $video])
+                @if (Auth::user()->can('hide video'))
+                    <x-jet-section-border />
+                    @livewire('video.hide', ['video' => $video])
+                @endif
                 @if (Auth::user()->can('delete video'))
                     <x-jet-section-border />
                     @livewire('video.delete', ['video' => $video])

@@ -13,14 +13,14 @@ use Livewire\Component;
 class Delete extends Component {
 
     /** @var Video $video */
-    public $video;
+    public Video $video;
 
     /**
      * Indicates if video deletion is being confirmed.
      *
      * @var bool
      */
-    public $confirmingVideoDeletion = false;
+    public bool $confirmingVideoDeletion = false;
 
     /**
      * Confirm that the user would like to delete the video.
@@ -49,7 +49,7 @@ class Delete extends Component {
 
         $deleter->delete($this->video);
 
-        redirect('/dashboard/my-video');
+        redirect(route('dashboard-video'));
     }
 
     /**

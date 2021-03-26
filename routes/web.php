@@ -31,11 +31,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard/video/{id?}', f
     return Auth::user()->can('view all videos') ? view('video', ['video' => Video::find($id)]) : redirect('/dashboard');
 })->name('dashboard-video');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard/my-video/{id?}', function (int $id = 0) {
-    return Auth::user()->can('manage own videos') ? VideoController::own($id) : redirect('/dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard/my-video', function () {
+    return Auth::user()->can('manage own videos') ? view('my-video') : redirect('/dashboard');
 })->name('dashboard-own-video');
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard/my-video/create/{id}/{filename}', function (string $id, string $filename) {
-    $id = Str::replaceFirst('-', '/', $id);
-    return Auth::user()->can('create video') ? VideoController::create($id, $filename) : redirect('/dashboard');
-})->name('dashboard-create-video');

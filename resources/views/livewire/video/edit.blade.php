@@ -1,23 +1,33 @@
-<div class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md">
-    <form action="{{ route('dashboard-own-video', ['id' => $video->id]) }}" method="post">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
-            <div class="row-span-2">
-                @livewire('video.player', ['video' => $video])
-            </div>
-            <div>
-                <label class="text-gray-700" for="title">Titel</label>
-                <input id="title" name="title" type="text" class="w-full mt-2 px-4 py-2 block rounded bg-white text-gray-800 border border-gray-300 focus:border-blue-500 focus:outline-none focus:shadow-outline" value="{{ $video->name }}" required>
-            </div>
+<x-jet-form-section submit="updateVideoInformation">
+    <x-slot name="title">
+        {{ __('Edit Video') }}
+    </x-slot>
 
-            <div>
-                <label class="text-gray-700" for="text">Beschreibung</label>
-                <textarea id="text" name="text" class="w-full mt-2 px-4 py-2 block rounded bg-white text-gray-800 border border-gray-300 focus:border-blue-500 focus:outline-none focus:shadow-outline" rows="10" required>{{ trim($video->description) }}</textarea>
-            </div>
-        </div>
+    <x-slot name="description">
+        @livewire('video.player', ['video' => $video])
+    </x-slot>
 
-        <div class="flex justify-end mt-4">
-            <x-jet-button>Speichern</x-jet-button>
-            <a href="{{ route('dashboard-own-video') }}" class="btn btn-default ml-2">Abbrechen</a>
+    <x-slot name="form">
+        <!-- Name -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="name" value="{{ __('Title') }}" />
+            <x-jet-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="state.name" />
+            <x-jet-input-error for="name" class="mt-2" />
         </div>
-    </form>
-</div>
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="description" value="{{ __('Description') }}" />
+            <x-textarea id="description" type="text" class="mt-1 block w-full h-72" maxlength="2000" wire:model.defer="state.description" />
+            <x-jet-input-error for="description" class="mt-2" />
+        </div>
+    </x-slot>
+
+    <x-slot name="actions">
+        <x-jet-action-message class="mr-3" on="saved">
+            {{ __('Saved.') }}
+        </x-jet-action-message>
+
+        <x-jet-button wire:loading.attr="disabled">
+            {{ __('Save') }}
+        </x-jet-button>
+    </x-slot>
+</x-jet-form-section>

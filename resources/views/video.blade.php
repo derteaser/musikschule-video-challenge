@@ -4,11 +4,7 @@
             @isset ($video)
                 {{ $video->name ?? __('Videos') }}
             @else
-                @if (isset($edit) && $edit)
-                    {{ __('Meine Videos') }}
-                @else
-                    {{ __('Videos') }}
-                @endif
+                {{ __('Videos') }}
             @endisset
         </h2>
     </x-slot>
@@ -18,19 +14,16 @@
             @if (session()->has('flash.banner'))
                 <x-jet-banner />
             @endif
-            @if (isset($edit) && $edit)
-                @isset ($video)
-                    @livewire('video.edit', ['video' => $video])
-                @else
-                    @livewire('video.own', ['videos' => $videos])
-                @endisset
+
+            @isset ($video)
+                @livewire('video.show', ['video' => $video])
+                @if (Auth::user()->can('delete video'))
+                    <x-jet-section-border />
+                    @livewire('video.delete', ['video' => $video])
+                @endif
             @else
-                @isset ($video)
-                    @livewire('video.show', ['video' => $video])
-                @else
-                    @livewire('video.index')
-                @endisset
-            @endif
+                @livewire('video.index')
+            @endisset
         </div>
     </div>
 </x-app-layout>

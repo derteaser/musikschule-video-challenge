@@ -2,8 +2,8 @@
     @livewire('video.player', ['video' => $video])
     <div class="p-6">
         <div>
-            <h1 class="block text-gray-800 font-semibold text-2xl mt-2 hover:text-gray-600 hover:underline">{{ $video->name }}</h1>
-            <div class="text-gray-600 mt-2">{{ $video->description }}</div>
+            <h1 class="block text-gray-800 font-semibold text-2xl my-2 hover:text-gray-600 hover:underline">{{ $video->name }}</h1>
+            <div class="prose my-2">{!! nl2br($video->description) !!}</div>
         </div>
 
         <div class="mt-4">
@@ -16,4 +16,24 @@
             </div>
         </div>
     </div>
+    @if (Auth::user()->can('view user data'))
+        <div class="grid grid-flow-col auto-cols-auto gap-6 mt-2 p-6 bg-gray-100">
+            <div>
+                <h4 class="text-xs text-gray-600 uppercase">Instrument</h4>
+                {{ Auth::user()->musicalInstrument()->first()->name }}
+            </div>
+            <div>
+                <h4 class="text-xs text-gray-600 uppercase">Alter</h4>
+                {{ Auth::user()->age() }}
+            </div>
+            <div>
+                <h4 class="text-xs text-gray-600 uppercase">Wohnort</h4>
+                {{ Auth::user()->city }}
+            </div>
+            <div>
+                <h4 class="text-xs text-gray-600 uppercase">Lehrer/in</h4>
+                {{ Auth::user()->teacher }}
+            </div>
+        </div>
+    @endif
 </div>

@@ -1,9 +1,0 @@
-Title: Teilnahmebedingungen
-
-----
-
-Text: 
-
-----
-
-ViewPermissions:

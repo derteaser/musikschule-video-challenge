@@ -4,7 +4,7 @@
     </x-slot>
 
     <x-slot name="description">
-        @livewire('video.player', ['video' => $video])
+
     </x-slot>
 
     <x-slot name="form">
@@ -22,7 +22,7 @@
     </x-slot>
 
     <x-slot name="actions">
-        <x-jet-action-message class="mr-3" on="saved">
+        <x-jet-action-message class="mr-3 text-green-800" on="videoUpdated">
             {{ __('Saved.') }}
         </x-jet-action-message>
 

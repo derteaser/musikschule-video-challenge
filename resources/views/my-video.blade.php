@@ -10,6 +10,8 @@
             @endif
 
             @if ($video = Auth::user()->video()->first())
+                @livewire('video.show', ['video' => $video])
+                <x-jet-section-border />
                 @livewire('video.edit', ['video' => $video])
             @else
                 <div class="h-full flex flex-col items-center justify-center">

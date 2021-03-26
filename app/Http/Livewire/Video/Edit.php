@@ -43,6 +43,6 @@ class Edit extends Component {
             $this->state
         );
 
-        $this->emit('saved');
+        $this->emit('videoUpdated');
     }
 }

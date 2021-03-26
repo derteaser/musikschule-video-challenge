@@ -15,12 +15,12 @@
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
-                    @if (Auth::user()->can('view all videos'))
+                    @if (Auth::user()->can('view videos'))
                         <x-jet-nav-link href="{{ route('dashboard-video') }}" :active="request()->routeIs('dashboard-video')">
                             {{ __('Videos') }}
                         </x-jet-nav-link>
                     @endif
-                    @if (Auth::user()->can('manage own videos'))
+                    @if (Auth::user()->can('manage my video'))
                         <x-jet-nav-link href="{{ route('dashboard-own-video') }}" :active="request()->routeIs('dashboard-own-video')">
                             {{ __('Mein Video') }}
                         </x-jet-nav-link>
@@ -154,12 +154,12 @@
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
-            @if (Auth::user()->can('view all videos'))
+            @if (Auth::user()->can('view videos'))
                 <x-jet-responsive-nav-link href="{{ route('dashboard-video') }}" :active="request()->routeIs('dashboard-video')">
                     {{ __('Videos') }}
                 </x-jet-responsive-nav-link>
             @endif
-            @if (Auth::user()->can('manage own videos'))
+            @if (Auth::user()->can('manage my video'))
                 <x-jet-responsive-nav-link href="{{ route('dashboard-own-video') }}" :active="request()->routeIs('dashboard-own-video')">
                     {{ __('Mein Video') }}
                 </x-jet-responsive-nav-link>

@@ -3,10 +3,10 @@
     <div class="p-6">
         <div>
             <h1 class="block text-gray-800 font-semibold text-2xl my-2">{{ $video->name }}</h1>
-            <div class="prose my-2">{!! nl2br($video->description) !!}</div>
+            <div class="prose max-w-screen-xl my-2">{!! $video->description !!}</div>
         </div>
 
-        <div class="mt-4">
+        <div class="mt-6">
             <div class="flex items-center">
                 <div class="flex items-center">
                     <img class="h-8 w-8 rounded-full object-cover" src="{{ $video->user()->profile_photo_url }}" alt="{{ $video->user()->displayName() }}" />

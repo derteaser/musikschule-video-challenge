@@ -1,11 +1,10 @@
+@section('page-title')
+    {{ $video->name ?? __('Videos') }}
+@endsection
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            @isset ($video)
-                {{ $video->name ?? __('Videos') }}
-            @else
-                {{ __('Videos') }}
-            @endisset
+            {{ $video->name ?? __('Videos') }}
         </h2>
     </x-slot>
 

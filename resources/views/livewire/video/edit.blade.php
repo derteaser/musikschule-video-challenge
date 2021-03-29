@@ -14,9 +14,10 @@
             <x-jet-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="state.name" />
             <x-jet-input-error for="name" class="mt-2" />
         </div>
+        <!-- Description -->
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="description" value="{{ __('Description') }}" />
-            <x-textarea id="description" type="text" class="mt-1 block w-full h-72" maxlength="2000" wire:model.defer="state.description" />
+            <x-wysiwyg id="description" class="mt-1 block w-full" wire:model.defer="state.description" />
             <x-jet-input-error for="description" class="mt-2" />
         </div>
     </x-slot>

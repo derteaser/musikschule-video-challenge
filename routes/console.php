@@ -1,5 +1,6 @@
 <?php
 
+use App\Actions\Jetstream\DeleteUser;
 use App\Models\User;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
@@ -32,4 +33,14 @@ Artisan::command('user:create', function () {
         ]);
 
     $this->info('Account created for '.$name);
+});
+
+Artisan::command('user:delete', function() {
+   $id = $this->ask('ID?');
+
+   $user = User::find($id);
+   $deleter = new DeleteUser();
+   $deleter->delete($user);
+
+    $this->info('Account deleted for ID '.$id);
 });

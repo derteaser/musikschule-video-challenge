@@ -5,7 +5,6 @@ namespace App\Models;
 use Cloudinary;
 use Cloudinary\Asset\Image;
 use Cloudinary\Transformation\FocusOn;
-use Cloudinary\Transformation\Format;
 use Cloudinary\Transformation\Gravity;
 use Cloudinary\Transformation\Resize;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -15,7 +14,6 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Facades\Storage;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\Features;
 use Laravel\Jetstream\HasProfilePhoto;
@@ -73,7 +71,7 @@ use Laravel\Sanctum\HasApiTokens;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class User extends Authenticatable {
+class User extends Authenticatable implements MustVerifyEmail{
     use HasApiTokens;
     use HasFactory;
     use HasProfilePhoto;

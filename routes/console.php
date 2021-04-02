@@ -32,15 +32,22 @@ Artisan::command('user:create', function () {
             'password' => Hash::make($pwd),
         ]);
 
-    $this->info('Account created for '.$name);
+    $this->info('Account created for ' . $name);
 });
 
-Artisan::command('user:delete', function() {
-   $id = $this->ask('ID?');
+Artisan::command('user:delete {id}', function (int $id) {
+    $user = User::find($id);
 
-   $user = User::find($id);
-   $deleter = new DeleteUser();
-   $deleter->delete($user);
+    if ($user === null) {
+        $this->error('There is no User with ID ' . $id);
+        return;
+    }
 
-    $this->info('Account deleted for ID '.$id);
+    if ($this->confirm('Are you sure you want to delete User ' . $user->name . '?')) {
+        $deleter = new DeleteUser();
+        $deleter->delete($user);
+
+        $this->info('Account deleted for ID ' . $id);
+    }
+
 });

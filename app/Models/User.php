@@ -164,7 +164,7 @@ class User extends Authenticatable implements MustVerifyEmail{
      * @return void
      */
     public function deleteProfilePhoto() {
-        if (!Features::managesProfilePhotos()) {
+        if (!Features::managesProfilePhotos() || !$this->profile_photo_path) {
             return;
         }
 

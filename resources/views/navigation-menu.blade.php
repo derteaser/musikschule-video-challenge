@@ -22,7 +22,7 @@
                     @endif
                     @if (Auth::user()->can('manage my video'))
                         <x-jet-nav-link href="{{ route('dashboard-own-video') }}" :active="request()->routeIs('dashboard-own-video')">
-                            {{ __('Mein Video') }}
+                            {{ __('My Video') }}
                         </x-jet-nav-link>
                     @endif
                 </div>
@@ -161,7 +161,7 @@
             @endif
             @if (Auth::user()->can('manage my video'))
                 <x-jet-responsive-nav-link href="{{ route('dashboard-own-video') }}" :active="request()->routeIs('dashboard-own-video')">
-                    {{ __('Mein Video') }}
+                    {{ __('My Video') }}
                 </x-jet-responsive-nav-link>
             @endif
         </div>

@@ -1,5 +1,5 @@
 @section('page-title')
-    Mein Video
+    {{ __('My Video') }}
 @endsection
 <x-app-layout>
     <x-slot name="header">

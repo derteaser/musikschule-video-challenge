@@ -1462,26 +1462,27 @@
         },
         {
             "name": "laravel-lang/lang",
-            "version": "8.1.0",
+            "version": "8.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/lang.git",
-                "reference": "5cb49c43fb5c11c8a741e61480664612c90f8769"
+                "reference": "fff3ca444866efd2cc31d92a08a41502002fa994"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/5cb49c43fb5c11c8a741e61480664612c90f8769",
-                "reference": "5cb49c43fb5c11c8a741e61480664612c90f8769",
+                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/fff3ca444866efd2cc31d92a08a41502002fa994",
+                "reference": "fff3ca444866efd2cc31d92a08a41502002fa994",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*"
             },
             "require-dev": {
-                "andrey-helldar/pretty-array": "^2.0",
-                "andrey-helldar/support": "^3.0",
-                "php": "^7.4|^8.0",
-                "phpunit/phpunit": "^9.5"
+                "andrey-helldar/pretty-array": "^2.1",
+                "andrey-helldar/support": "^3.2",
+                "php": "^8.0",
+                "phpunit/phpunit": "^9.5",
+                "symfony/var-dumper": "^5.2"
             },
             "suggest": {
                 "andrey-helldar/laravel-lang-publisher": "Easy installation and update of translation files for your project",
@@ -1510,7 +1511,7 @@
                 "issues": "https://github.com/Laravel-Lang/lang/issues",
                 "source": "https://github.com/Laravel-Lang/lang"
             },
-            "time": "2021-03-23T20:57:44+00:00"
+            "time": "2021-04-02T12:36:45+00:00"
         },
         {
             "name": "laravel/fortify",

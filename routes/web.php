@@ -34,3 +34,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard/video/{id?}', f
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard/my-video', function () {
     return Auth::user()->can('manage my video') ? view('my-video') : redirect('/dashboard');
 })->name('dashboard-own-video');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard/attendants', function () {
+    return Auth::user()->hasAnyRole(['Admin', 'Superadmin']) ? view('attendants') : redirect('/dashboard');
+})->name('dashboard-attendants');

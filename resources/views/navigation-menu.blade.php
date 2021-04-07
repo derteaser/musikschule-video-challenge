@@ -25,6 +25,11 @@
                             {{ __('My Video') }}
                         </x-jet-nav-link>
                     @endif
+                    @if (Auth::user()->hasAnyRole(['Admin', 'Superadmin']))
+                        <x-jet-nav-link href="{{ route('dashboard-attendants') }}" :active="request()->routeIs('dashboard-attendants')">
+                            {{ __('Attendants') }}
+                        </x-jet-nav-link>
+                    @endif
                 </div>
             </div>
 

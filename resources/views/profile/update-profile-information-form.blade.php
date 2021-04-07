@@ -85,7 +85,7 @@
             <!-- Birthday -->
             <div class="col-span-6 sm:col-span-4">
                 <x-jet-label for="birthday" value="{{ __('Birthday') }}" />
-                <x-date-picker id="birthday" type="text" class="mt-1 block w-full" wire:model.defer="state.birthday" />
+                <x-jet-input id="birthday" class="block mt-1 w-full" type="date" min="1920-01-01" max="2018-01-01" wire:model.defer="state.birthday" />
                 <x-jet-input-error for="birthday" class="mt-2" />
             </div>
 

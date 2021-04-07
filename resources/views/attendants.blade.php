@@ -14,7 +14,27 @@
                 <x-jet-banner />
             @endif
 
-            @livewire('attendant.index')
+            <x-jet-section-title>
+                <x-slot name="title">{{ __('New Registrations') }}</x-slot>
+                <x-slot name="description"></x-slot>
+            </x-jet-section-title>
+            @livewire('attendant.index', ['filterByRole' => \App\Http\Livewire\Attendant\Index::NO_ROLES])
+
+            <x-jet-section-border></x-jet-section-border>
+
+            <x-jet-section-title>
+                <x-slot name="title">{{ __('Students') }}</x-slot>
+                <x-slot name="description"></x-slot>
+            </x-jet-section-title>
+            @livewire('attendant.index', ['filterByRole' => 'Student'])
+
+            <x-jet-section-border></x-jet-section-border>
+
+            <x-jet-section-title>
+                <x-slot name="title">{{ __('Jury') }}</x-slot>
+                <x-slot name="description"></x-slot>
+            </x-jet-section-title>
+            @livewire('attendant.index', ['filterByRole' => 'Jury'])
         </div>
     </div>
 </x-app-layout>

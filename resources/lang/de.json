@@ -1,6 +1,7 @@
 {
     "A fresh verification link has been sent to your email address.": "Ein neuer Bestätigungslink wurde verschickt.",
     "A new verification link has been sent to the email address you provided during registration.": "Ein neuer Bestätigungslink wurde an die E-Mail-Adresse gesendet, die Du bei der Registrierung angegeben hast.",
+    "Actions": "Aktionen",
     "Add a new team member to your team, allowing them to collaborate with you.": "Fügen Sie ein neues Teammitglied zu Ihrem Team hinzu und erlauben Sie ihm mit Ihnen zusammenzuarbeiten.",
     "Add additional security to your account using two factor authentication.":"Fügen Sie Ihrem Konto zusätzliche Sicherheit hinzu, indem Sie die Zwei-Faktor-Authentifizierung verwenden.",
     "Add Team Member": "Teammitglied hinzufügen",
@@ -147,6 +148,7 @@
     "Sorry, you are not authorized to access this page.": "Tut uns leid, Du hast keine Rechte, diese Seite zu besuchen.",
     "Sorry, your session has expired. Please refresh and try again.": "Tut uns leid, Deine Sitzung ist abgelaufen. Bitte lade die Seite neu und probiere es erneut.",
     "Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two factor authentication device is lost.": "Speichern Sie diese Wiederherstellungscodes in einem sicheren Passwortmanager. Sie können verwendet werden, um den Zugriff auf Ihr Konto wiederherzustellen, wenn Ihr Zwei-Faktor-Authentifizierungsgerät verloren geht.",
+    "Students": "Schüler/innen",
     "Switch Teams": "Teams wechseln",
     "Teacher": "Lehrer/in",
     "Team Details": "Teamdetails",

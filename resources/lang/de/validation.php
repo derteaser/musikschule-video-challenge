@@ -149,6 +149,7 @@ return [
     'attributes' => [
         'name'                  => 'Name',
         'username'              => 'Benutzername',
+        'nickname'              => 'Spitzname',
         'email'                 => 'E-Mail Adresse',
         'first_name'            => 'Vorname',
         'last_name'             => 'Nachname',
@@ -176,5 +177,9 @@ return [
         'time'                  => 'Uhrzeit',
         'available'             => 'verfügbar',
         'size'                  => 'Größe',
+        'birthday'              => 'Geburtstag',
+        'musical_instrument_id' => 'Musikinstrument',
+        'teacher'               => 'Lehrer/in',
+        'terms'                 => 'Nutzungsbedingungen und Datenschutzerklärung'
     ],
 ];

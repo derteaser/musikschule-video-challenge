@@ -15,6 +15,31 @@
             </div>
 
             <div class="mt-4">
+                <x-jet-label for="nickname" value="{{ __('Nickname') }} (optional)" />
+                <x-jet-input id="nickname" class="block mt-1 w-full" type="text" name="nickname" :value="old('nickname')" />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="city" value="{{ __('City') }}" />
+                <x-jet-input id="city" class="block mt-1 w-full" type="text" name="city" :value="old('city')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="birthday" value="{{ __('Birthday') }}" />
+                <x-jet-input id="birthday" class="block mt-1 w-full" type="date" min="1920-01-01" max="2018-01-01" name="birthday" :value="old('birthday')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="musical_instrument_id" value="{{ __('Musical Instrument') }}" />
+                <x-instrument-select id="musical_instrument_id" class="mt-1 block w-full" name="musical_instrument_id" :value="old('musical_instrument_id')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="teacher" value="{{ __('Teacher') }}" />
+                <x-jet-input id="teacher" class="block mt-1 w-full" type="text" name="teacher" :value="old('teacher')" required />
+            </div>
+
+            <div class="mt-4">
                 <x-jet-label for="email" value="{{ __('Email') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>

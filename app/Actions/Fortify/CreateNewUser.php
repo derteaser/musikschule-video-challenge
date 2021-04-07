@@ -5,6 +5,7 @@ namespace App\Actions\Fortify;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Jetstream\Jetstream;
@@ -23,7 +24,7 @@ class CreateNewUser implements CreatesNewUsers
     public function create(array $input): User {
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
-            'nickname' => ['string', 'max:255', 'unique:users'],
+            'nickname' => strlen(trim($input['nickname'])) ? ['string', 'max:255', 'unique:users'] : '',
             'city' => ['required', 'string', 'max:255'],
             'birthday' => ['required', 'date'],
             'musical_instrument_id' => ['required', 'integer'],

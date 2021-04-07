@@ -90,6 +90,10 @@ class User extends Authenticatable implements MustVerifyEmail{
         'email',
         'password',
         'birthday',
+        'musical_instrument_id',
+        'nickname',
+        'city',
+        'teacher'
     ];
 
     /**

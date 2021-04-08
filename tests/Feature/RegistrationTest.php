@@ -22,13 +22,14 @@ class RegistrationTest extends TestCase
     {
         $response = $this->post('/register', [
             'name' => 'Test User',
+            'nickname' => 'Testy',
             'email' => 'test@example.com',
             'password' => 'password',
             'password_confirmation' => 'password',
             'city' => 'New York',
             'teacher' => 'Prof. Van Dusen',
             'birthday' => '1980-01-01',
-            'musical_instrument_id' => 2,
+            'musical_instrument_id' => '2',
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature(),
         ]);
 

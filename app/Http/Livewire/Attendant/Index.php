@@ -23,7 +23,7 @@ class Index extends Component {
                 $this->users = User::all()->sortBy('name');
                 break;
             case self::NO_ROLES:
-                $this->users = User::all()->sortByDesc('created_at');
+                $this->users = User::withCount('roles')->has('roles', 0)->get()->sortByDesc('created_at');
                 break;
             default:
                 /** @var Role $role */

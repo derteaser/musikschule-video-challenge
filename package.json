@@ -22,9 +22,5 @@
         "tailwindcss": "^2.1.1",
         "tailwindcss-aspect-ratio": "^3.0.0",
         "tailwindcss-responsive-embed": "^1.0.0"
-    },
-    "dependencies": {
-        "moment": "^2.29.1",
-        "pikaday": "^1.8.2"
     }
 }

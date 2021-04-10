@@ -44,11 +44,18 @@
                 </div>
             </x-slot>
             <x-slot name="content">
-                <x-jet-dropdown-link href="#" wire:click="test">
-                    {{ __('Test') }} {{ $user->nickname }}
-                </x-jet-dropdown-link>
+                @if ($user->hasVerifiedEmail())
+                    <x-jet-dropdown-link href="#" wire:click="remindUserOfTerms">
+                        {{ __('Remind User of Terms') }}
+                    </x-jet-dropdown-link>
+                @endif
             </x-slot>
         </x-jet-dropdown>
+        @if ($successMessage)
+            <div class="bg-green-600 text-white rounded px-2 py-1 text-xs mt-1" wire:loading.class="hidden">
+                {{ $successMessage }}
+            </div>
+        @endif
     </td>
 </tr>
 

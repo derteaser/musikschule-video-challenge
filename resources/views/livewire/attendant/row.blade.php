@@ -25,11 +25,11 @@
     <td class="px-6 py-4 whitespace-nowrap">
         @if ($user->hasVerifiedEmail())
             <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                      {{ __('E-Mail verified') }}
+                                      {{ __('Email verified') }}
                                     </span>
         @else
             <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
-                                      {{ __('E-Mail not verified') }}
+                                      {{ __('Email not verified') }}
                                     </span>
         @endif
     </td>

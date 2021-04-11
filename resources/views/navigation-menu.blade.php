@@ -169,6 +169,11 @@
                     {{ __('My Video') }}
                 </x-jet-responsive-nav-link>
             @endif
+            @if (Auth::user()->hasAnyRole(['Admin', 'Superadmin']))
+                <x-jet-responsive-nav-link href="{{ route('dashboard-attendants') }}" :active="request()->routeIs('dashboard-attendants')">
+                    {{ __('Attendants') }}
+                </x-jet-responsive-nav-link>
+            @endif
         </div>
 
         <!-- Responsive Settings Options -->

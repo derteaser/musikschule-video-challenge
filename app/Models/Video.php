@@ -18,6 +18,7 @@ use Illuminate\Support\Carbon;
  * @property int $id
  * @property string $name
  * @property string $description
+ * @property string $comment
  * @property string $cloudinary_public_id
  * @property bool $isHidden
  * @property int $user_id
@@ -35,13 +36,12 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|Video whereUserId($value)
  * @mixin Eloquent
  */
-class Video extends Model
-{
+class Video extends Model {
     use HasFactory;
 
-    /** @var int  */
+    /** @var int */
     const THUMBNAIL_WIDTH = 1600;
-    /** @var int  */
+    /** @var int */
     const THUMBNAIL_HEIGHT = 900;
 
     /**
@@ -57,14 +57,14 @@ class Video extends Model
         'name',
         'cloudinary_public_id',
         'description',
+        'comment',
         'user_id'
     ];
 
     /**
      * @return User
      */
-    public function user(): object
-    {
+    public function user(): object {
         return $this->belongsTo(User::class)->first();
     }
 
@@ -72,8 +72,7 @@ class Video extends Model
         return $this->video()->format(Format::jpg())->resize(new Resize('thumb', self::THUMBNAIL_WIDTH, self::THUMBNAIL_HEIGHT));
     }
 
-    public function video(): CloudinaryVideo
-    {
+    public function video(): CloudinaryVideo {
         return new CloudinaryVideo($this->cloudinary_public_id);
     }
 }

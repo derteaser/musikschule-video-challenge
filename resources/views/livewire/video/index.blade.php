@@ -23,9 +23,14 @@
         <div class="bg-white overflow-hidden shadow-md sm:rounded-lg relative">
             <a href="{{ route('dashboard-video', ['id' => $video->id]) }}" class="group">
                 <img class="w-full h-64 object-cover" src="{{ $video->thumbnail()->toUrl() }}" alt="Video">
-                @if ($video->isHidden)
-                    <div class="absolute m-4 p-2 top-0 right-0 bg-red-600 text-white text-xs uppercase rounded-lg">Verborgen</div>
-                @endif
+                <div class="absolute top-0 right-0 m-4 flex flex-row space-x-2">
+                    @if ($video->comment && Auth::user()->can('comment video'))
+                        <div class="p-2 bg-gray-600 text-white text-xs uppercase rounded-lg">Kommentiert</div>
+                    @endif
+                    @if ($video->isHidden)
+                        <div class="p-2 bg-red-600 text-white text-xs uppercase rounded-lg">Verborgen</div>
+                    @endif
+                </div>
                 <div class="p-6">
                     <h1 class="block text-gray-800 font-semibold text-2xl mt-2 hover:text-gray-600 group-hover:underline">{{ $video->name }}</h1>
                     <div class="mt-4">

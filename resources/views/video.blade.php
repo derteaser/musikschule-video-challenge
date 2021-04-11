@@ -16,13 +16,23 @@
 
             @isset ($video)
                 @livewire('video.show', ['video' => $video])
+                @if (Auth::user()->can('comment video'))
+                    <x-jet-section-border />
+                    <div class="mt-10 sm:mt-0">
+                        @livewire('video.comment', ['video' => $video])
+                    </div>
+                @endif
                 @if (Auth::user()->can('hide video'))
                     <x-jet-section-border />
-                    @livewire('video.hide', ['video' => $video])
+                    <div class="mt-10 sm:mt-0">
+                        @livewire('video.hide', ['video' => $video])
+                    </div>
                 @endif
                 @if (Auth::user()->can('delete video'))
                     <x-jet-section-border />
-                    @livewire('video.delete', ['video' => $video])
+                    <div class="mt-10 sm:mt-0">
+                        @livewire('video.delete', ['video' => $video])
+                    </div>
                 @endif
             @else
                 @livewire('video.index')

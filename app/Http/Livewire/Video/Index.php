@@ -33,7 +33,8 @@ class Index extends Component {
         $query = Video::query();
 
         if ($this->searchTerm) {
-            $query = Video::where('name', 'like', '%' . $this->searchTerm . '%');
+            $query = Video::where('name', 'like', '%' . $this->searchTerm . '%')
+                ->orWhere('description', 'like', '%' . $this->searchTerm . '%');
         }
 
         if ($this->musicalInstrumentId) {

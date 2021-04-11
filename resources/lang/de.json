@@ -21,12 +21,14 @@
     "API Token": "API-Token",
     "API tokens allow third-party services to authenticate with our application on your behalf.": "Mit API-Token können sich Dienste von Drittanbietern in Ihrem Namen bei unserer Anwendung authentifizieren.",
     "API Tokens": "API-Token",
+    "Approve Attendance": "Teilnahme bestätigen",
     "Are you sure you want to delete this team? Once a team is deleted, all of its resources and data will be permanently deleted.": "Möchten Sie dieses Team wirklich löschen? Sobald ein Team gelöscht wird, werden alle Ressourcen und Daten dauerhaft gelöscht.",
     "Are you sure you want to delete this video?": "Möchtest Du dieses Video wirklich löschen?",
     "Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.": "Möchten Du Dein Konto wirklich löschen? Sobald Dein Konto gelöscht wurde, werden alle Ressourcen und Daten dauerhaft gelöscht. Bitte gebe Dein Passwort ein, um zu bestätigen, dass Du Dein Konto dauerhaft löschen möchtest.",
     "Are you sure you would like to delete this API token?": "Möchtest Du dieses API-Token wirklich löschen?",
     "Are you sure you would like to leave this team?": "Sind Sie sicher, dass Sie dieses Team verlassen möchten?",
     "Are you sure you would like to remove this person from the team?": "Sind Sie sicher, dass Sie diese Person aus dem Team entfernen möchten?",
+    "Attendance successfully approved.": "Teilnahme erfolgreich bestätigt.",
     "Attendants": "Teilnehmende",
     "Before proceeding, please check your email for a verification link.": "Bevor Sie fortfahren, überprüfen Sie bitte Ihr E-Mail-Postfach auf einen Bestätigungslink.",
     "Birthday": "Geburtstag",
@@ -217,5 +219,6 @@
     "You may delete any of your existing tokens if they are no longer needed.": "Du kannst alle vorhandenen Token löschen, wenn sie nicht mehr benötigt werden.",
     "You may not delete your personal team.": "Sie können Ihr persönliches Team nicht löschen.",
     "You may not leave a team that you created.": "Sie können ein von Ihnen erstelltes Team nicht verlassen.",
+    "Your account has been approved!": "Deine Anmeldung zur Videochallenge wurde bestätigt!",
     "Your email address is not verified.": "Deine E-Mail Adresse wurde noch nicht bestätigt."
 }

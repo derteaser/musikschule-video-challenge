@@ -44,7 +44,12 @@
                 </div>
             </x-slot>
             <x-slot name="content">
-                @if ($user->hasVerifiedEmail())
+                @if ($user->hasVerifiedEmail() && $user->getRoleNames()->isEmpty())
+                    <x-jet-dropdown-link href="#" wire:click="approveUserAttendance">
+                        {{ __('Approve Attendance') }}
+                    </x-jet-dropdown-link>
+                @endif
+                @if ($user->hasVerifiedEmail() && $user->getRoleNames()->isEmpty())
                     <x-jet-dropdown-link href="#" wire:click="remindUserOfTerms">
                         {{ __('Remind User of Terms') }}
                     </x-jet-dropdown-link>

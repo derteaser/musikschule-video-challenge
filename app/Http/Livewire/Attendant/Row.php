@@ -13,21 +13,18 @@ class Row extends Component {
     /** @var User */
     public $user;
 
-    /** @var string */
-    public $successMessage;
-
     public function render() {
         return view('livewire.attendant.row');
     }
 
     public function remindUserOfTerms() {
         Mail::to($this->user)->send(new RemindUserOfTerms($this->user));
-        $this->successMessage = __('Reminder successfully sent.');
+        $this->emit('reminderSent');
     }
 
     public function approveUserAttendance() {
         $this->user->assignRole('Student');
         Mail::to($this->user)->send(new ApproveUserAttendance($this->user));
-        $this->successMessage = __('Attendance successfully approved.');
+        $this->emit('attendanceApproved');
     }
 }

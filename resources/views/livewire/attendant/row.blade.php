@@ -56,11 +56,12 @@
                 @endif
             </x-slot>
         </x-jet-dropdown>
-        @if ($successMessage)
-            <div class="bg-green-600 text-white rounded px-2 py-1 text-xs mt-1" wire:loading.class="hidden">
-                {{ $successMessage }}
-            </div>
-        @endif
+        <x-jet-action-message class="mr-3 text-green-800" on="reminderSent">
+            {{ __('Reminder successfully sent.') }}
+        </x-jet-action-message>
+        <x-jet-action-message class="mr-3 text-green-800" on="attendanceApproved">
+            {{ __('Attendance successfully approved.') }}
+        </x-jet-action-message>
     </td>
 </tr>
 

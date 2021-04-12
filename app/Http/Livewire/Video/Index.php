@@ -74,4 +74,16 @@ class Index extends Component {
 
         return $query;
     }
+
+    public function updatingSearchTerm() {
+        $this->resetPage();
+    }
+
+    public function updatingAge() {
+        $this->resetPage();
+    }
+
+    public function updatingMusicalInstrumentId() {
+        $this->resetPage();
+    }
 }

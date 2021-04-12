@@ -36,6 +36,9 @@
     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
         {{ $user->roles->pluck('name')->implode(', ') }}
     </td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+        {{ $user->created_at->format('d.m.Y') }}
+    </td>
     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
         <x-jet-dropdown align="right">
             <x-slot name="trigger">

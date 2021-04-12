@@ -12,7 +12,7 @@ class RemindUserOfTerms extends Mailable {
     use Queueable, SerializesModels;
 
     /** @var User */
-    public $user;
+    public User $user;
 
     /**
      * Create a new message instance.

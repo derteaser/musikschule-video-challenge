@@ -1,18 +1,5 @@
 <div>
-    <div class="mb-8 grid grid-cols-1 md:grid-cols-3 gap-3 px-2 md:px-0">
-        <div>
-            <x-jet-label for="instrument">{{ __('Musical Instrument') }}</x-jet-label>
-            <x-instrument-search-filter id="instrument" class="w-full mt-1" wire:model="musicalInstrumentId"/>
-        </div>
-        <div>
-            <x-jet-label for="age">{{ __('Age') }}</x-jet-label>
-            <x-age-search-filter id="age" class="w-full mt-1" wire:model="age"/>
-        </div>
-        <div>
-            <x-jet-label for="searchTerm">{{ __('Search Term') }}</x-jet-label>
-            <x-jet-input id="searchTerm" type="text" class="mt-1 block w-full" wire:model="searchTerm"/>
-        </div>
-    </div>
+    <x-video-search-filters />
     @if ($videos->isEmpty())
         <div class="bg-red-600 text-white px-4 py-2 rounded-lg">
             {{ __('Sorry, no videos found') }}

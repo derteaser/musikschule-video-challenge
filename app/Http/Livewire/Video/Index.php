@@ -5,14 +5,13 @@ namespace App\Http\Livewire\Video;
 use App\Models\Video;
 use Carbon\Carbon;
 use Illuminate\Database\Query\Builder;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Index extends Component {
 
-    /** @var Collection */
-    public Collection $videos;
+    use WithPagination;
 
     /** @var string|int */
     public $musicalInstrumentId = '';
@@ -24,12 +23,12 @@ class Index extends Component {
     public string $searchTerm = '';
 
     public function render() {
-        $this->videos = $this->prepareVideos();
-
-        return view('livewire.video.index');
+        return view('livewire.video.index', [
+            'videos' => $this->prepareVideos()->paginate(12)
+        ]);
     }
 
-    private function prepareVideos(): Collection {
+    private function prepareVideos(): \Illuminate\Database\Eloquent\Builder {
         $query = Video::query();
 
         if ($this->searchTerm) {
@@ -61,7 +60,7 @@ class Index extends Component {
                 }
 
                 $start = Carbon::now()->startOfDay()->subYears($from);
-                $end = Carbon::now()->endOfDay()->subYears($to)->addYear()->subDay(); // plus 1 year minus a day
+                $end = Carbon::now()->endOfDay()->subYears($to)->addYear()->subDay();
 
                 $query->select('id')->from('users')->whereBetween('birthday', [$start, $end]);
             });
@@ -73,6 +72,6 @@ class Index extends Component {
 
         $query->orderByDesc('created_at');
 
-        return $query->get();
+        return $query;
     }
 }

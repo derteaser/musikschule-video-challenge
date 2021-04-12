@@ -34,4 +34,5 @@
         </div>
         @endforeach
     </div>
+    <div class="mt-8">{{ $videos->links() }}</div>
 </div>

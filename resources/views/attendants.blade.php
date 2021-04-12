@@ -35,6 +35,14 @@
                 <x-slot name="description"></x-slot>
             </x-jet-section-title>
             @livewire('attendant.index', ['filterByRole' => 'Jury'])
+
+            <x-jet-section-border></x-jet-section-border>
+
+            <x-jet-section-title>
+                <x-slot name="title">{{ __('Admins') }}</x-slot>
+                <x-slot name="description"></x-slot>
+            </x-jet-section-title>
+            @livewire('attendant.index', ['filterByRole' => 'Admin'])
         </div>
     </div>
 </x-app-layout>

@@ -40,31 +40,33 @@
         {{ $user->created_at->format('d.m.Y') }}
     </td>
     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-        <x-jet-dropdown align="right">
-            <x-slot name="trigger">
-                <div class="text-right">
-                    <x-jet-button wire:loading.attr="disabled">{{ __('Actions') }}</x-jet-button>
-                </div>
-            </x-slot>
-            <x-slot name="content">
-                @if ($user->hasVerifiedEmail() && $user->getRoleNames()->isEmpty())
-                    <x-jet-dropdown-link href="#" wire:click="approveUserAttendance">
-                        {{ __('Approve Attendance') }}
-                    </x-jet-dropdown-link>
-                @endif
-                @if ($user->hasVerifiedEmail() && $user->getRoleNames()->isEmpty())
-                    <x-jet-dropdown-link href="#" wire:click="remindUserOfTerms">
-                        {{ __('Remind User of Terms') }}
-                    </x-jet-dropdown-link>
-                @endif
-            </x-slot>
-        </x-jet-dropdown>
-        <x-jet-action-message class="mr-3 text-green-800" on="reminderSent">
-            {{ __('Reminder successfully sent.') }}
-        </x-jet-action-message>
-        <x-jet-action-message class="mr-3 text-green-800" on="attendanceApproved">
-            {{ __('Attendance successfully approved.') }}
-        </x-jet-action-message>
+        @if (!$user->hasAnyRole(['Admin', 'Superadmin']))
+            <x-jet-dropdown align="right">
+                <x-slot name="trigger">
+                    <div class="text-right">
+                        <x-jet-button wire:loading.attr="disabled">{{ __('Actions') }}</x-jet-button>
+                    </div>
+                </x-slot>
+                <x-slot name="content">
+                    @if ($user->hasVerifiedEmail() && $user->getRoleNames()->isEmpty())
+                        <x-jet-dropdown-link href="#" wire:click="approveUserAttendance">
+                            {{ __('Approve Attendance') }}
+                        </x-jet-dropdown-link>
+                    @endif
+                    @if ($user->hasVerifiedEmail() && $user->getRoleNames()->isEmpty())
+                        <x-jet-dropdown-link href="#" wire:click="remindUserOfTerms">
+                            {{ __('Remind User of Terms') }}
+                        </x-jet-dropdown-link>
+                    @endif
+                </x-slot>
+            </x-jet-dropdown>
+            <x-jet-action-message class="mr-3 text-green-800" on="reminderSent">
+                {{ __('Reminder successfully sent.') }}
+            </x-jet-action-message>
+            <x-jet-action-message class="mr-3 text-green-800" on="attendanceApproved">
+                {{ __('Attendance successfully approved.') }}
+            </x-jet-action-message>
+        @endif
     </td>
 </tr>
 

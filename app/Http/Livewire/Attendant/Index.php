@@ -3,16 +3,12 @@
 namespace App\Http\Livewire\Attendant;
 
 use App\Models\User;
-use Illuminate\Support\Collection;
 use Livewire\Component;
 use Spatie\Permission\Models\Role;
 
 class Index extends Component {
 
     const NO_ROLES = 'NONE';
-
-    /** @var Collection */
-    public Collection $users;
 
     /** @var string */
     public string $filterByRole;
@@ -34,6 +30,24 @@ class Index extends Component {
     }
 
     public function render() {
-        return view('livewire.attendant.index');
+        switch ($this->filterByRole) {
+            case null:
+                $users = User::query()->orderBy('name');
+                break;
+            case self::NO_ROLES:
+                $users = User::withCount('roles')->has('roles', 0)->orderByDesc('created_at');
+                break;
+            default:
+                /** @var Role $role */
+                $role = Role::where('name', $this->filterByRole)->first();
+                $users = User::whereHas('roles', function ($q) use ($role) {
+                    $q->where('id', $role->id);
+                });
+                break;
+        }
+
+        return view('livewire.attendant.index', [
+            'users' => $users->paginate(20)
+        ]);
     }
 }

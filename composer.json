@@ -1,12 +1,14 @@
 {
-    "name": "laravel/laravel",
+    "name": "foev-musikschule/video-challenge",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Musikschule Rhein-Kreis Neuss Videochallenge",
     "keywords": [
-        "framework",
-        "laravel"
+        "website",
+        "contest",
+        "music",
+        "video"
     ],
-    "license": "MIT",
+    "license": "proprietary",
     "require": {
         "php": "^7.4|^8.0",
         "calebporzio/sushi": "^2.1",

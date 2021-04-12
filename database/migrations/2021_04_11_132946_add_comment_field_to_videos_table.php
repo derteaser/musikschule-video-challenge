@@ -14,7 +14,7 @@ class AddCommentFieldToVideosTable extends Migration
     public function up()
     {
         Schema::table('videos', function (Blueprint $table) {
-            $table->text('comment');
+            $table->text('comment')->default('');
         });
     }
 

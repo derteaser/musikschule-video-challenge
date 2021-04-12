@@ -8,7 +8,7 @@ use Livewire\Component;
 class Player extends Component
 {
     /** @var Video */
-    public $video;
+    public Video $video;
 
     public function render()
     {

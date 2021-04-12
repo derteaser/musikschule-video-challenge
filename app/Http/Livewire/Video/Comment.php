@@ -13,12 +13,12 @@ use Livewire\Component;
 class Comment extends Component {
 
     /** @var Video $video */
-    public $video;
+    public Video $video;
 
     /**
      * @var string
      */
-    public $comment;
+    public string $comment;
 
     /**
      * Prepare the component.

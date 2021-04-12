@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 8.28.1.
+ * Generated for Laravel 8.36.2.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -1255,6 +1255,7 @@
          * @param \Closure|string $concrete
          * @return mixed 
          * @throws \Illuminate\Contracts\Container\BindingResolutionException
+         * @throws \Illuminate\Contracts\Container\CircularDependencyException
          * @static 
          */ 
         public static function build($concrete)
@@ -1719,6 +1720,29 @@
                         return $instance->hasResolvedGuards();
         }
                     /**
+         * Forget all of the resolved guard instances.
+         *
+         * @return \Illuminate\Auth\AuthManager 
+         * @static 
+         */ 
+        public static function forgetGuards()
+        {
+                        /** @var \Illuminate\Auth\AuthManager $instance */
+                        return $instance->forgetGuards();
+        }
+                    /**
+         * Set the application instance used by the manager.
+         *
+         * @param \Illuminate\Contracts\Foundation\Application $app
+         * @return \Illuminate\Auth\AuthManager 
+         * @static 
+         */ 
+        public static function setApplication($app)
+        {
+                        /** @var \Illuminate\Auth\AuthManager $instance */
+                        return $instance->setApplication($app);
+        }
+                    /**
          * Create the user provider implementation for the driver.
          *
          * @param string|null $provider
@@ -1922,6 +1946,7 @@
          * @param string $password
          * @param string $attribute
          * @return bool|null 
+         * @throws \Illuminate\Auth\AuthenticationException
          * @static 
          */ 
         public static function logoutOtherDevices($password, $attribute = 'password')
@@ -2716,6 +2741,40 @@
                         /** @var \Illuminate\Broadcasting\BroadcastManager $instance */
                         return $instance->extend($driver, $callback);
         }
+                    /**
+         * Get the application instance used by the manager.
+         *
+         * @return \Illuminate\Contracts\Foundation\Application 
+         * @static 
+         */ 
+        public static function getApplication()
+        {
+                        /** @var \Illuminate\Broadcasting\BroadcastManager $instance */
+                        return $instance->getApplication();
+        }
+                    /**
+         * Set the application instance used by the manager.
+         *
+         * @param \Illuminate\Contracts\Foundation\Application $app
+         * @return \Illuminate\Broadcasting\BroadcastManager 
+         * @static 
+         */ 
+        public static function setApplication($app)
+        {
+                        /** @var \Illuminate\Broadcasting\BroadcastManager $instance */
+                        return $instance->setApplication($app);
+        }
+                    /**
+         * Forget all of the resolved driver instances.
+         *
+         * @return \Illuminate\Broadcasting\BroadcastManager 
+         * @static 
+         */ 
+        public static function forgetDrivers()
+        {
+                        /** @var \Illuminate\Broadcasting\BroadcastManager $instance */
+                        return $instance->forgetDrivers();
+        }
          
     }
             /**
@@ -2739,7 +2798,7 @@
                     /**
          * Dispatch a command to its appropriate handler in the current process.
          * 
-         * Queuable jobs will be dispatched to the "sync" queue.
+         * Queueable jobs will be dispatched to the "sync" queue.
          *
          * @param mixed $command
          * @param mixed $handler
@@ -4001,6 +4060,17 @@
                         return $instance->getQueuedCookies();
         }
                     /**
+         * Flush the cookies which have been queued for the next request.
+         *
+         * @return \Illuminate\Cookie\CookieJar 
+         * @static 
+         */ 
+        public static function flushQueuedCookies()
+        {
+                        /** @var \Illuminate\Cookie\CookieJar $instance */
+                        return $instance->flushQueuedCookies();
+        }
+                    /**
          * Register a custom macro.
          *
          * @param string $name
@@ -4595,6 +4665,17 @@
                         $instance->recordsHaveBeenModified($value);
         }
                     /**
+         * Reset the record modification state.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function forgetRecordModificationState()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        $instance->forgetRecordModificationState();
+        }
+                    /**
          * Is Doctrine available?
          *
          * @return bool 
@@ -5101,7 +5182,7 @@
          * Register an event listener with the dispatcher.
          *
          * @param \Closure|string|array $events
-         * @param \Closure|string|null $listener
+         * @param \Closure|string|array|null $listener
          * @return void 
          * @static 
          */ 
@@ -5306,6 +5387,19 @@
         public static function hasMacro($name)
         {
                         return \Illuminate\Events\Dispatcher::hasMacro($name);
+        }
+                    /**
+         * Assert if an event has a listener attached to it.
+         *
+         * @param string $expectedEvent
+         * @param string $expectedListener
+         * @return void 
+         * @static 
+         */ 
+        public static function assertListening($expectedEvent, $expectedListener)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\EventFake $instance */
+                        $instance->assertListening($expectedEvent, $expectedListener);
         }
                     /**
          * Assert if an event was dispatched based on a truth-test callback.
@@ -6223,6 +6317,18 @@
                         /** @var \Illuminate\Auth\Access\Gate $instance */
                         return $instance->policies();
         }
+                    /**
+         * Set the container instance used by the gate.
+         *
+         * @param \Illuminate\Contracts\Container\Container $container
+         * @return \Illuminate\Auth\Access\Gate 
+         * @static 
+         */ 
+        public static function setContainer($container)
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->setContainer($container);
+        }
          
     }
             /**
@@ -6364,6 +6470,40 @@
                         /** @var \Illuminate\Hashing\HashManager $instance */
                         return $instance->getDrivers();
         }
+                    /**
+         * Get the container instance used by the manager.
+         *
+         * @return \Illuminate\Contracts\Container\Container 
+         * @static 
+         */ 
+        public static function getContainer()
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->getContainer();
+        }
+                    /**
+         * Set the container instance used by the manager.
+         *
+         * @param \Illuminate\Contracts\Container\Container $container
+         * @return \Illuminate\Hashing\HashManager 
+         * @static 
+         */ 
+        public static function setContainer($container)
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->setContainer($container);
+        }
+                    /**
+         * Forget all of the resolved driver instances.
+         *
+         * @return \Illuminate\Hashing\HashManager 
+         * @static 
+         */ 
+        public static function forgetDrivers()
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->forgetDrivers();
+        }
          
     }
             /**
@@ -6380,6 +6520,7 @@
      * @method static \Illuminate\Http\Client\PendingRequest bodyFormat(string $format)
      * @method static \Illuminate\Http\Client\PendingRequest contentType(string $contentType)
      * @method static \Illuminate\Http\Client\PendingRequest retry(int $times, int $sleep = 0)
+     * @method static \Illuminate\Http\Client\PendingRequest sink($to)
      * @method static \Illuminate\Http\Client\PendingRequest stub(callable $callback)
      * @method static \Illuminate\Http\Client\PendingRequest timeout(int $seconds)
      * @method static \Illuminate\Http\Client\PendingRequest withBasicAuth(string $username, string $password)
@@ -6391,6 +6532,8 @@
      * @method static \Illuminate\Http\Client\PendingRequest withToken(string $token, string $type = 'Bearer')
      * @method static \Illuminate\Http\Client\PendingRequest withoutRedirecting()
      * @method static \Illuminate\Http\Client\PendingRequest withoutVerifying()
+     * @method static \Illuminate\Http\Client\PendingRequest dump()
+     * @method static \Illuminate\Http\Client\PendingRequest dd()
      * @method static \Illuminate\Http\Client\Response delete(string $url, array $data = [])
      * @method static \Illuminate\Http\Client\Response get(string $url, array $query = [])
      * @method static \Illuminate\Http\Client\Response head(string $url, array $query = [])
@@ -7142,7 +7285,7 @@
          * Get a mailer instance by name.
          *
          * @param string|null $name
-         * @return \Illuminate\Mail\Mailer 
+         * @return \Illuminate\Contracts\Mail\Mailer 
          * @static 
          */ 
         public static function mailer($name = null)
@@ -7221,6 +7364,40 @@
         {
                         /** @var \Illuminate\Mail\MailManager $instance */
                         return $instance->extend($driver, $callback);
+        }
+                    /**
+         * Get the application instance used by the manager.
+         *
+         * @return \Illuminate\Contracts\Foundation\Application 
+         * @static 
+         */ 
+        public static function getApplication()
+        {
+                        /** @var \Illuminate\Mail\MailManager $instance */
+                        return $instance->getApplication();
+        }
+                    /**
+         * Set the application instance used by the manager.
+         *
+         * @param \Illuminate\Contracts\Foundation\Application $app
+         * @return \Illuminate\Mail\MailManager 
+         * @static 
+         */ 
+        public static function setApplication($app)
+        {
+                        /** @var \Illuminate\Mail\MailManager $instance */
+                        return $instance->setApplication($app);
+        }
+                    /**
+         * Forget all of the resolved mailer instances.
+         *
+         * @return \Illuminate\Mail\MailManager 
+         * @static 
+         */ 
+        public static function forgetMailers()
+        {
+                        /** @var \Illuminate\Mail\MailManager $instance */
+                        return $instance->forgetMailers();
         }
                     /**
          * Assert if a mailable was sent based on a truth-test callback.
@@ -7566,6 +7743,40 @@
                         return $instance->getDrivers();
         }
                     /**
+         * Get the container instance used by the manager.
+         *
+         * @return \Illuminate\Contracts\Container\Container 
+         * @static 
+         */ 
+        public static function getContainer()
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Notifications\ChannelManager $instance */
+                        return $instance->getContainer();
+        }
+                    /**
+         * Set the container instance used by the manager.
+         *
+         * @param \Illuminate\Contracts\Container\Container $container
+         * @return \Illuminate\Notifications\ChannelManager 
+         * @static 
+         */ 
+        public static function setContainer($container)
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Notifications\ChannelManager $instance */
+                        return $instance->setContainer($container);
+        }
+                    /**
+         * Forget all of the resolved driver instances.
+         *
+         * @return \Illuminate\Notifications\ChannelManager 
+         * @static 
+         */ 
+        public static function forgetDrivers()
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Notifications\ChannelManager $instance */
+                        return $instance->forgetDrivers();
+        }
+                    /**
          * Assert if a notification was sent based on a truth-test callback.
          *
          * @param mixed $notifiable
@@ -7702,7 +7913,7 @@
      * 
      *
      * @method static mixed reset(array $credentials, \Closure $callback)
-     * @method static string sendResetLink(array $credentials)
+     * @method static string sendResetLink(array $credentials, \Closure $callback = null)
      * @method static \Illuminate\Contracts\Auth\CanResetPassword getUser(array $credentials)
      * @method static string createToken(\Illuminate\Contracts\Auth\CanResetPassword $user)
      * @method static void deleteToken(\Illuminate\Contracts\Auth\CanResetPassword $user)
@@ -7912,6 +8123,29 @@
         {
                         /** @var \Illuminate\Queue\QueueManager $instance */
                         return $instance->getName($connection);
+        }
+                    /**
+         * Get the application instance used by the manager.
+         *
+         * @return \Illuminate\Contracts\Foundation\Application 
+         * @static 
+         */ 
+        public static function getApplication()
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        return $instance->getApplication();
+        }
+                    /**
+         * Set the application instance used by the manager.
+         *
+         * @param \Illuminate\Contracts\Foundation\Application $app
+         * @return \Illuminate\Queue\QueueManager 
+         * @static 
+         */ 
+        public static function setApplication($app)
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        return $instance->setApplication($app);
         }
                     /**
          * Assert if a job was pushed based on a truth-test callback.
@@ -8187,13 +8421,24 @@
                     /**
          * Register a callback to be executed when creating job payloads.
          *
-         * @param callable $callback
+         * @param callable|null $callback
          * @return void 
          * @static 
          */ 
         public static function createPayloadUsing($callback)
         {            //Method inherited from \Illuminate\Queue\Queue         
                         \Illuminate\Queue\SyncQueue::createPayloadUsing($callback);
+        }
+                    /**
+         * Get the container instance being used by the connection.
+         *
+         * @return \Illuminate\Container\Container 
+         * @static 
+         */ 
+        public static function getContainer()
+        {            //Method inherited from \Illuminate\Queue\Queue         
+                        /** @var \Illuminate\Queue\SyncQueue $instance */
+                        return $instance->getContainer();
         }
                     /**
          * Set the IoC container instance.
@@ -9839,7 +10084,7 @@
                         return $instance->getAcceptableContentTypes();
         }
                     /**
-         * Returns true if the request is a XMLHttpRequest.
+         * Returns true if the request is an XMLHttpRequest.
          * 
          * It works if your JavaScript library sets an X-Requested-With HTTP header.
          * It is known to work with common JavaScript frameworks:
@@ -11541,6 +11786,18 @@
                         return \Illuminate\Routing\Router::uniqueMiddleware($middleware);
         }
                     /**
+         * Set the container instance used by the router.
+         *
+         * @param \Illuminate\Container\Container $container
+         * @return \Illuminate\Routing\Router 
+         * @static 
+         */ 
+        public static function setContainer($container)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->setContainer($container);
+        }
+                    /**
          * Register a custom macro.
          *
          * @param string $name
@@ -12033,6 +12290,40 @@
         {            //Method inherited from \Illuminate\Support\Manager         
                         /** @var \Illuminate\Session\SessionManager $instance */
                         return $instance->getDrivers();
+        }
+                    /**
+         * Get the container instance used by the manager.
+         *
+         * @return \Illuminate\Contracts\Container\Container 
+         * @static 
+         */ 
+        public static function getContainer()
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Session\SessionManager $instance */
+                        return $instance->getContainer();
+        }
+                    /**
+         * Set the container instance used by the manager.
+         *
+         * @param \Illuminate\Contracts\Container\Container $container
+         * @return \Illuminate\Session\SessionManager 
+         * @static 
+         */ 
+        public static function setContainer($container)
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Session\SessionManager $instance */
+                        return $instance->setContainer($container);
+        }
+                    /**
+         * Forget all of the resolved driver instances.
+         *
+         * @return \Illuminate\Session\SessionManager 
+         * @static 
+         */ 
+        public static function forgetDrivers()
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Session\SessionManager $instance */
+                        return $instance->forgetDrivers();
         }
                     /**
          * Start the session, reading the data from a handler.
@@ -13776,6 +14067,29 @@
                         /** @var \Illuminate\Validation\Factory $instance */
                         $instance->setPresenceVerifier($presenceVerifier);
         }
+                    /**
+         * Get the container instance used by the validation factory.
+         *
+         * @return \Illuminate\Contracts\Container\Container 
+         * @static 
+         */ 
+        public static function getContainer()
+        {
+                        /** @var \Illuminate\Validation\Factory $instance */
+                        return $instance->getContainer();
+        }
+                    /**
+         * Set the container instance used by the validation factory.
+         *
+         * @param \Illuminate\Contracts\Container\Container $container
+         * @return \Illuminate\Validation\Factory 
+         * @static 
+         */ 
+        public static function setContainer($container)
+        {
+                        /** @var \Illuminate\Validation\Factory $instance */
+                        return $instance->setContainer($container);
+        }
          
     }
             /**
@@ -14714,7 +15028,7 @@
          *
          * @param string $file The asset to upload.
          * @param array $options The optional parameters. See the upload API documentation.
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @throws ApiError
          * @see https://cloudinary.com/documentation/image_upload_api_reference#upload_method
          * @static 
@@ -14761,7 +15075,7 @@
          * @param string $file The asset to upload.
          * @param string $uploadPreset The name of an upload preset.
          * @param array $options The optional parameters. See the upload API documentation.
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @throws ApiError
          * @see https://cloudinary.com/documentation/image_upload_api_reference#unsigned_upload_syntax
          * @static 
@@ -15084,7 +15398,7 @@
          * 
          *
          * @param $publicId
-         * @return \CloudinaryLabs\CloudinaryLaravel\ImageTag 
+         * @return \Cloudinary\Tag\ImageTag 
          * @static 
          */ 
         public static function getImageTag($publicId)
@@ -15096,7 +15410,7 @@
          * 
          *
          * @param $publicId
-         * @return \CloudinaryLabs\CloudinaryLaravel\VideoTag 
+         * @return \Cloudinary\Tag\VideoTag 
          * @static 
          */ 
         public static function getVideoTag($publicId)
@@ -15110,7 +15424,7 @@
          * @param string $tag The name of the tag to add.
          * @param array $publicIds The public IDs of the assets to add the tag to.
          * @param array $options The optional parameters. See the upload API documentation.
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @see https://cloudinary.com/documentation/image_upload_api_reference#tags_method
          * @static 
          */ 
@@ -15137,7 +15451,7 @@
          * @param string $tag The name of the tag to remove.
          * @param array|string $publicIds The public IDs of the assets to remove the tags from.
          * @param array $options The optional parameters. See the upload API documentation.
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @see https://cloudinary.com/documentation/image_upload_api_reference#tags_method
          * @static 
          */ 
@@ -15163,7 +15477,7 @@
          *
          * @param array $publicIds The public IDs of the assets to remove all tags from.
          * @param array $options The optional parameters. See the upload API documentation.
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @see https://cloudinary.com/documentation/image_upload_api_reference#tags_method
          * @static 
          */ 
@@ -15190,7 +15504,7 @@
          * @param string $tag The new tag with which to replace the existing tags.
          * @param array|string $publicIds The public IDs of the assets to replace the tags of.
          * @param array $options The optional parameters. See the upload API documentation.
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @see https://cloudinary.com/documentation/image_upload_api_reference#tags_method
          * @static 
          */ 
@@ -15220,7 +15534,7 @@
          *
          * @param string $tag The tag that indicates which images to include in the sprite.
          * @param array $options The optional parameters. See the upload API documentation.
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @see https://cloudinary.com/documentation/image_upload_api_reference#sprite_method
          * @static 
          */ 
@@ -15262,7 +15576,7 @@
          *
          * @param $tag
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function generatePDFAsync($tag, $options = [])
@@ -15275,7 +15589,7 @@
          *
          * @param $tag
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function generateAnimatedGIF($tag, $options = [])
@@ -15288,7 +15602,7 @@
          *
          * @param $tag
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function generateAnimatedPNG($tag, $options = [])
@@ -15301,7 +15615,7 @@
          *
          * @param $tag
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function generateAnimatedPNGAsync($tag, $options = [])
@@ -15314,7 +15628,7 @@
          *
          * @param $tag
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function generateAnimatedWEBP($tag, $options = [])
@@ -15327,7 +15641,7 @@
          *
          * @param $tag
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function generateAnimatedWEBPAsync($tag, $options = [])
@@ -15340,7 +15654,7 @@
          *
          * @param $tag
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function generateAnimatedMP4($tag, $options = [])
@@ -15353,7 +15667,7 @@
          *
          * @param $tag
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function generateAnimatedMP4Async($tag, $options = [])
@@ -15366,7 +15680,7 @@
          *
          * @param $tag
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function generateAnimatedWEBM($tag, $options = [])
@@ -15379,7 +15693,7 @@
          *
          * @param $tag
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function generateAnimatedWEBMAsync($tag, $options = [])
@@ -15392,7 +15706,7 @@
          *
          * @param $tag
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function multi($tag, $options = [])
@@ -15405,7 +15719,7 @@
          *
          * @param $tag
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\PromiseInterface 
+         * @return \GuzzleHttp\Promise\PromiseInterface 
          * @static 
          */ 
         public static function multiAsync($tag, $options = [])
@@ -15418,7 +15732,7 @@
          *
          * @param $publicId
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function explode($publicId, $options = [])
@@ -15431,7 +15745,7 @@
          *
          * @param $publicId
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\PromiseInterface 
+         * @return \GuzzleHttp\Promise\PromiseInterface 
          * @static 
          */ 
         public static function explodeAsync($publicId, $options = [])
@@ -15444,7 +15758,7 @@
          *
          * @param string $text The text string to generate an image for.
          * @param array $options The optional parameters.  See the upload API documentation.
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @see https://cloudinary.com/documentation/image_upload_api_reference#text_method
          * @static 
          */ 
@@ -15458,7 +15772,7 @@
          *
          * @param $text
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\PromiseInterface 
+         * @return \GuzzleHttp\Promise\PromiseInterface 
          * @static 
          */ 
         public static function generateImageFromTextAsync($text, $options = [])
@@ -15471,7 +15785,7 @@
          *
          * @param array $options
          * @param null $targetFormat
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function createArchive($options = [], $targetFormat = null)
@@ -15484,7 +15798,7 @@
          *
          * @param array $options
          * @param null $targetFormat
-         * @return \CloudinaryLabs\CloudinaryLaravel\PromiseInterface 
+         * @return \GuzzleHttp\Promise\PromiseInterface 
          * @static 
          */ 
         public static function createArchiveAsync($options = [], $targetFormat = null)
@@ -15496,7 +15810,7 @@
          * 
          *
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function createZip($options = [])
@@ -15508,7 +15822,7 @@
          * 
          *
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\PromiseInterface 
+         * @return \GuzzleHttp\Promise\PromiseInterface 
          * @static 
          */ 
         public static function createZipAsync($options = [])
@@ -15546,7 +15860,7 @@
          * @param $context
          * @param array $publicIds
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function addContext($context, $publicIds = [], $options = [])
@@ -15560,7 +15874,7 @@
          * @param $context
          * @param array $publicIds
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\PromiseInterface 
+         * @return \GuzzleHttp\Promise\PromiseInterface 
          * @static 
          */ 
         public static function addContextAsync($context, $publicIds = [], $options = [])
@@ -15573,7 +15887,7 @@
          *
          * @param array $publicIds
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function removeAllContext($publicIds = [], $options = [])
@@ -15586,7 +15900,7 @@
          *
          * @param array $publicIds
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\PromiseInterface 
+         * @return \GuzzleHttp\Promise\PromiseInterface 
          * @static 
          */ 
         public static function removeAllContextAsync($publicIds = [], $options = [])
@@ -15599,7 +15913,7 @@
          *
          * @param $publicId
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\ApiResponse 
+         * @return \Cloudinary\Api\ApiResponse 
          * @static 
          */ 
         public static function destroy($publicId, $options = [])
@@ -15612,7 +15926,7 @@
          *
          * @param $publicId
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\PromiseInterface 
+         * @return \GuzzleHttp\Promise\PromiseInterface 
          * @static 
          */ 
         public static function destroyAsync($publicId, $options = [])
@@ -15640,7 +15954,7 @@
          * @param $from
          * @param $to
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\PromiseInterface 
+         * @return \GuzzleHttp\Promise\PromiseInterface 
          * @static 
          */ 
         public static function renameAsync($from, $to, $options = [])
@@ -15666,7 +15980,7 @@
          *
          * @param $publicId
          * @param array $options
-         * @return \CloudinaryLabs\CloudinaryLaravel\PromiseInterface 
+         * @return \GuzzleHttp\Promise\PromiseInterface 
          * @static 
          */ 
         public static function explicitAsync($publicId, $options = [])
@@ -15694,6 +16008,27 @@
         public static function register($apiKey, $apiSecret = null, $contextDetector = null, $container = null)
         {
                         return \Facade\FlareClient\Flare::register($apiKey, $apiSecret, $contextDetector, $container);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function determineVersionUsing($determineVersionCallable)
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->determineVersionUsing($determineVersionCallable);
+        }
+                    /**
+         * 
+         *
+         * @return null|string 
+         * @static 
+         */ 
+        public static function version()
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->version();
         }
                     /**
          * 
@@ -15850,6 +16185,16 @@
          *
          * @static 
          */ 
+        public static function censorRequestBodyFields($fieldNames)
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->censorRequestBodyFields($fieldNames);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
         public static function createReport($throwable)
         {
                         /** @var \Facade\FlareClient\Flare $instance */
@@ -15950,7 +16295,7 @@
                     /**
          * 
          *
-         * @return \Jenssegers\Agent\CrawlerDetect 
+         * @return \Jaybizzle\CrawlerDetect\CrawlerDetect 
          * @static 
          */ 
         public static function getCrawlerDetect()
@@ -18176,6 +18521,34 @@ namespace  {
             {
                                 /** @var \Illuminate\Database\Eloquent\Builder $instance */
                                 return $instance->eachById($callback, $count, $column, $alias);
+            }
+             
+                /**
+             * Query lazily, by chunks of the given size.
+             *
+             * @param int $chunkSize
+             * @return \Illuminate\Support\LazyCollection 
+             * @static 
+             */ 
+            public static function lazy($chunkSize = 1000)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->lazy($chunkSize);
+            }
+             
+                /**
+             * Query lazily, by chunking the results of a query by comparing IDs.
+             *
+             * @param int $count
+             * @param string|null $column
+             * @param string|null $alias
+             * @return \Illuminate\Support\LazyCollection 
+             * @static 
+             */ 
+            public static function lazyById($chunkSize = 1000, $column = null, $alias = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->lazyById($chunkSize, $column, $alias);
             }
              
                 /**

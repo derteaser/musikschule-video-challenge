@@ -3,8 +3,6 @@
 namespace App\Actions\Video;
 
 use App\Models\Video;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\ValidationException;
 
 class HideVideo {
 

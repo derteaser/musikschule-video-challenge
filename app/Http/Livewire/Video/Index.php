@@ -12,16 +12,16 @@ use Livewire\Component;
 class Index extends Component {
 
     /** @var Collection */
-    public $videos;
+    public Collection $videos;
 
     /** @var int */
-    public $musicalInstrumentId;
+    public int $musicalInstrumentId;
 
     /** @var string|int */
     public $age;
 
     /** @var string */
-    public $searchTerm;
+    public string $searchTerm;
 
     public function render() {
         $this->videos = $this->prepareVideos();

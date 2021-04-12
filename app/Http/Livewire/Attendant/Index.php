@@ -12,10 +12,10 @@ class Index extends Component {
     const NO_ROLES = 'NONE';
 
     /** @var Collection */
-    public $users;
+    public Collection $users;
 
     /** @var string */
-    public $filterByRole;
+    public string $filterByRole;
 
     public function mount() {
         switch ($this->filterByRole) {

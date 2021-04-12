@@ -6,11 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Sushi\Sushi;
 
+/**
+ * @mixin IdeHelperMusicalInstrument
+ */
 class MusicalInstrument extends Model {
 
     use Sushi;
 
-    protected $rows = [
+    protected array $rows = [
         ['id' => 1, 'name' => 'Klavier'],
         ['id' => 2, 'name' => 'Keyboard'],
         ['id' => 3, 'name' => 'Cembalo'],

@@ -14,14 +14,14 @@ class Index extends Component {
     /** @var Collection */
     public Collection $videos;
 
-    /** @var int */
-    public int $musicalInstrumentId;
+    /** @var string|int */
+    public $musicalInstrumentId = '';
 
     /** @var string|int */
-    public $age;
+    public $age = '';
 
     /** @var string */
-    public string $searchTerm;
+    public string $searchTerm = '';
 
     public function render() {
         $this->videos = $this->prepareVideos();

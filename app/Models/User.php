@@ -8,7 +8,6 @@ use Cloudinary\Transformation\FocusOn;
 use Cloudinary\Transformation\Gravity;
 use Cloudinary\Transformation\Resize;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
@@ -23,37 +22,7 @@ use Lab404\Impersonate\Models\Impersonate;
 use Laravel\Sanctum\HasApiTokens;
 
 /**
- * Class User
- *
- * @package App\Models
- * @property int $id
- * @property string $name
- * @property string $nickname
- * @property string $city
- * @property string $teacher
- * @property string $email
- * @property string $profile_photo_url
- * @property \Illuminate\Support\Carbon|null $email_verified_at
- * @property \Illuminate\Support\Carbon $birthday
- * @property string $password
- * @property string|null $two_factor_secret
- * @property string|null $two_factor_recovery_codes
- * @property string|null $remember_token
- * @property int|null $current_team_id
- * @property string|null $profile_photo_path
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
- * @property-read int|null $notifications_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Permission\Models\Permission[] $permissions
- * @property-read int|null $permissions_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Permission\Models\Role[] $roles
- * @property-read int|null $roles_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Laravel\Sanctum\PersonalAccessToken[] $tokens
- * @property-read int|null $tokens_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Video[] $videos
- * @property-read int|null $videos_count
- * @mixin \Eloquent
+ * @mixin IdeHelperUser
  */
 class User extends Authenticatable implements MustVerifyEmail {
     use HasApiTokens;

@@ -1,10 +1,4 @@
 version: 2
-registries:
-  git-bitbucket-org:
-    type: git
-    url: https://bitbucket.org
-    username: derteaser@gmail.com
-    password: "${{secrets.GIT_BITBUCKET_ORG_PASSWORD}}"
 updates:
 - package-ecosystem: composer
   directory: "/"
@@ -16,8 +10,6 @@ updates:
   - derteaser
   assignees:
   - derteaser
-  registries:
-  - git-bitbucket-org
 - package-ecosystem: npm
   directory: "/"
   schedule:
@@ -26,5 +18,3 @@ updates:
   open-pull-requests-limit: 10
   assignees:
   - derteaser
-  registries:
-  - git-bitbucket-org

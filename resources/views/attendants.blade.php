@@ -14,35 +14,13 @@
                 <x-jet-banner />
             @endif
 
-            <x-jet-section-title>
-                <x-slot name="title">{{ __('New Registrations') }}</x-slot>
-                <x-slot name="description"></x-slot>
-            </x-jet-section-title>
-            @livewire('attendant.index', ['filterByRole' => \App\Http\Livewire\Attendant\Index::NO_ROLES])
-
+            @livewire('attendant.index', ['title' => __('New Registrations'), 'filterByRole' => \App\Http\Livewire\Attendant\Index::NO_ROLES])
             <x-jet-section-border></x-jet-section-border>
-
-            <x-jet-section-title>
-                <x-slot name="title">{{ __('Students') }}</x-slot>
-                <x-slot name="description"></x-slot>
-            </x-jet-section-title>
-            @livewire('attendant.index', ['filterByRole' => 'Student'])
-
+            @livewire('attendant.index', ['title' => __('Students'), 'filterByRole' => 'Student'])
             <x-jet-section-border></x-jet-section-border>
-
-            <x-jet-section-title>
-                <x-slot name="title">{{ __('Jury') }}</x-slot>
-                <x-slot name="description"></x-slot>
-            </x-jet-section-title>
-            @livewire('attendant.index', ['filterByRole' => 'Jury'])
-
+            @livewire('attendant.index', ['title' => __('Jury'), 'filterByRole' => 'Jury'])
             <x-jet-section-border></x-jet-section-border>
-
-            <x-jet-section-title>
-                <x-slot name="title">{{ __('Admins') }}</x-slot>
-                <x-slot name="description"></x-slot>
-            </x-jet-section-title>
-            @livewire('attendant.index', ['filterByRole' => 'Admin'])
+            @livewire('attendant.index', ['title' => __('Admins'), 'filterByRole' => 'Admin'])
         </div>
     </div>
 </x-app-layout>

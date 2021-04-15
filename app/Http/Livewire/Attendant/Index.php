@@ -10,8 +10,8 @@ class Index extends Component {
 
     const NO_ROLES = 'NONE';
 
-    /** @var string */
     public string $filterByRole;
+    public string $title;
 
     public function mount() {
         switch ($this->filterByRole) {

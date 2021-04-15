@@ -19,6 +19,8 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />

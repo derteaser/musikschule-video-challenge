@@ -15,6 +15,8 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">

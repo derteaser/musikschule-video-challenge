@@ -12,7 +12,6 @@ use Livewire\Component;
 
 class Comment extends Component {
 
-    /** @var Video $video */
     public Video $video;
 
     /**
@@ -26,7 +25,7 @@ class Comment extends Component {
      * @return void
      */
     public function mount() {
-        $this->comment = $this->video->comment;
+        $this->comment = $this->video->comment ?? '';
     }
 
     /**

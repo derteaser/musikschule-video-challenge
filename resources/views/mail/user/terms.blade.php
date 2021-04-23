@@ -3,7 +3,7 @@
 
 Hallo {{ $user->name }},
 
-bitte denk daran, dass die Freischaltung für den Upload der Videos nur möglich ist, wenn die Teilnahmeerklärung bis __spätestens zum 22.04.__ an [videochallenge@foev-musikschule.de](mailto:videochallenge@foev-musikschule.de) geschickt wurde. Falls Du das noch nicht gemacht habt, sprich bitte mit Deinen Eltern.
+bitte denk daran, dass die Freischaltung für den Upload der Videos nur möglich ist, wenn die Teilnahmeerklärung an [videochallenge@foev-musikschule.de](mailto:videochallenge@foev-musikschule.de) geschickt wurde. Falls Du das noch nicht gemacht hast, sprich bitte mit Deinen Eltern.
 
 @component('mail::button', ['url' => $url, 'color' => 'primary'])
     Teilnahmeerklärung herunterladen

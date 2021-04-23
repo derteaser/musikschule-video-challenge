@@ -2,13 +2,15 @@ Liebe Schülerinnen und Schüler,
 
 willkommen bei der Videochallenge der Musikschule des Rhein-Kreis Neuss. Wir freuen uns, dass ihr mitmacht.
 
-Bitte denkt daran, dass die Freischaltung für den Upload der Videos nur möglich ist, wenn die [Teilnahmeerklärung](Teilnahmeerklaerung.pdf) bis __spätestens zum 22.04.__ an [videochallenge@foev-musikschule.de](mailto:videochallenge@foev-musikschule.de) geschickt wurde. Falls ihr das noch nicht gemacht habt, sprecht bitte mit euren Eltern.
+Wer es noch nicht gemacht hat: Jetzt ganz schnell registrieren, die Bestätigung der E-Mail nicht vergessen und die [Teilnahmeerklärung](Teilnahmeerklaerung.pdf) an [videochallenge@foev-musikschule.de](mailto:videochallenge@foev-musikschule.de) schicken.
 
-Habt ihr Fragen oder Anregungen? Dann schreibt einfach an [videochallenge@foev-musikschule.de](mailto:videochallenge@foev-musikschule.de).
+__Ab dem 24.04. ist der Upload freigeschaltet__
 
-Bis dahin viel Spaß beim Üben eurer Lieblingsstücke.
+__Ganz wichtig:__ Ein Video pro Registrierung. Geschwister machen also entweder ein Video zusammen oder haben jede/r eine eigene Registrierung. Alles klar?
 
-In der Zeit __vom 24.04. bis zum 08.05.__ habt ihr dann auf dieser Seite die Möglichkeit, eure Videos hochzuladen. Wir sind sehr gespannt, was euch alles einfällt.
+Wenn nicht – schreibt einfach an [videochallenge@foev-musikschule.de](mailto:videochallenge@foev-musikschule.de).
+
+Bis zum 08.05. läuft der Upload. Bitte nicht mehr als 50 MB und irgendwie auch nicht viel mehr als 3:00 Minuten (so ungefähr).
 
 Viele Grüße
 

@@ -20,19 +20,19 @@
         <div class="grid grid-flow-col auto-cols-auto gap-6 mt-2 p-6 bg-gray-100">
             <div>
                 <h4 class="text-xs text-gray-600 uppercase">Instrument</h4>
-                {{ Auth::user()->musicalInstrument()->first()->name }}
+                {{ $video->user()->musicalInstrument()->first()->name }}
             </div>
             <div>
                 <h4 class="text-xs text-gray-600 uppercase">Alter</h4>
-                {{ Auth::user()->age() }}
+                {{ $video->user()->age() }}
             </div>
             <div>
                 <h4 class="text-xs text-gray-600 uppercase">Wohnort</h4>
-                {{ Auth::user()->city }}
+                {{ $video->user()->city }}
             </div>
             <div>
                 <h4 class="text-xs text-gray-600 uppercase">Lehrer/in</h4>
-                {{ Auth::user()->teacher }}
+                {{ $video->user()->teacher }}
             </div>
         </div>
     @endif

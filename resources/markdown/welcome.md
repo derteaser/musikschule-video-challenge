@@ -4,7 +4,7 @@ willkommen bei der Videochallenge der Musikschule des Rhein-Kreis Neuss. Wir fre
 
 Wer es noch nicht gemacht hat: Jetzt ganz schnell registrieren, die Bestätigung der E-Mail nicht vergessen und die [Teilnahmeerklärung](Teilnahmeerklaerung.pdf) an [videochallenge@foev-musikschule.de](mailto:videochallenge@foev-musikschule.de) schicken.
 
-__Ab dem 24.04. ist der Upload freigeschaltet__
+### Ab sofort steht der Upload offen
 
 __Ganz wichtig:__ Ein Video pro Registrierung. Geschwister machen also entweder ein Video zusammen oder haben jede/r eine eigene Registrierung. Alles klar?
 

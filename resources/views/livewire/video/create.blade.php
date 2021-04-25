@@ -11,6 +11,7 @@
                     sources: ['local'],
                     uploadPreset: @json(config('cloudinary.upload_preset')),
                     clientAllowedFormats: ["mp4","mov","avi"],
+                    maxFileSize: 50000000,
                     styles: {
                         palette: {
                             window: "#ffffff",

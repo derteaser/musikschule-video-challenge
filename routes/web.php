@@ -1,10 +1,8 @@
 <?php
 
-use App\Http\Controllers\VideoController;
 use App\Models\Video;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------

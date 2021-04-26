@@ -59,8 +59,10 @@ class Index extends Component {
                         break;
                 }
 
-                $start = Carbon::now()->startOfDay()->subYears($from);
-                $end = Carbon::now()->endOfDay()->subYears($to)->addYear()->subDay();
+                $start = Carbon::now()->startOfDay()->subYears($from)->subYear();
+                \Debugbar::debug($start);
+                $end = Carbon::now()->endOfDay()->subYears($to)->subDay();
+                \Debugbar::debug($end);
 
                 $query->select('id')->from('users')->whereBetween('birthday', [$start, $end]);
             });

@@ -3,6 +3,7 @@
 namespace App\Actions\Fortify;
 
 use App\Models\User;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -34,12 +35,17 @@ class CreateNewUser implements CreatesNewUsers
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
         ])->validate();
 
+        if (Carbon::canBeCreatedFromFormat($input['birthday'], 'Y-m-d')) {
+            $birthday = Carbon::createFromFormat('Y-m-d', $input['birthday']);
+        } else {
+            $birthday = Carbon::createFromFormat('d.m.Y', $input['birthday']);
+        }
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
             'nickname' => $input['nickname'],
             'city' => $input['city'],
-            'birthday' => $input['birthday'],
+            'birthday' => $birthday,
             'teacher' => $input['teacher'],
             'musical_instrument_id' => $input['musical_instrument_id'],
             'password' => Hash::make($input['password']),

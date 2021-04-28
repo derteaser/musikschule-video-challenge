@@ -60,9 +60,7 @@ class Index extends Component {
                 }
 
                 $start = Carbon::now()->startOfDay()->subYears($from)->subYear();
-                \Debugbar::debug($start);
                 $end = Carbon::now()->endOfDay()->subYears($to)->subDay();
-                \Debugbar::debug($end);
 
                 $query->select('id')->from('users')->whereBetween('birthday', [$start, $end]);
             });

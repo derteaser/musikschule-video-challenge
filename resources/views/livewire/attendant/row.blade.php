@@ -58,6 +58,11 @@
                             {{ __('Remind User of Terms') }}
                         </x-jet-dropdown-link>
                     @endif
+                    @if ($user->video)
+                            <x-jet-dropdown-link href="{{ route('dashboard-video', ['id' => $user->video->id]) }}">
+                                {{ __('Video') }}
+                            </x-jet-dropdown-link>
+                    @endif
                 </x-slot>
             </x-jet-dropdown>
             <x-jet-action-message class="mr-3 text-green-800" on="reminderSent">

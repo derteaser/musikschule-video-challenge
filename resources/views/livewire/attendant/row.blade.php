@@ -23,7 +23,11 @@
         <div class="text-sm text-gray-500">{{ $user->teacher }}</div>
     </td>
     <td class="px-6 py-4 whitespace-nowrap">
-        @if ($user->hasVerifiedEmail())
+        @if ($user->video)
+            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-indigo-100 text-indigo-800">
+                                      {{ __('Video uploaded') }}
+                                    </span>
+        @elseif ($user->hasVerifiedEmail())
             <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                                       {{ __('Email verified') }}
                                     </span>
@@ -60,7 +64,7 @@
                     @endif
                     @if ($user->video)
                             <x-jet-dropdown-link href="{{ route('dashboard-video', ['id' => $user->video->id]) }}">
-                                {{ __('Video') }}
+                                {{ __('Show Video') }}
                             </x-jet-dropdown-link>
                     @endif
                 </x-slot>

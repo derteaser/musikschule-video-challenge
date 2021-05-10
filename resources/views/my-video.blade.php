@@ -16,7 +16,7 @@
                 @livewire('video.show', ['video' => $video])
                 <x-jet-section-border />
                 @livewire('video.edit', ['video' => $video])
-            @else
+            @elseif (Auth::user()->can('create video'))
                 <div class="h-full flex flex-col items-center justify-center">
                     @livewire('video.create')
                 </div>

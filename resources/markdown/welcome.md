@@ -1,17 +1,14 @@
-Liebe Schülerinnen und Schüler,
+Liebe Schülerinnen, lieber Schüler,
 
-willkommen bei der Videochallenge der Musikschule des Rhein-Kreis Neuss. Wir freuen uns, dass ihr mitmacht.
+wir hatten mit so ungefähr 50 Videos gerechnet – ihr habt rund 190 geschafft. Wir sind platt und richtig begeistert.
 
-Wer es noch nicht gemacht hat: Jetzt ganz schnell registrieren, die Bestätigung der E-Mail nicht vergessen und die [Teilnahmeerklärung](Teilnahmeerklaerung.pdf) an [videochallenge@foev-musikschule.de](mailto:videochallenge@foev-musikschule.de) schicken.
+Tausend Dank für so viel Spaß in Bild und Ton. Bis zum 05.06.2021 könnt ihr noch alle Beiträge hier in unserer Plattform hören und sehen.
 
-Nach der Registrierung wird der Zugang freigeschaltet. Das erfolgt in der Regel am nächsten Tag. Danach kann das Video hochgeladen werden.
+In der Woche vor Pfingsten werden wir die Gewinner der Gutscheine auslosen und benachrichtigen. Ihr erinnert euch: 20 x 50,00 Euro für euch und eure Musik.
 
-__Ganz wichtig:__ Ein Video pro Registrierung. Geschwister machen also entweder ein Video zusammen oder haben jede/r eine eigene Registrierung. Alles klar?
+Danach werden wir einige Videos auswählen, die ganz besonders gut zeigen, was in unserer Musikschule los ist. Wenn ihr und eure Eltern dann einverstanden seid, dann geht es für euch ins Tonstudio.
 
-Wenn nicht – schreibt einfach an [videochallenge@foev-musikschule.de](mailto:videochallenge@foev-musikschule.de).
+Bis dahin, vielen Dank für eure tollen Beiträge
 
-Bis zum 08.05. läuft der Upload. Bitte nicht mehr als 50 MB und irgendwie auch nicht viel mehr als 3:00 Minuten (so ungefähr).
-
-Viele Grüße
-
-vom Förderverein
+und viele Grüße vom
+Förderverein

@@ -1,6 +1,6 @@
 Liebe Schülerinnen, lieber Schüler,
 
-wir hatten mit so ungefähr 50 Videos gerechnet – ihr habt rund 190 geschafft. Wir sind platt und richtig begeistert.
+wir hatten mit so ungefähr 50 Videos gerechnet – ihr habt 190 geschafft. Wir sind platt und richtig begeistert.
 
 Tausend Dank für so viel Spaß in Bild und Ton. Bis zum 05.06.2021 könnt ihr noch alle Beiträge hier in unserer Plattform hören und sehen.
 

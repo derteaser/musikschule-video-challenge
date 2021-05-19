@@ -36,3 +36,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard/my-video', func
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard/attendants', function () {
     return Auth::user()->hasAnyRole(['Admin', 'Superadmin']) ? view('attendants') : redirect('/dashboard');
 })->name('dashboard-attendants');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard/draw', function () {
+    return Auth::user()->can('draw winners') ? view('draw') : redirect('/dashboard');
+})->name('dashboard-draw');

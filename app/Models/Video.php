@@ -33,6 +33,7 @@ class Video extends Model {
         'cloudinary_public_id',
         'description',
         'comment',
+        'winner',
         'user_id'
     ];
 

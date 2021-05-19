@@ -14,6 +14,7 @@ namespace App\Models{
 /**
  * App\Models\MusicalInstrument
  *
+ * @mixin IdeHelperMusicalInstrument
  * @property int $id
  * @property string|null $name
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $users
@@ -23,7 +24,6 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|MusicalInstrument query()
  * @method static \Illuminate\Database\Eloquent\Builder|MusicalInstrument whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|MusicalInstrument whereName($value)
- * @mixin \Eloquent
  */
 	class IdeHelperMusicalInstrument extends \Eloquent {}
 }
@@ -32,6 +32,7 @@ namespace App\Models{
 /**
  * App\Models\User
  *
+ * @mixin IdeHelperUser
  * @property int $id
  * @property string $name
  * @property string $email
@@ -61,29 +62,28 @@ namespace App\Models{
  * @property-read int|null $tokens_count
  * @property-read \App\Models\Video|null $video
  * @method static \Database\Factories\UserFactory factory(...$parameters)
- * @method static Builder|User newModelQuery()
- * @method static Builder|User newQuery()
- * @method static Builder|User permission($permissions)
- * @method static Builder|User query()
- * @method static Builder|User role($roles, $guard = null)
- * @method static Builder|User whereBirthday($value)
- * @method static Builder|User whereCity($value)
- * @method static Builder|User whereCreatedAt($value)
- * @method static Builder|User whereCurrentTeamId($value)
- * @method static Builder|User whereEmail($value)
- * @method static Builder|User whereEmailVerifiedAt($value)
- * @method static Builder|User whereId($value)
- * @method static Builder|User whereMusicalInstrumentId($value)
- * @method static Builder|User whereName($value)
- * @method static Builder|User whereNickname($value)
- * @method static Builder|User wherePassword($value)
- * @method static Builder|User whereProfilePhotoPath($value)
- * @method static Builder|User whereRememberToken($value)
- * @method static Builder|User whereTeacher($value)
- * @method static Builder|User whereTwoFactorRecoveryCodes($value)
- * @method static Builder|User whereTwoFactorSecret($value)
- * @method static Builder|User whereUpdatedAt($value)
- * @mixin \Eloquent
+ * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|User permission($permissions)
+ * @method static \Illuminate\Database\Eloquent\Builder|User query()
+ * @method static \Illuminate\Database\Eloquent\Builder|User role($roles, $guard = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereBirthday($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereCity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereCurrentTeamId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereEmailVerifiedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereMusicalInstrumentId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereNickname($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User wherePassword($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereProfilePhotoPath($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereTeacher($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereTwoFactorRecoveryCodes($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereTwoFactorSecret($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  */
 	class IdeHelperUser extends \Eloquent implements \Illuminate\Contracts\Auth\MustVerifyEmail {}
 }
@@ -92,6 +92,7 @@ namespace App\Models{
 /**
  * App\Models\Video
  *
+ * @mixin IdeHelperVideo
  * @property int $id
  * @property string $name
  * @property string $description
@@ -101,6 +102,7 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property int $isHidden
  * @property string|null $comment
+ * @property string|null $winner
  * @method static \Illuminate\Database\Eloquent\Builder|Video newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Video newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Video query()
@@ -113,7 +115,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Video whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Video whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Video whereUserId($value)
- * @mixin \Eloquent
+ * @method static \Illuminate\Database\Eloquent\Builder|Video whereWinner($value)
  */
 	class IdeHelperVideo extends \Eloquent {}
 }

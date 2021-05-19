@@ -30,6 +30,11 @@
                             {{ __('Attendants') }}
                         </x-jet-nav-link>
                     @endif
+                    @if (Auth::user()->can('draw winners'))
+                        <x-jet-nav-link href="{{ route('dashboard-draw') }}" :active="request()->routeIs('dashboard-draw')">
+                            {{ __('Draw Winners') }}
+                        </x-jet-nav-link>
+                    @endif
                 </div>
             </div>
 
@@ -172,6 +177,11 @@
             @if (Auth::user()->hasAnyRole(['Admin', 'Superadmin']))
                 <x-jet-responsive-nav-link href="{{ route('dashboard-attendants') }}" :active="request()->routeIs('dashboard-attendants')">
                     {{ __('Attendants') }}
+                </x-jet-responsive-nav-link>
+            @endif
+            @if (Auth::user()->can('draw winners'))
+                <x-jet-responsive-nav-link href="{{ route('dashboard-draw') }}" :active="request()->routeIs('dashboard-draw')">
+                    {{ __('Draw Winners') }}
                 </x-jet-responsive-nav-link>
             @endif
         </div>

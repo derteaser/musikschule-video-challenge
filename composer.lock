@@ -173,16 +173,16 @@
         },
         {
             "name": "calebporzio/sushi",
-            "version": "v2.2.0",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/calebporzio/sushi.git",
-                "reference": "3faf827881c27fde73eb5339586e59b14f5cb408"
+                "reference": "75a2418601296797f6b8bd4cb49b2d95797df102"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/calebporzio/sushi/zipball/3faf827881c27fde73eb5339586e59b14f5cb408",
-                "reference": "3faf827881c27fde73eb5339586e59b14f5cb408",
+                "url": "https://api.github.com/repos/calebporzio/sushi/zipball/75a2418601296797f6b8bd4cb49b2d95797df102",
+                "reference": "75a2418601296797f6b8bd4cb49b2d95797df102",
                 "shasum": ""
             },
             "require": {
@@ -214,7 +214,7 @@
             ],
             "description": "Eloquent's missing \"array\" driver.",
             "support": {
-                "source": "https://github.com/calebporzio/sushi/tree/v2.2.0"
+                "source": "https://github.com/calebporzio/sushi/tree/v2.3.0"
             },
             "funding": [
                 {
@@ -222,7 +222,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-04-16T21:59:24+00:00"
+            "time": "2021-08-12T13:54:53+00:00"
         },
         {
             "name": "cloudinary-labs/cloudinary-laravel",

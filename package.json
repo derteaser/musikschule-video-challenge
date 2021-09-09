@@ -19,7 +19,7 @@
         "lodash": "^4.17.19",
         "postcss": "^8.3.6",
         "postcss-import": "^14.0.2",
-        "tailwindcss": "^2.2.11",
+        "tailwindcss": "^2.2.14",
         "tailwindcss-aspect-ratio": "^3.0.0",
         "tailwindcss-responsive-embed": "^1.0.0"
     }

@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 8.62.0.
+ * Generated for Laravel 8.65.0.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -700,7 +700,7 @@
          * @param int $code
          * @param string $message
          * @param array $headers
-         * @return void 
+         * @return \Illuminate\Foundation\never 
          * @throws \Symfony\Component\HttpKernel\Exception\HttpException
          * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
          * @static 
@@ -708,7 +708,7 @@
         public static function abort($code, $message = '', $headers = [])
         {
                         /** @var \Illuminate\Foundation\Application $instance */
-                        $instance->abort($code, $message, $headers);
+                        return $instance->abort($code, $message, $headers);
         }
                     /**
          * Register a terminating callback with the application.
@@ -2064,6 +2064,18 @@
         {            //Method inherited from \Illuminate\Auth\SessionGuard         
                         /** @var \Lab404\Impersonate\Guard\SessionGuard $instance */
                         return $instance->viaRemember();
+        }
+                    /**
+         * Set the number of minutes the remember me cookie should be valid for.
+         *
+         * @param int $minutes
+         * @return \Lab404\Impersonate\Guard\SessionGuard 
+         * @static 
+         */ 
+        public static function setRememberDuration($minutes)
+        {            //Method inherited from \Illuminate\Auth\SessionGuard         
+                        /** @var \Lab404\Impersonate\Guard\SessionGuard $instance */
+                        return $instance->setRememberDuration($minutes);
         }
                     /**
          * Get the cookie creator instance used by the guard.
@@ -8085,6 +8097,20 @@
                         return $instance->forgetDrivers();
         }
                     /**
+         * Assert if a notification was sent on-demand based on a truth-test callback.
+         *
+         * @param string|\Closure $notification
+         * @param callable|null $callback
+         * @return void 
+         * @throws \Exception
+         * @static 
+         */ 
+        public static function assertSentOnDemand($notification, $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\NotificationFake $instance */
+                        $instance->assertSentOnDemand($notification, $callback);
+        }
+                    /**
          * Assert if a notification was sent based on a truth-test callback.
          *
          * @param mixed $notifiable
@@ -8098,6 +8124,19 @@
         {
                         /** @var \Illuminate\Support\Testing\Fakes\NotificationFake $instance */
                         $instance->assertSentTo($notifiable, $notification, $callback);
+        }
+                    /**
+         * Assert if a notification was sent on-demand a number of times.
+         *
+         * @param string $notification
+         * @param int $times
+         * @return void 
+         * @static 
+         */ 
+        public static function assertSentOnDemandTimes($notification, $times = 1)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\NotificationFake $instance */
+                        $instance->assertSentOnDemandTimes($notification, $times);
         }
                     /**
          * Assert if a notification was sent a number of times.
@@ -10831,7 +10870,7 @@
                     /**
          * Retrieve input from the request as a collection.
          *
-         * @param string|null $key
+         * @param array|string|null $key
          * @return \Illuminate\Support\Collection 
          * @static 
          */ 
@@ -14973,6 +15012,19 @@
                         return $instance->renderComponent();
         }
                     /**
+         * Get an item from the component data that exists above the current component.
+         *
+         * @param string $key
+         * @param mixed $default
+         * @return mixed|null 
+         * @static 
+         */ 
+        public static function getConsumableComponentData($key, $default = null)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->getConsumableComponentData($key, $default);
+        }
+                    /**
          * Start the slot rendering process.
          *
          * @param string $name
@@ -18151,6 +18203,16 @@
                         /** @var \Livewire\LivewireManager $instance */
                         return $instance->shouldDisableBackButtonCache();
         }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function flushState()
+        {
+                        /** @var \Livewire\LivewireManager $instance */
+                        return $instance->flushState();
+        }
          
     }
      
@@ -19582,6 +19644,37 @@ namespace  {
             {
                                 /** @var \Illuminate\Database\Eloquent\Builder $instance */
                                 return $instance->orWhereMorphedTo($relation, $model);
+            }
+             
+                /**
+             * Add a "belongs to" relationship where clause to the query.
+             *
+             * @param \Illuminate\Database\Eloquent\Model $related
+             * @param string $relationship
+             * @param string $boolean
+             * @return \Illuminate\Database\Eloquent\Builder|static 
+             * @throws \Exception
+             * @static 
+             */ 
+            public static function whereBelongsTo($related, $relationshipName = null, $boolean = 'and')
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->whereBelongsTo($related, $relationshipName, $boolean);
+            }
+             
+                /**
+             * Add an "BelongsTo" relationship with an "or where" clause to the query.
+             *
+             * @param \Illuminate\Database\Eloquent\Model $related
+             * @param string $relationship
+             * @return \Illuminate\Database\Eloquent\Builder|static 
+             * @throws \Exception
+             * @static 
+             */ 
+            public static function orWhereBelongsTo($related, $relationshipName = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->orWhereBelongsTo($related, $relationshipName);
             }
              
                 /**
@@ -21566,6 +21659,19 @@ namespace  {
             }
              
                 /**
+             * Update records in a PostgreSQL database using the update from syntax.
+             *
+             * @param array $values
+             * @return int 
+             * @static 
+             */ 
+            public static function updateFrom($values)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->updateFrom($values);
+            }
+             
+                /**
              * Insert or update a record matching the attributes, and fill it with values.
              *
              * @param array $attributes
@@ -21761,13 +21867,13 @@ namespace  {
                 /**
              * Die and dump the current SQL and bindings.
              *
-             * @return void 
+             * @return \Illuminate\Database\Query\never 
              * @static 
              */ 
             public static function dd()
             {
                                 /** @var \Illuminate\Database\Query\Builder $instance */
-                                $instance->dd();
+                                return $instance->dd();
             }
              
                 /**

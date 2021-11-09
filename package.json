@@ -16,7 +16,7 @@
         "autoprefixer": "^10.3.6",
         "axios": "^0.22",
         "bigpicture": "^2.5.3",
-        "laravel-mix": "^6.0.38",
+        "laravel-mix": "^6.0.39",
         "lodash": "^4.17.19",
         "postcss": "^8.3.8",
         "postcss-import": "^14.0.2",

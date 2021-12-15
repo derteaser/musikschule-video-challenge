@@ -28,6 +28,10 @@ class Index extends Component {
         ]);
     }
 
+    public function updatedPaginators($page, $pageName) {
+        $this->dispatchBrowserEvent('pagination-updated', ['page' => $page]);
+    }
+
     private function prepareVideos(): \Illuminate\Database\Eloquent\Builder {
         $query = Video::query();
 

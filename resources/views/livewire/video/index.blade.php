@@ -5,7 +5,7 @@
             {{ __('Sorry, no videos found') }}
         </div>
     @endif
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 container mx-auto" id="videosGrid">
         @foreach($videos as /* @var App\Models\Video $video */ $video)
             <a href="{{ route('dashboard-video', ['id' => $video->id]) }}" class="bg-white overflow-hidden shadow-md sm:rounded-lg group flex flex-col justify-between">
                 <div>
@@ -35,4 +35,9 @@
         @endforeach
     </div>
     <div class="mt-8">{{ $videos->links() }}</div>
+    <script>
+        window.addEventListener('pagination-updated', event => {
+            window.scrollTo(0, 220);
+        })
+    </script>
 </div>

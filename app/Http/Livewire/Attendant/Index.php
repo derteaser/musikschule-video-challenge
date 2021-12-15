@@ -3,15 +3,20 @@
 namespace App\Http\Livewire\Attendant;
 
 use App\Models\User;
+use Illuminate\Database\Eloquent\Collection;
 use Livewire\Component;
+use Livewire\WithPagination;
 use Spatie\Permission\Models\Role;
 
 class Index extends Component {
+
+    use WithPagination;
 
     const NO_ROLES = 'NONE';
 
     public string $filterByRole;
     public string $title;
+    private Collection $users;
 
     public function mount() {
         switch ($this->filterByRole) {
@@ -24,7 +29,7 @@ class Index extends Component {
             default:
                 /** @var Role $role */
                 $role = Role::where('name', $this->filterByRole)->first();
-                $this->users = $role->users->sortBy('name');
+                $this->users = $role ? $role->users->sortBy('name') : Collection::empty();
                 break;
         }
     }

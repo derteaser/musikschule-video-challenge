@@ -55,7 +55,9 @@ Artisan::command('user:delete {id}', function (int $id) {
 
 });
 
-Artisan::command('cloudinary:videos', function () {
+Artisan::command('cloudinary:videos {--O|orphans}', function () {
+    $orphans = $this->option('orphans');
+
     $searchResult = Cloudinary::search()
         ->expression('folder:videos/*')
         ->maxResults(500)
@@ -66,7 +68,7 @@ Artisan::command('cloudinary:videos', function () {
         $cloudinaryVideo = new CloudinaryVideo($resource['public_id']);
         $video = Video::whereCloudinaryPublicId($cloudinaryVideo->getPublicId())->first();
 
-        if ($video) {
+        if ($video && !$orphans) {
             $this->info($cloudinaryVideo->getPublicId() . ' -> ' . $video->id);
         } else {
             $this->error($cloudinaryVideo->getPublicId());

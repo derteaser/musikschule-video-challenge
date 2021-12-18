@@ -2,6 +2,9 @@
 
 use App\Actions\Jetstream\DeleteUser;
 use App\Models\User;
+use App\Models\Video;
+use Cloudinary\Asset\Video as CloudinaryVideo;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 
@@ -50,4 +53,22 @@ Artisan::command('user:delete {id}', function (int $id) {
         $this->info('Account deleted for ID ' . $id);
     }
 
+});
+
+Artisan::command('cloudinary:videos', function () {
+    $searchResult = Cloudinary::search()
+        ->expression('folder:videos/*')
+        ->sortBy('public_id')
+        ->execute();
+
+    foreach ($searchResult['resources'] as $resource) {
+        $cloudinaryVideo = new CloudinaryVideo($resource['public_id']);
+        $video = Video::whereCloudinaryPublicId($cloudinaryVideo->getPublicId())->first();
+
+        if ($video) {
+            $this->info($cloudinaryVideo->getPublicId() . ' -> ' . $video->id);
+        } else {
+            $this->error($cloudinaryVideo->getPublicId());
+        }
+    }
 });

@@ -73,3 +73,20 @@ Artisan::command('cloudinary:videos', function () {
         }
     }
 });
+
+Artisan::command('cloudinary:video {id}', function (string $id) {
+    $searchResult = Cloudinary::search()
+        ->expression('public_id:' . $id)
+        ->execute();
+
+    foreach ($searchResult['resources'] as $resource) {
+        $cloudinaryVideo = new CloudinaryVideo($resource['public_id']);
+        $video = Video::whereCloudinaryPublicId($cloudinaryVideo->getPublicId())->first();
+
+        if ($video) {
+            $this->info($cloudinaryVideo->getPublicId() . ' -> ' . $video->id);
+        } else {
+            $this->error($cloudinaryVideo->getPublicId());
+        }
+    }
+});

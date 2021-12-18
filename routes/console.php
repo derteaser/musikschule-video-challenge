@@ -58,6 +58,7 @@ Artisan::command('user:delete {id}', function (int $id) {
 Artisan::command('cloudinary:videos', function () {
     $searchResult = Cloudinary::search()
         ->expression('folder:videos/*')
+        ->maxResults(500)
         ->sortBy('public_id')
         ->execute();
 

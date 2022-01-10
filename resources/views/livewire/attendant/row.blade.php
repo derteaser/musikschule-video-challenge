@@ -52,6 +52,11 @@
                     </div>
                 </x-slot>
                 <x-slot name="content">
+                    @if (!$user->hasVerifiedEmail())
+                        <x-jet-dropdown-link href="#" wire:click="confirmUserDeletion" wire:loading.attr="disabled">
+                            {{ __('Delete') }}
+                        </x-jet-dropdown-link>
+                    @endif
                     @if ($user->hasVerifiedEmail() && $user->getRoleNames()->isEmpty())
                         <x-jet-dropdown-link href="#" wire:click="approveUserAttendance">
                             {{ __('Approve Attendance') }}
@@ -75,6 +80,26 @@
             <x-jet-action-message class="mr-3 text-green-800" on="attendanceApproved">
                 {{ __('Attendance successfully approved.') }}
             </x-jet-action-message>
+            <!-- Delete User Confirmation Modal -->
+            <x-jet-dialog-modal wire:model="confirmingUserDeletion">
+                <x-slot name="title">
+                    {{ __('Delete') }}
+                </x-slot>
+
+                <x-slot name="content">
+                    {{ __('Are you sure you want to delete this user?') }}
+                </x-slot>
+
+                <x-slot name="footer">
+                    <x-jet-secondary-button wire:click="$toggle('confirmingUserDeletion')" wire:loading.attr="disabled">
+                        {{ __('Nevermind') }}
+                    </x-jet-secondary-button>
+
+                    <x-jet-danger-button class="ml-2" wire:click="deleteUser" wire:loading.attr="disabled">
+                        {{ __('Delete') }}
+                    </x-jet-danger-button>
+                </x-slot>
+            </x-jet-dialog-modal>
         @endif
     </td>
 </tr>

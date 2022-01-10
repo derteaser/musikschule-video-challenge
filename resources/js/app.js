@@ -3,8 +3,8 @@ require('./bootstrap');
 import BigPicture from 'bigpicture'
 import Alpine from "alpinejs";
 
-Alpine.start();
 window.Alpine = Alpine;
+Alpine.start();
 
 (function () {
     const imageLinks = document.querySelectorAll('#publicVideos a');

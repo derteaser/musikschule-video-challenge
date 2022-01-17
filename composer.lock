@@ -1586,29 +1586,35 @@
         },
         {
             "name": "laravel-lang/lang",
-            "version": "10.1.12",
+            "version": "10.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/lang.git",
-                "reference": "dbb5b475cc48d906427255f9a6e557d5075413a1"
+                "reference": "3ba8daee0b86eae97888764cd5c8c3413e5a0224"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/dbb5b475cc48d906427255f9a6e557d5075413a1",
-                "reference": "dbb5b475cc48d906427255f9a6e557d5075413a1",
+                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/3ba8daee0b86eae97888764cd5c8c3413e5a0224",
+                "reference": "3ba8daee0b86eae97888764cd5c8c3413e5a0224",
                 "shasum": ""
             },
             "require": {
-                "ext-json": "*"
+                "ext-json": "*",
+                "php": "^7.3|^8.0"
+            },
+            "conflict": {
+                "laravel-lang/publisher": "<11.2"
             },
             "require-dev": {
                 "dragon-code/pretty-array": "^3.0",
-                "dragon-code/support": "^5.0",
+                "dragon-code/support": "^5.4",
                 "guzzlehttp/guzzle": "^7.3",
+                "laravel-lang/publisher": "^11.2",
                 "laravel/breeze": "^1.2",
                 "laravel/fortify": "^1.7",
                 "laravel/jetstream": "^2.3",
-                "php": "^8.0",
+                "laravel/ui": "^3.4",
+                "orchestra/testbench": "^5.0|^6.0|^7.0",
                 "phpunit/phpunit": "^9.5",
                 "symfony/finder": "^5.2",
                 "symfony/var-dumper": "^5.2",
@@ -1620,6 +1626,11 @@
                 "overtrue/laravel-lang": "Command to add languages in your project"
             },
             "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LaravelLang\\Lang\\": "src"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -1641,7 +1652,7 @@
                 "issues": "https://github.com/Laravel-Lang/lang/issues",
                 "source": "https://github.com/Laravel-Lang/lang"
             },
-            "time": "2021-12-28T19:42:13+00:00"
+            "time": "2022-01-16T10:33:47+00:00"
         },
         {
             "name": "laravel/fortify",

@@ -177,27 +177,27 @@
         },
         {
             "name": "calebporzio/sushi",
-            "version": "v2.3.1",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/calebporzio/sushi.git",
-                "reference": "9139590922edfa1db61e9aa49401889e85ed3b5f"
+                "reference": "cec0768285971add48f3ccebfefad856be6f5078"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/calebporzio/sushi/zipball/9139590922edfa1db61e9aa49401889e85ed3b5f",
-                "reference": "9139590922edfa1db61e9aa49401889e85ed3b5f",
+                "url": "https://api.github.com/repos/calebporzio/sushi/zipball/cec0768285971add48f3ccebfefad856be6f5078",
+                "reference": "cec0768285971add48f3ccebfefad856be6f5078",
                 "shasum": ""
             },
             "require": {
-                "illuminate/database": "^5.8 || ^6.0 || ^7.0 || ^8.0",
-                "illuminate/support": "^5.8 || ^6.0 || ^7.0 || ^8.0",
+                "illuminate/database": "^5.8 || ^6.0 || ^7.0 || ^8.0 || ^9.0",
+                "illuminate/support": "^5.8 || ^6.0 || ^7.0 || ^8.0 || ^9.0",
                 "php": "^7.1.3|^8.0"
             },
             "require-dev": {
                 "doctrine/dbal": "^2.9",
-                "orchestra/database": "3.8.* || 3.9.* || ^4.0 || ^5.0",
-                "orchestra/testbench": "3.8.* || 3.9.* || ^4.0 || ^6.0",
+                "orchestra/database": "3.8.* || 3.9.* || ^4.0 || ^5.0 || ^6.0 || ^7.0",
+                "orchestra/testbench": "3.8.* || 3.9.* || ^4.0 || ^6.0 || ^7.0",
                 "phpunit/phpunit": "^7.5 || ^8.4 || ^9.0"
             },
             "type": "library",
@@ -218,7 +218,7 @@
             ],
             "description": "Eloquent's missing \"array\" driver.",
             "support": {
-                "source": "https://github.com/calebporzio/sushi/tree/v2.3.1"
+                "source": "https://github.com/calebporzio/sushi/tree/v2.4.0"
             },
             "funding": [
                 {
@@ -226,7 +226,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-18T14:28:54+00:00"
+            "time": "2022-01-18T22:48:40+00:00"
         },
         {
             "name": "cloudinary-labs/cloudinary-laravel",

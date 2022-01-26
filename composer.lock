@@ -1587,21 +1587,20 @@
         },
         {
             "name": "laravel-lang/lang",
-            "version": "10.3.0",
+            "version": "10.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/lang.git",
-                "reference": "4088cf7248d2955d5011cc459128eed04246d912"
+                "reference": "00dacab33999a643613159ecb2f0a9b311e785b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/4088cf7248d2955d5011cc459128eed04246d912",
-                "reference": "4088cf7248d2955d5011cc459128eed04246d912",
+                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/00dacab33999a643613159ecb2f0a9b311e785b7",
+                "reference": "00dacab33999a643613159ecb2f0a9b311e785b7",
                 "shasum": ""
             },
             "require": {
-                "ext-json": "*",
-                "php": "^7.3 || ^8.0"
+                "ext-json": "*"
             },
             "conflict": {
                 "laravel-lang/publisher": "<12.0"
@@ -1616,6 +1615,7 @@
                 "laravel/jetstream": "^2.3",
                 "laravel/ui": "^3.4",
                 "orchestra/testbench": "^5.0 || ^6.0 || ^7.0",
+                "php": "^8.0",
                 "phpunit/phpunit": "^9.5",
                 "symfony/finder": "^5.2 || ^6.0",
                 "symfony/var-dumper": "^5.2 || ^6.0",
@@ -1653,7 +1653,13 @@
                 "issues": "https://github.com/Laravel-Lang/lang/issues",
                 "source": "https://github.com/Laravel-Lang/lang"
             },
-            "time": "2022-01-17T15:15:44+00:00"
+            "funding": [
+                {
+                    "url": "https://opencollective.com/laravel-lang",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2022-01-24T21:57:50+00:00"
         },
         {
             "name": "laravel/fortify",

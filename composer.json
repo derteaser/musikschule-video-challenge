@@ -10,7 +10,7 @@
     ],
     "license": "proprietary",
     "require": {
-        "php": "^7.4|^8.0",
+        "php": "^8.0",
         "calebporzio/sushi": "^2.1",
         "cloudinary-labs/cloudinary-laravel": "^1.0.1",
         "fideloper/proxy": "^4.4",

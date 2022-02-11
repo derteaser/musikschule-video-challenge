@@ -16,13 +16,15 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "jantinnerezo/livewire-alert": "^2.2",
         "kineticamobile/lumki": "^0.1.9",
         "laravel-lang/lang": "~10.1",
         "laravel/framework": "^8.12",
         "laravel/jetstream": "^2.1",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
-        "livewire/livewire": "^2.0"
+        "livewire/livewire": "^2.0",
+        "rappasoft/laravel-livewire-tables": "^1.22"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
@@ -63,7 +65,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan vendor:publish --force --tag=livewire:assets --ansi"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""

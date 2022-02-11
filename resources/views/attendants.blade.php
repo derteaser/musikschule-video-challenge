@@ -14,15 +14,7 @@
                 <x-jet-banner />
             @endif
 
-            @livewire('attendant.index', ['title' => __('New Registrations'), 'filterByRole' => \App\Http\Livewire\Attendant\Index::NO_ROLES])
-            <x-jet-section-border></x-jet-section-border>
-            @livewire('attendant.index', ['title' => __('Students'), 'filterByRole' => 'Student'])
-            <x-jet-section-border></x-jet-section-border>
-            @livewire('attendant.index', ['title' => __('Teachers'), 'filterByRole' => 'Teacher'])
-            <x-jet-section-border></x-jet-section-border>
-            @livewire('attendant.index', ['title' => __('Jury'), 'filterByRole' => 'Jury'])
-            <x-jet-section-border></x-jet-section-border>
-            @livewire('attendant.index', ['title' => __('Admins'), 'filterByRole' => 'Admin'])
+            @livewire('attendant-table')
         </div>
     </div>
 </x-app-layout>

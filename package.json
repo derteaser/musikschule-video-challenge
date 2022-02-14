@@ -15,7 +15,7 @@
         "@tailwindcss/typography": "^0.5.1",
         "alpinejs": "^3.9.0",
         "autoprefixer": "^10.4.2",
-        "axios": "^0.25",
+        "axios": "^0.26",
         "bigpicture": "^2.6.1",
         "laravel-mix": "^6.0.41",
         "lodash": "^4.17.21",

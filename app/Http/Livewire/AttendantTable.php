@@ -89,6 +89,21 @@ class AttendantTable extends DataTableComponent {
                 else
                     $query->whereRelation('roles', 'role_id', $roleId);
             })
+            ->when($this->getFilter('status'), function(Builder $query, string $status) {
+                switch ($status) {
+                    case 'video_uploaded':
+                        $query->whereHas('video');
+                        break;
+                    case 'email_not_verified':
+                        $query->whereNull('email_verified_at');
+                        break;
+                    case 'email_verified':
+                        $query->whereNotNull('email_verified_at')->whereDoesntHave('video');
+                        break;
+                    default:
+                        break;
+                }
+            })
             ->when($this->getFilter('created_at'), fn($query, $created_at) => $query->whereDate('created_at', $created_at));
     }
 

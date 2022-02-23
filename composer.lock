@@ -1669,16 +1669,16 @@
         },
         {
             "name": "laravel-lang/lang",
-            "version": "10.4.6",
+            "version": "10.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/lang.git",
-                "reference": "d55a2d75ebbeba50a2fcfea506c5d74b28b32a31"
+                "reference": "a879cab3f19eb8d85ed3a0f1e8c9936c973a0621"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/d55a2d75ebbeba50a2fcfea506c5d74b28b32a31",
-                "reference": "d55a2d75ebbeba50a2fcfea506c5d74b28b32a31",
+                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/a879cab3f19eb8d85ed3a0f1e8c9936c973a0621",
+                "reference": "a879cab3f19eb8d85ed3a0f1e8c9936c973a0621",
                 "shasum": ""
             },
             "require": {
@@ -1741,7 +1741,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2022-02-17T12:38:35+00:00"
+            "time": "2022-02-22T17:57:38+00:00"
         },
         {
             "name": "laravel/fortify",

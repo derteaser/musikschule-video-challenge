@@ -14,7 +14,7 @@
         "calebporzio/sushi": "^2.1",
         "cloudinary-labs/cloudinary-laravel": "^1.0.1",
         "fideloper/proxy": "^4.4",
-        "fruitcake/laravel-cors": "^2.0",
+        "fruitcake/laravel-cors": "^3.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "jantinnerezo/livewire-alert": "^2.2",
         "kineticamobile/lumki": "^0.1.9",

@@ -32,5 +32,4 @@
         </div>
         @livewire('public-videos')
     </div>
-    <livewire:video-player />
 </x-guest-layout>

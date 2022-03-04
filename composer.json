@@ -12,14 +12,13 @@
     "require": {
         "php": "^8.0",
         "calebporzio/sushi": "^2.1",
-        "cloudinary-labs/cloudinary-laravel": "^1.0.1",
-        "fideloper/proxy": "^4.4",
+        "cloudinary-labs/cloudinary-laravel": "^1.0.5",
         "fruitcake/laravel-cors": "^3.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "jantinnerezo/livewire-alert": "^2.2",
-        "kineticamobile/lumki": "^0.1.9",
+        "kineticamobile/lumki": "dev-laravel9",
         "laravel-lang/lang": "~10.1",
-        "laravel/framework": "^8.12",
+        "laravel/framework": "^9.3",
         "laravel/jetstream": "^2.1",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
@@ -29,13 +28,19 @@
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
         "barryvdh/laravel-ide-helper": "^2.9",
-        "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.2",
-        "nunomaduro/collision": "^5.0",
-        "phpunit/phpunit": "^9.3.3"
+        "nunomaduro/collision": "^6.1",
+        "phpunit/phpunit": "^9.3.3",
+        "spatie/ignition": "^1.1"
     },
+    "repositories": [
+        {
+            "type": "github",
+            "url": "https://github.com/derteaser/lumki.git"
+        }
+    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",

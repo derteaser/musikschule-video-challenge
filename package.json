@@ -16,7 +16,7 @@
         "alpinejs": "^3.9.5",
         "autoprefixer": "^10.4.4",
         "axios": "^0.26",
-        "bigpicture": "^2.6.1",
+        "bigpicture": "^2.6.2",
         "laravel-mix": "^6.0.43",
         "lodash": "^4.17.21",
         "postcss": "^8.4.12",

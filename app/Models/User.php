@@ -18,7 +18,6 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\Features;
 use Laravel\Jetstream\HasProfilePhoto;
 use Spatie\Permission\Traits\HasRoles;
-use Lab404\Impersonate\Models\Impersonate;
 use Laravel\Sanctum\HasApiTokens;
 
 /**
@@ -29,7 +28,6 @@ class User extends Authenticatable implements MustVerifyEmail {
     use HasFactory;
     use HasProfilePhoto;
     use HasRoles;
-    use Impersonate;
     use Notifiable;
     use TwoFactorAuthenticatable;
 
@@ -100,7 +98,6 @@ class User extends Authenticatable implements MustVerifyEmail {
      * Update the user's profile photo.
      *
      * @param UploadedFile $photo
-     * @return void
      */
     public function updateProfilePhoto(UploadedFile $photo) {
         tap($this->profile_photo_path, function ($previous) use ($photo) {
@@ -117,8 +114,6 @@ class User extends Authenticatable implements MustVerifyEmail {
 
     /**
      * Delete the user's profile photo.
-     *
-     * @return void
      */
     public function deleteProfilePhoto() {
         if (!Features::managesProfilePhotos() || !$this->profile_photo_path) {
@@ -143,7 +138,7 @@ class User extends Authenticatable implements MustVerifyEmail {
         }
 
         $image = new Image($this->profile_photo_path);
-        return $image->resize(Resize::thumbnail()->width(200)->gravity(Gravity::focusOn(FocusOn::face())))->signUrl(true)->toUrl();
+        return $image->resize(Resize::thumbnail()->width(200)->gravity(Gravity::focusOn(FocusOn::face())))->signUrl()->toUrl();
     }
 
     /**

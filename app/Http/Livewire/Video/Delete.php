@@ -27,8 +27,7 @@ class Delete extends Component {
      *
      * @return void
      */
-    public function confirmVideoDeletion()
-    {
+    public function confirmVideoDeletion() {
         $this->resetErrorBag();
 
         $this->dispatchBrowserEvent('confirming-delete-video');
@@ -43,8 +42,7 @@ class Delete extends Component {
      * @return void
      * @throws Exception
      */
-    public function deleteVideo(DeleteVideo $deleter)
-    {
+    public function deleteVideo(DeleteVideo $deleter) {
         $this->resetErrorBag();
 
         $deleter->delete($this->video);

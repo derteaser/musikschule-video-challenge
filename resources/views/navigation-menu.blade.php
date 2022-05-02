@@ -120,8 +120,20 @@
                                 {{ __('Profile') }}
                             </x-jet-dropdown-link>
 
+                            @if(Auth::user()->hasRole('Superadmin'))
+                                <!-- Role and Permission Management -->
+                                <div class="block px-4 py-2 text-xs text-gray-400">
+                                    {{ __('Settings') }}
+                                </div>
 
-                            @lumki
+                                <x-jet-dropdown-link href="{{ route('dashboard-role') }}">
+                                    {{ __('Roles') }}
+                                </x-jet-dropdown-link>
+
+                                <x-jet-dropdown-link href="{{ route('dashboard-permission') }}">
+                                    {{ __('Permissions') }}
+                                </x-jet-dropdown-link>
+                            @endif
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                 <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
@@ -207,8 +219,20 @@
                     {{ __('Profile') }}
                 </x-jet-responsive-nav-link>
 
+                @if(Auth::user()->hasRole('Superadmin'))
+                    <!-- Role and Permission Management -->
+                    <div class="block px-4 py-2 text-xs text-gray-400">
+                        {{ __('Settings') }}
+                    </div>
 
-                @lumki
+                    <x-jet-responsive-nav-link href="{{ route('dashboard-role') }}" :active="request()->routeIs('dashboard-role')">
+                        {{ __('Roles') }}
+                    </x-jet-responsive-nav-link>
+
+                    <x-jet-responsive-nav-link href="{{ route('dashboard-permission') }}" :active="request()->routeIs('dashboard-permission')">
+                        {{ __('Permissions') }}
+                    </x-jet-responsive-nav-link>
+                @endif
 
                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                     <x-jet-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">

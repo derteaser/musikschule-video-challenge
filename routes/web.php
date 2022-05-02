@@ -1,8 +1,10 @@
 <?php
 
+use App\Models\User;
 use App\Models\Video;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Spatie\Permission\Models\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +16,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::impersonate();
 
 Route::get('/', function () {
     return view('home');
@@ -37,6 +37,18 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard/attendants', fu
     return Auth::user()->hasAnyRole(['Admin', 'Superadmin']) ? view('attendants') : redirect('/dashboard');
 })->name('dashboard-attendants');
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard/user/{user}', function (User $user) {
+    return Auth::user()->hasAnyRole(['Admin', 'Superadmin']) ? view('user', ['user' => $user]) : redirect('/dashboard');
+})->name('dashboard-user');
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard/draw', function () {
     return Auth::user()->can('draw winners') ? view('draw') : redirect('/dashboard');
 })->name('dashboard-draw');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard/permission', function () {
+    return Auth::user()->hasRole('Superadmin') ? view('permission') : redirect('/dashboard');
+})->name('dashboard-permission');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard/role/{role?}', function (?Role $role = null) {
+    return Auth::user()->hasRole('Superadmin') ? view('role', ['role' => $role]) : redirect('/dashboard');
+})->name('dashboard-role');

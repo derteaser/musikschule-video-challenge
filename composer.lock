@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "555b18aed86a37e2b3d08076efb29170",
+    "content-hash": "451dfe6564c61da8d94920b74a1e9251",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -59,6 +59,156 @@
                 "source": "https://github.com/Bacon/BaconQrCode/tree/2.0.7"
             },
             "time": "2022-03-14T02:02:36+00:00"
+        },
+        {
+            "name": "blade-ui-kit/blade-heroicons",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blade-ui-kit/blade-heroicons.git",
+                "reference": "a2749abc7b8eb6149ff643ffa99a3d33a2de7961"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blade-ui-kit/blade-heroicons/zipball/a2749abc7b8eb6149ff643ffa99a3d33a2de7961",
+                "reference": "a2749abc7b8eb6149ff643ffa99a3d33a2de7961",
+                "shasum": ""
+            },
+            "require": {
+                "blade-ui-kit/blade-icons": "^1.1",
+                "illuminate/support": "^8.0|^9.0",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0|^7.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BladeUI\\Heroicons\\BladeHeroiconsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BladeUI\\Heroicons\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dries Vints",
+                    "homepage": "https://driesvints.com"
+                }
+            ],
+            "description": "A package to easily make use of Heroicons in your Laravel Blade views.",
+            "homepage": "https://github.com/blade-ui-kit/blade-heroicons",
+            "keywords": [
+                "Heroicons",
+                "blade",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/blade-ui-kit/blade-heroicons/issues",
+                "source": "https://github.com/blade-ui-kit/blade-heroicons/tree/1.3.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/caneco",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/driesvints",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-03-02T11:50:13+00:00"
+        },
+        {
+            "name": "blade-ui-kit/blade-icons",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blade-ui-kit/blade-icons.git",
+                "reference": "012496d145bf4ea7fffd0beed9b9acbf434cc7c8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blade-ui-kit/blade-icons/zipball/012496d145bf4ea7fffd0beed9b9acbf434cc7c8",
+                "reference": "012496d145bf4ea7fffd0beed9b9acbf434cc7c8",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.0|^9.0",
+                "illuminate/filesystem": "^8.0|^9.0",
+                "illuminate/support": "^8.0|^9.0",
+                "illuminate/view": "^8.0|^9.0",
+                "php": "^7.4|^8.0",
+                "symfony/console": "^5.3|^6.0",
+                "symfony/finder": "^5.3|^6.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3",
+                "orchestra/testbench": "^6.0|^7.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "bin": [
+                "bin/blade-icons-generate"
+            ],
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BladeUI\\Icons\\BladeIconsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "BladeUI\\Icons\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dries Vints",
+                    "homepage": "https://driesvints.com"
+                }
+            ],
+            "description": "A package to easily make use of icons in your Laravel Blade views.",
+            "homepage": "https://github.com/blade-ui-kit/blade-icons",
+            "keywords": [
+                "blade",
+                "icons",
+                "laravel",
+                "svg"
+            ],
+            "support": {
+                "issues": "https://github.com/blade-ui-kit/blade-icons/issues",
+                "source": "https://github.com/blade-ui-kit/blade-icons"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/caneco",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/driesvints",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-02-28T21:03:33+00:00"
         },
         {
             "name": "brick/math",
@@ -1466,169 +1616,17 @@
             "time": "2020-06-13T08:05:20+00:00"
         },
         {
-            "name": "kineticamobile/lumki",
-            "version": "dev-laravel9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/derteaser/lumki.git",
-                "reference": "ea8dcfb652a5aeaf75ef0681dfa07eddaf7a7c33"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/derteaser/lumki/zipball/ea8dcfb652a5aeaf75ef0681dfa07eddaf7a7c33",
-                "reference": "ea8dcfb652a5aeaf75ef0681dfa07eddaf7a7c33",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5|~6|~7|~8|~9",
-                "lab404/laravel-impersonate": "^1.7",
-                "spatie/laravel-permission": "^3.0|^4.0|^5.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.1",
-                "orchestra/testbench": "~3|~4|~5|~6",
-                "phpunit/phpunit": "~8.0|~9.0",
-                "sempro/phpunit-pretty-print": "^1.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Kineticamobile\\Lumki\\LumkiServiceProvider"
-                    ],
-                    "aliases": {
-                        "Lumki": "Kineticamobile\\Lumki\\Facades\\Lumki"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Kineticamobile\\Lumki\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Kineticamobile\\Lumki\\Tests\\": "tests"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "phpunit --testdox"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Raul Tierno",
-                    "email": "raultm@gmail.com",
-                    "homepage": "https://github.com/raultm"
-                },
-                {
-                    "name": "Daniel Macías",
-                    "email": "danielmaciasramos@gmail.com",
-                    "homepage": "https://github.com/dmaciasr"
-                },
-                {
-                    "name": "Emilio Ortiz",
-                    "email": "emilio.ortiz@kinetica.mobi",
-                    "homepage": "https://github.com/branigan"
-                }
-            ],
-            "description": "Laravel User Management for Laravel 8 with Jetstream",
-            "homepage": "https://github.com/kineticamobile/lumki",
-            "keywords": [
-                "Laravel",
-                "Laravel 8",
-                "Lumki",
-                "Users Management"
-            ],
-            "support": {
-                "source": "https://github.com/derteaser/lumki/tree/laravel9"
-            },
-            "time": "2022-03-04T10:53:51+00:00"
-        },
-        {
-            "name": "lab404/laravel-impersonate",
-            "version": "1.7.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/404labfr/laravel-impersonate.git",
-                "reference": "7c1f9c5cefd40247993f52f4b7724fd8b580084f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/404labfr/laravel-impersonate/zipball/7c1f9c5cefd40247993f52f4b7724fd8b580084f",
-                "reference": "7c1f9c5cefd40247993f52f4b7724fd8b580084f",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": "^6.0 | ^7.0 | ^8.0 | ^9.0",
-                "php": "^7.2 | ^8.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.3.3",
-                "orchestra/database": "^4.0 | ^5.0 | ^6.0 | ^7.0",
-                "orchestra/testbench": "^4.0 | ^5.0 | ^6.0 | ^7.0",
-                "phpunit/phpunit": "^7.5 | ^8.0 | ^9.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Lab404\\Impersonate\\ImpersonateServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/helpers.php"
-                ],
-                "psr-4": {
-                    "Lab404\\Impersonate\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Marceau Casals",
-                    "email": "marceau@casals.fr"
-                }
-            ],
-            "description": "Laravel Impersonate is a plugin that allows to you to authenticate as your users.",
-            "keywords": [
-                "auth",
-                "impersonate",
-                "impersonation",
-                "laravel",
-                "laravel-package",
-                "laravel-plugin",
-                "package",
-                "plugin",
-                "user"
-            ],
-            "support": {
-                "issues": "https://github.com/404labfr/laravel-impersonate/issues",
-                "source": "https://github.com/404labfr/laravel-impersonate/tree/1.7.3"
-            },
-            "time": "2022-01-15T13:39:35+00:00"
-        },
-        {
             "name": "laravel-lang/lang",
-            "version": "10.7.1",
+            "version": "10.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/lang.git",
-                "reference": "915dee600990ac5b4d302cdf40899e5e93cbe6d2"
+                "reference": "dbc67144ef3c876fa26e9f267478924ad680cce4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/915dee600990ac5b4d302cdf40899e5e93cbe6d2",
-                "reference": "915dee600990ac5b4d302cdf40899e5e93cbe6d2",
+                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/dbc67144ef3c876fa26e9f267478924ad680cce4",
+                "reference": "dbc67144ef3c876fa26e9f267478924ad680cce4",
                 "shasum": ""
             },
             "require": {
@@ -1638,21 +1636,21 @@
                 "laravel-lang/publisher": "<12.0"
             },
             "require-dev": {
-                "dragon-code/pretty-array": "^3.0",
-                "dragon-code/simple-dto": "^2.2",
-                "dragon-code/support": "^5.6",
+                "dragon-code/pretty-array": "^4.0",
+                "dragon-code/simple-dto": "^2.3",
+                "dragon-code/support": "^6.1",
                 "ext-zip": "*",
                 "guzzlehttp/guzzle": "^7.3",
-                "laravel-lang/publisher": "^12.1",
+                "laravel-lang/publisher": "^13.0",
                 "laravel/breeze": "^1.2",
                 "laravel/fortify": "^1.7",
                 "laravel/jetstream": "^2.3",
                 "laravel/ui": "^3.4",
-                "orchestra/testbench": "^5.0 || ^6.0 || ^7.0",
+                "orchestra/testbench": "^7.0",
                 "php": "^8.1",
                 "phpunit/phpunit": "^9.5",
-                "symfony/finder": "^5.2 || ^6.0",
-                "symfony/var-dumper": "^5.2 || ^6.0",
+                "symfony/finder": "^6.0",
+                "symfony/var-dumper": "^6.0",
                 "vlucas/phpdotenv": "^5.4.1"
             },
             "suggest": {
@@ -1693,7 +1691,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2022-04-18T09:21:20+00:00"
+            "time": "2022-05-02T02:20:56+00:00"
         },
         {
             "name": "laravel/fortify",
@@ -10062,9 +10060,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "kineticamobile/lumki": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

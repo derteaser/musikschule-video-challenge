@@ -17,6 +17,7 @@
         "cloudinary-labs/cloudinary-laravel": "^1.0.5",
         "fruitcake/laravel-cors": "^3.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "innocenzi/laravel-vite": "0.2.*",
         "jantinnerezo/livewire-alert": "^2.2",
         "laravel-lang/lang": "~10.1",
         "laravel/framework": "^9.3",

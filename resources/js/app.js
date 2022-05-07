@@ -1,5 +1,3 @@
-require('./bootstrap');
-
 import BigPicture from 'bigpicture'
 import Alpine from "alpinejs";
 import collapse from '@alpinejs/collapse';

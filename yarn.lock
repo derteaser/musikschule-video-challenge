@@ -938,10 +938,10 @@ util-deprecate@^1.0.2:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
-vite-plugin-laravel@^0.2.0-beta.11:
-  version "0.2.0-beta.12"
-  resolved "https://registry.yarnpkg.com/vite-plugin-laravel/-/vite-plugin-laravel-0.2.0-beta.12.tgz#ccf6c4ef09f8f38e4da71dc10526caf47d30b585"
-  integrity sha512-W4/FqGbzd8x5m1zvDMhjw/M1Qw6I6SXIAD0AX/8D1+E3irhudGeseMBgCxb2s34WjW5T7Y6SEQ6mVMCvaMgSMw==
+vite-plugin-laravel@^0.2.0-beta.13:
+  version "0.2.0-beta.13"
+  resolved "https://registry.yarnpkg.com/vite-plugin-laravel/-/vite-plugin-laravel-0.2.0-beta.13.tgz#b82a42093f871ee80d5b16b566383384575cbe8c"
+  integrity sha512-mDJ7WJJTiBO4ENPXKcMJa0MeLJ+OxWPQdeAa4TVfRFI1QA1eRhIJADSUH+kKj5/1qwPIb0EwdG0rO7zEpB9Ozg==
   dependencies:
     debug "^4.3.4"
     defu "^6.0.0"

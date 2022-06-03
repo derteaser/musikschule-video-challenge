@@ -17755,6 +17755,30 @@
                         /** @var \CloudinaryLabs\CloudinaryLaravel\CloudinaryEngine $instance */
                         return $instance->explicitAsync($publicId, $options);
         }
+                    /**
+         * Get Resource data
+         *
+         * @param string $path
+         * @return array 
+         * @static 
+         */ 
+        public static function getResource($path)
+        {
+                        /** @var \CloudinaryLabs\CloudinaryLaravel\CloudinaryEngine $instance */
+                        return $instance->getResource($path);
+        }
+                    /**
+         * Get the url of a file
+         *
+         * @param string $publicId
+         * @return string|false 
+         * @static 
+         */ 
+        public static function getUrl($publicId)
+        {
+                        /** @var \CloudinaryLabs\CloudinaryLaravel\CloudinaryEngine $instance */
+                        return $instance->getUrl($publicId);
+        }
          
     }
      

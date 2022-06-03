@@ -397,19 +397,20 @@
         },
         {
             "name": "cloudinary/cloudinary_php",
-            "version": "2.6.1",
+            "version": "2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cloudinary/cloudinary_php.git",
-                "reference": "9e29ef67e571712900de566642b0f824927e88fd"
+                "reference": "dd9636019d402b823390a465351b61caea80f127"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/9e29ef67e571712900de566642b0f824927e88fd",
-                "reference": "9e29ef67e571712900de566642b0f824927e88fd",
+                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/dd9636019d402b823390a465351b61caea80f127",
+                "reference": "dd9636019d402b823390a465351b61caea80f127",
                 "shasum": ""
             },
             "require": {
+                "cloudinary/transformation-builder-sdk": "^1",
                 "ext-json": "*",
                 "guzzlehttp/guzzle": "^6|^7",
                 "monolog/monolog": "^1|^2",
@@ -455,9 +456,69 @@
             "support": {
                 "email": "info@cloudinary.com",
                 "issues": "https://github.com/cloudinary/cloudinary_php/issues",
-                "source": "https://github.com/cloudinary/cloudinary_php/tree/2.6.1"
+                "source": "https://github.com/cloudinary/cloudinary_php/tree/2.7.1"
             },
-            "time": "2022-02-01T08:37:20+00:00"
+            "time": "2022-05-26T13:18:56+00:00"
+        },
+        {
+            "name": "cloudinary/transformation-builder-sdk",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cloudinary/php-transformation-builder-sdk.git",
+                "reference": "3c926d857061339e2b65e7f3c444eab80ea5fe1e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cloudinary/php-transformation-builder-sdk/zipball/3c926d857061339e2b65e7f3c444eab80ea5fe1e",
+                "reference": "3c926d857061339e2b65e7f3c444eab80ea5fe1e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "consolidation/robo": "~1",
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "ext-zip": "*",
+                "friendsofphp/php-cs-fixer": "*",
+                "phpmd/phpmd": "*",
+                "phpunit/phpunit": "^5",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cloudinary",
+                    "homepage": "https://github.com/cloudinary/php-transformation-builder-sdk/graphs/contributors"
+                }
+            ],
+            "description": "Cloudinary PHP Transformation Builder SDK",
+            "homepage": "https://github.com/cloudinary/php-transformation-builder-sdk",
+            "keywords": [
+                "cdn",
+                "cloud",
+                "cloudinary",
+                "image management",
+                "sdk"
+            ],
+            "support": {
+                "email": "info@cloudinary.com",
+                "issues": "https://github.com/cloudinary/php-transformation-builder-sdk/issues",
+                "source": "https://github.com/cloudinary/php-transformation-builder-sdk/tree/1.0.0"
+            },
+            "time": "2022-05-24T08:16:26+00:00"
         },
         {
             "name": "dasprid/enum",
@@ -1467,16 +1528,16 @@
         },
         {
             "name": "innocenzi/laravel-vite",
-            "version": "v0.2.0-beta.12",
+            "version": "v0.2.0-beta.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/innocenzi/laravel-vite.git",
-                "reference": "c2db2deb25b241322429bd4e5ca9e90184aea1bb"
+                "reference": "f2ba0c4b5a75864c5a1c4b9c98a5c6ab0df8e4ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/innocenzi/laravel-vite/zipball/c2db2deb25b241322429bd4e5ca9e90184aea1bb",
-                "reference": "c2db2deb25b241322429bd4e5ca9e90184aea1bb",
+                "url": "https://api.github.com/repos/innocenzi/laravel-vite/zipball/f2ba0c4b5a75864c5a1c4b9c98a5c6ab0df8e4ac",
+                "reference": "f2ba0c4b5a75864c5a1c4b9c98a5c6ab0df8e4ac",
                 "shasum": ""
             },
             "require": {
@@ -1532,7 +1593,7 @@
             ],
             "support": {
                 "issues": "https://github.com/innocenzi/laravel-vite/issues",
-                "source": "https://github.com/innocenzi/laravel-vite/tree/v0.2.0-beta.12"
+                "source": "https://github.com/innocenzi/laravel-vite/tree/v0.2.0-beta.16"
             },
             "funding": [
                 {
@@ -1540,7 +1601,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-18T16:27:32+00:00"
+            "time": "2022-06-01T10:47:28+00:00"
         },
         {
             "name": "jantinnerezo/livewire-alert",
@@ -2067,16 +2128,16 @@
         },
         {
             "name": "laravel/jetstream",
-            "version": "v2.8.1",
+            "version": "v2.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/jetstream.git",
-                "reference": "50ca355fa7cff5a851bbc0fa6addaa0010493c8d"
+                "reference": "a643cbbc6fad2101ad6f3dbea5f9213b69bfaf44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/jetstream/zipball/50ca355fa7cff5a851bbc0fa6addaa0010493c8d",
-                "reference": "50ca355fa7cff5a851bbc0fa6addaa0010493c8d",
+                "url": "https://api.github.com/repos/laravel/jetstream/zipball/a643cbbc6fad2101ad6f3dbea5f9213b69bfaf44",
+                "reference": "a643cbbc6fad2101ad6f3dbea5f9213b69bfaf44",
                 "shasum": ""
             },
             "require": {
@@ -2129,7 +2190,7 @@
                 "issues": "https://github.com/laravel/jetstream/issues",
                 "source": "https://github.com/laravel/jetstream"
             },
-            "time": "2022-05-13T14:06:46+00:00"
+            "time": "2022-05-30T13:18:11+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -3136,16 +3197,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.13.2",
+            "version": "v4.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "210577fe3cf7badcc5814d99455df46564f3c077"
+                "reference": "34bea19b6e03d8153165d8f30bba4c3be86184c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/210577fe3cf7badcc5814d99455df46564f3c077",
-                "reference": "210577fe3cf7badcc5814d99455df46564f3c077",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/34bea19b6e03d8153165d8f30bba4c3be86184c1",
+                "reference": "34bea19b6e03d8153165d8f30bba4c3be86184c1",
                 "shasum": ""
             },
             "require": {
@@ -3186,9 +3247,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v4.13.2"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v4.14.0"
             },
-            "time": "2021-11-30T19:35:32+00:00"
+            "time": "2022-05-31T20:59:12+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -3746,16 +3807,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.11.4",
+            "version": "v0.11.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "05c544b339b112226ad14803e1e5b09a61957454"
+                "reference": "c23686f9c48ca202710dbb967df8385a952a2daf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/05c544b339b112226ad14803e1e5b09a61957454",
-                "reference": "05c544b339b112226ad14803e1e5b09a61957454",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/c23686f9c48ca202710dbb967df8385a952a2daf",
+                "reference": "c23686f9c48ca202710dbb967df8385a952a2daf",
                 "shasum": ""
             },
             "require": {
@@ -3816,9 +3877,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.11.4"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.5"
             },
-            "time": "2022-05-06T12:49:14+00:00"
+            "time": "2022-05-27T18:03:49+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -7614,16 +7675,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.14.6",
+            "version": "v1.14.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "f00f3a8f83e71436d473cda7700ae7b4b68d26cc"
+                "reference": "04b425968c6a76940bddd2cfa40bf9e9ce78eee8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/f00f3a8f83e71436d473cda7700ae7b4b68d26cc",
-                "reference": "f00f3a8f83e71436d473cda7700ae7b4b68d26cc",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/04b425968c6a76940bddd2cfa40bf9e9ce78eee8",
+                "reference": "04b425968c6a76940bddd2cfa40bf9e9ce78eee8",
                 "shasum": ""
             },
             "require": {
@@ -7670,7 +7731,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2022-05-18T15:56:59+00:00"
+            "time": "2022-05-31T14:48:21+00:00"
         },
         {
             "name": "maximebf/debugbar",
@@ -10152,5 +10213,5 @@
         "php": "^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }

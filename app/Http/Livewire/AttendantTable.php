@@ -12,106 +12,118 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 use App\Models\User;
-use Rappasoft\LaravelLivewireTables\Views\Filter;
+use Rappasoft\LaravelLivewireTables\Views\Columns\ButtonGroupColumn;
+use Rappasoft\LaravelLivewireTables\Views\Columns\LinkColumn;
+use Rappasoft\LaravelLivewireTables\Views\Filters\DateFilter;
+use Rappasoft\LaravelLivewireTables\Views\Filters\SelectFilter;
 use Spatie\Permission\Models\Role;
 
 class AttendantTable extends DataTableComponent {
 
     use LivewireAlert;
 
-    public bool $columnSelect = true;
-    public bool $rememberColumnSelection = false;
-    public string $defaultSortColumn = 'created_at';
-    public string $defaultSortDirection = 'desc';
+    protected $model = User::class;
+
     public bool $viewingModal = false;
 
     public int $currentModel = 0;
 
     public const NO_ROLES = 'NONE';
 
+    public function configure(): void {
+        $this->setPrimaryKey('id');
+        $this->setDefaultSort('created_at', 'desc');
+        $this->setAdditionalSelects(['users.email_verified_at as email_verified_at']);
+        //$this->setRememberColumnSelectionDisabled();
+    }
+
     public function columns(): array {
         return [
             Column::make(__('ID'), "id")
-                ->excludeFromSelectable()
+                ->excludeFromColumnSelect()
                 ->sortable(),
             Column::make(__('Name'), "name")
-                ->excludeFromSelectable()
+                ->excludeFromColumnSelect()
                 ->searchable()
-                ->sortable(),
+                ->sortable()
+                ->view('livewire-tables.columns.user-avatar-name'),
             Column::make(__('Email'), "email")
                 ->searchable()
-                ->sortable(),
-            Column::make(__('Musical Instrument'), "musicalInstrument.name")
-                ->selected(),
+                ->sortable()
+                ->view('livewire-tables.columns.email')
+                ->deselected(),
+            Column::make(__('Musical Instrument'), "musical_instrument_id")
+                ->format(fn($value, User $row) => $row->musicalInstrument->name ?? '-'),
             Column::make(__('Teacher'), "teacher")
+                ->deselected()
                 ->sortable(),
             Column::make(__('City'), "city")
+                ->deselected()
                 ->searchable()
                 ->sortable(),
-            Column::make(__('Age'), "birthday.age")
+            Column::make(__('Age'), "birthday")
+                ->format(fn($value) => $value->age)
+                ->deselected()
                 ->sortable(),
-            Column::make(__('Role'), "role")
-                ->selected(),
+            Column::make(__('Role'), "roles")
+                ->label(fn(User $row) => view('livewire-tables.columns.user-roles')->withRow($row)),
             Column::make(__('Status'))
-                ->excludeFromSelectable(),
+                ->label(fn(User $row) => view('livewire-tables.columns.user-status')->withRow($row))
+                ->excludeFromColumnSelect(),
             Column::make(__('Created'), "created_at")
-                ->selected()
+                ->format(fn($value) => $value->format('d.m.Y'))
                 ->sortable(),
-            Column::blank()
-                ->excludeFromSelectable(),
+            Column::make('')
+                ->label(fn(User $row) => view('livewire-tables.columns.user-actions')->withRow($row))
+                ->hideIf(!auth()->user()->hasAnyRole(['Admin', 'Superadmin']))
+                ->excludeFromColumnSelect(),
         ];
     }
 
     public function filters(): array {
         return [
-            'musical_instrument' => Filter::make(__('Musical Instrument'))
-                ->select(MusicalInstrument::all()->sortBy('name')->pluck('name', 'id')->all()),
-            'role' => Filter::make(__('Role'))
-                ->select(Role::all()->sortBy('name')->pluck('name', 'id')->prepend(__('New Registrations'), self::NO_ROLES)->all()),
-            'status' => Filter::make(__('Status'))
-                ->select([
+            SelectFilter::make(__('Musical Instrument'), 'musical_instrument')
+                ->filter(function (Builder $builder, string $value) {
+                    $builder->where('musical_instrument_id', $value);
+                })
+                ->options(MusicalInstrument::all()->sortBy('name')->pluck('name', 'id')->all()),
+            SelectFilter::make(__('Role'), 'role')
+                ->filter(function (Builder $builder, string $value) {
+                    if ($value == self::NO_ROLES)
+                        $builder->withCount('roles')->has('roles', 0);
+                    else
+                        $builder->whereRelation('roles', 'role_id', $value);
+                })
+                ->options(Role::all()->sortBy('name')->pluck('name', 'id')->prepend(__('New Registrations'), self::NO_ROLES)->all()),
+            SelectFilter::make(__('Status'), 'status')
+                ->filter(function (Builder $builder, string $value) {
+                    switch ($value) {
+                        case 'video_uploaded':
+                            $builder->whereHas('video');
+                            break;
+                        case 'email_not_verified':
+                            $builder->whereNull('email_verified_at');
+                            break;
+                        case 'email_verified':
+                            $builder->whereNotNull('email_verified_at')->whereDoesntHave('video');
+                            break;
+                        default:
+                            break;
+                    }
+                })
+                ->options([
                     'email_not_verified' => __('Email not verified'),
                     'email_verified' => __('Email verified'),
                     'video_uploaded' => __('Video uploaded'),
                 ]),
-            'created_at' => Filter::make(__('Created'))
-                ->date(),
+            DateFilter::make(__('Created'))
+                ->filter(function (Builder $builder, string $value) {
+                    $builder->whereDate('created_at', $value);
+                }),
         ];
     }
 
-
-    public function query(): Builder {
-        return User::query()
-            ->when($this->getFilter('musical_instrument'), fn($query, $instrumentId) => $query->where('musical_instrument_id', $instrumentId))
-            ->when($this->getFilter('role'), function ($query, $roleId) {
-                if ($roleId == self::NO_ROLES)
-                    $query->withCount('roles')->has('roles', 0);
-                else
-                    $query->whereRelation('roles', 'role_id', $roleId);
-            })
-            ->when($this->getFilter('status'), function(Builder $query, string $status) {
-                switch ($status) {
-                    case 'video_uploaded':
-                        $query->whereHas('video');
-                        break;
-                    case 'email_not_verified':
-                        $query->whereNull('email_verified_at');
-                        break;
-                    case 'email_verified':
-                        $query->whereNotNull('email_verified_at')->whereDoesntHave('video');
-                        break;
-                    default:
-                        break;
-                }
-            })
-            ->when($this->getFilter('created_at'), fn($query, $created_at) => $query->whereDate('created_at', $created_at));
-    }
-
-    public function rowView(): string {
-        return 'livewire-tables.rows.attendant_table';
-    }
-
-    public function modalsView(): string {
+    public function customView(): string {
         return 'livewire-tables.modals.delete_user';
     }
 

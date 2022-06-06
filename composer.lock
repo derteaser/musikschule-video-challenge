@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "df603918168c884ccb22a41871ad3c2f",
+    "content-hash": "7e53bdb601292516ec82bc700e40d4b6",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -325,16 +325,16 @@
         },
         {
             "name": "cloudinary-labs/cloudinary-laravel",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cloudinary-labs/cloudinary-laravel.git",
-                "reference": "7ff75be942a52ea5ecbb2d3c5450fc205b096ebc"
+                "reference": "f1b74dd7202b1314c8c8729be5b32dc7c3f5427d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cloudinary-labs/cloudinary-laravel/zipball/7ff75be942a52ea5ecbb2d3c5450fc205b096ebc",
-                "reference": "7ff75be942a52ea5ecbb2d3c5450fc205b096ebc",
+                "url": "https://api.github.com/repos/cloudinary-labs/cloudinary-laravel/zipball/f1b74dd7202b1314c8c8729be5b32dc7c3f5427d",
+                "reference": "f1b74dd7202b1314c8c8729be5b32dc7c3f5427d",
                 "shasum": ""
             },
             "require": {
@@ -391,9 +391,9 @@
             ],
             "support": {
                 "issues": "https://github.com/cloudinary-labs/cloudinary-laravel/issues",
-                "source": "https://github.com/cloudinary-labs/cloudinary-laravel/tree/2.0.0"
+                "source": "https://github.com/cloudinary-labs/cloudinary-laravel/tree/2.0.1"
             },
-            "time": "2022-06-02T11:49:18+00:00"
+            "time": "2022-06-03T13:17:15+00:00"
         },
         {
             "name": "cloudinary/cloudinary_php",
@@ -1528,16 +1528,16 @@
         },
         {
             "name": "innocenzi/laravel-vite",
-            "version": "v0.2.0-beta.16",
+            "version": "v0.2.0-beta.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/innocenzi/laravel-vite.git",
-                "reference": "f2ba0c4b5a75864c5a1c4b9c98a5c6ab0df8e4ac"
+                "reference": "c7cafae9364da1b43892ac79f11cc00708cec00e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/innocenzi/laravel-vite/zipball/f2ba0c4b5a75864c5a1c4b9c98a5c6ab0df8e4ac",
-                "reference": "f2ba0c4b5a75864c5a1c4b9c98a5c6ab0df8e4ac",
+                "url": "https://api.github.com/repos/innocenzi/laravel-vite/zipball/c7cafae9364da1b43892ac79f11cc00708cec00e",
+                "reference": "c7cafae9364da1b43892ac79f11cc00708cec00e",
                 "shasum": ""
             },
             "require": {
@@ -1593,7 +1593,7 @@
             ],
             "support": {
                 "issues": "https://github.com/innocenzi/laravel-vite/issues",
-                "source": "https://github.com/innocenzi/laravel-vite/tree/v0.2.0-beta.16"
+                "source": "https://github.com/innocenzi/laravel-vite/tree/v0.2.0-beta.18"
             },
             "funding": [
                 {
@@ -1601,7 +1601,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-06-01T10:47:28+00:00"
+            "time": "2022-06-06T09:33:25+00:00"
         },
         {
             "name": "jantinnerezo/livewire-alert",
@@ -1808,16 +1808,16 @@
         },
         {
             "name": "laravel-lang/lang",
-            "version": "10.9.1",
+            "version": "10.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/lang.git",
-                "reference": "07e100bbe05a876baed68b2dab12742e4f705ec8"
+                "reference": "0ab2e88f2772ae4f604ee25efe49e3f2bbf83146"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/07e100bbe05a876baed68b2dab12742e4f705ec8",
-                "reference": "07e100bbe05a876baed68b2dab12742e4f705ec8",
+                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/0ab2e88f2772ae4f604ee25efe49e3f2bbf83146",
+                "reference": "0ab2e88f2772ae4f604ee25efe49e3f2bbf83146",
                 "shasum": ""
             },
             "require": {
@@ -1882,7 +1882,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2022-05-26T13:57:11+00:00"
+            "time": "2022-06-06T10:31:09+00:00"
         },
         {
             "name": "laravel/fortify",
@@ -2386,16 +2386,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "2.3.1",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "cb36fee279f7fca01d5d9399ddd1b37e48e2eca1"
+                "reference": "6eddb90a9e4a1a8c5773226068fcfb48cb36812a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/cb36fee279f7fca01d5d9399ddd1b37e48e2eca1",
-                "reference": "cb36fee279f7fca01d5d9399ddd1b37e48e2eca1",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/6eddb90a9e4a1a8c5773226068fcfb48cb36812a",
+                "reference": "6eddb90a9e4a1a8c5773226068fcfb48cb36812a",
                 "shasum": ""
             },
             "require": {
@@ -2488,7 +2488,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-14T15:37:39+00:00"
+            "time": "2022-06-03T14:07:39+00:00"
         },
         {
             "name": "league/config",
@@ -4100,16 +4100,16 @@
         },
         {
             "name": "rappasoft/laravel-livewire-tables",
-            "version": "v1.25.1",
+            "version": "v2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rappasoft/laravel-livewire-tables.git",
-                "reference": "2465eae744d715e1c6fc96bdaa3b42f6eac68511"
+                "reference": "60d60c2401bfd8080789e32734433ff661210cdf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rappasoft/laravel-livewire-tables/zipball/2465eae744d715e1c6fc96bdaa3b42f6eac68511",
-                "reference": "2465eae744d715e1c6fc96bdaa3b42f6eac68511",
+                "url": "https://api.github.com/repos/rappasoft/laravel-livewire-tables/zipball/60d60c2401bfd8080789e32734433ff661210cdf",
+                "reference": "60d60c2401bfd8080789e32734433ff661210cdf",
                 "shasum": ""
             },
             "require": {
@@ -4122,8 +4122,7 @@
                 "ext-sqlite3": "*",
                 "orchestra/testbench": "^6.13|^7.0",
                 "phpunit/phpunit": "^9.3",
-                "spatie/laravel-ray": "^1.9",
-                "vimeo/psalm": "^4.4"
+                "spatie/laravel-ray": "^1.9"
             },
             "type": "library",
             "extra": {
@@ -4160,7 +4159,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rappasoft/laravel-livewire-tables/issues",
-                "source": "https://github.com/rappasoft/laravel-livewire-tables/tree/v1.25.1"
+                "source": "https://github.com/rappasoft/laravel-livewire-tables/tree/v2.7.0"
             },
             "funding": [
                 {
@@ -4168,7 +4167,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-30T01:55:23+00:00"
+            "time": "2022-05-08T02:25:51+00:00"
         },
         {
             "name": "shrikeh/teapot",
@@ -6713,21 +6712,21 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.10.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozarts/assert.git",
-                "reference": "6964c76c7804814a842473e0c8fd15bab0f18e25"
+                "reference": "11cb2199493b2f8a3b53e7f19068fc6aac760991"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozarts/assert/zipball/6964c76c7804814a842473e0c8fd15bab0f18e25",
-                "reference": "6964c76c7804814a842473e0c8fd15bab0f18e25",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/11cb2199493b2f8a3b53e7f19068fc6aac760991",
+                "reference": "11cb2199493b2f8a3b53e7f19068fc6aac760991",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2 || ^8.0",
-                "symfony/polyfill-ctype": "^1.8"
+                "ext-ctype": "*",
+                "php": "^7.2 || ^8.0"
             },
             "conflict": {
                 "phpstan/phpstan": "<0.12.20",
@@ -6765,9 +6764,9 @@
             ],
             "support": {
                 "issues": "https://github.com/webmozarts/assert/issues",
-                "source": "https://github.com/webmozarts/assert/tree/1.10.0"
+                "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
-            "time": "2021-03-09T10:59:23+00:00"
+            "time": "2022-06-03T18:03:27+00:00"
         }
     ],
     "packages-dev": [

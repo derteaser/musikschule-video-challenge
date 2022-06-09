@@ -1528,16 +1528,16 @@
         },
         {
             "name": "innocenzi/laravel-vite",
-            "version": "v0.2.0-beta.18",
+            "version": "v0.2.0-beta.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/innocenzi/laravel-vite.git",
-                "reference": "c7cafae9364da1b43892ac79f11cc00708cec00e"
+                "reference": "93d2dff7ccb197189adcbe92f3b1dcbe02926779"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/innocenzi/laravel-vite/zipball/c7cafae9364da1b43892ac79f11cc00708cec00e",
-                "reference": "c7cafae9364da1b43892ac79f11cc00708cec00e",
+                "url": "https://api.github.com/repos/innocenzi/laravel-vite/zipball/93d2dff7ccb197189adcbe92f3b1dcbe02926779",
+                "reference": "93d2dff7ccb197189adcbe92f3b1dcbe02926779",
                 "shasum": ""
             },
             "require": {
@@ -1593,7 +1593,7 @@
             ],
             "support": {
                 "issues": "https://github.com/innocenzi/laravel-vite/issues",
-                "source": "https://github.com/innocenzi/laravel-vite/tree/v0.2.0-beta.18"
+                "source": "https://github.com/innocenzi/laravel-vite/tree/v0.2.0-beta.20"
             },
             "funding": [
                 {
@@ -1601,7 +1601,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-06-06T09:33:25+00:00"
+            "time": "2022-06-07T07:57:39+00:00"
         },
         {
             "name": "jantinnerezo/livewire-alert",

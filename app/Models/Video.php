@@ -5,6 +5,7 @@ namespace App\Models;
 use Cloudinary\Asset\Video as CloudinaryVideo;
 use Cloudinary\Transformation\Format;
 use Cloudinary\Transformation\Resize;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -49,6 +50,6 @@ class Video extends Model {
     }
 
     public function video(): CloudinaryVideo {
-        return new CloudinaryVideo($this->cloudinary_public_id);
+        return Cloudinary::getVideo($this->cloudinary_public_id);
     }
 }

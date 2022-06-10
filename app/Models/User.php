@@ -137,8 +137,12 @@ class User extends Authenticatable implements MustVerifyEmail {
             return $this->defaultProfilePhotoUrl();
         }
 
-        $image = new Image($this->profile_photo_path);
-        return $image->resize(Resize::thumbnail()->width(200)->gravity(Gravity::focusOn(FocusOn::face())))->signUrl()->toUrl();
+        return Cloudinary::getImage($this->profile_photo_path)
+            ->resize(Resize::thumbnail()
+                ->width(200)
+                ->gravity(Gravity::focusOn(FocusOn::face())))
+            ->signUrl()
+            ->toUrl();
     }
 
     /**

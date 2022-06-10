@@ -22,7 +22,7 @@ class PublicVideos extends Component {
 
         $videos = [];
         foreach ($searchResult['resources'] as $resource) {
-            $videos[] = new Video($resource['public_id']);
+            $videos[] = Cloudinary::getVideo($resource['public_id']);
         }
         return view('livewire.public-videos', ['videos' => $videos]);
     }

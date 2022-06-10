@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: shivammathur/setup-php@d0696f9f8bc3b0456d759159fadc1bb4f31f1e10
       with:
-        php-version: '8.0'
+        php-version: '8.1'
     - uses: actions/checkout@v3
     - name: Create local changes
       run: |

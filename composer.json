@@ -21,7 +21,7 @@
         "jantinnerezo/livewire-alert": "2.2.6",
         "laravel-lang/lang": "10.9.4",
         "laravel/framework": "9.18.0",
-        "laravel/jetstream": "2.8.4",
+        "laravel/jetstream": "2.8.5",
         "laravel/sanctum": "2.15.1",
         "laravel/tinker": "2.7.2",
         "livewire/livewire": "2.10.5",

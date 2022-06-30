@@ -24,7 +24,7 @@
         "laravel/jetstream": "2.8.5",
         "laravel/sanctum": "2.15.1",
         "laravel/tinker": "2.7.2",
-        "livewire/livewire": "2.10.5",
+        "livewire/livewire": "2.10.6",
         "rappasoft/laravel-livewire-tables": "2.7.0",
         "spatie/laravel-permission": "5.5.5"
     },

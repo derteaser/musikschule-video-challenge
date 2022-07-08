@@ -270,7 +270,7 @@ caniuse-lite@^1.0.30001335, caniuse-lite@^1.0.30001349:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001352.tgz#cc6f5da3f983979ad1e2cdbae0505dccaa7c6a12"
   integrity sha512-GUgH8w6YergqPQDGWhJGt8GDRnY0L/iJVQcU3eJ46GYf52R8tk0Wxp0PymuFVZboJYXGiCqwozAYZNRjVj6IcA==
 
-chalk@^4.1.2:
+chalk@4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
   integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
@@ -496,7 +496,7 @@ escalade@^3.1.1:
   resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.1.1.tgz#d8cfdc7000965c5a0174b4a82eaa5c0552742e40"
   integrity sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==
 
-execa@^5.1.1:
+execa@5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/execa/-/execa-5.1.1.tgz#f80ad9cbf4298f7bd1d4c9555c21e93741c411dd"
   integrity sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==
@@ -977,15 +977,15 @@ util-deprecate@^1.0.2:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
-vite-plugin-laravel@0.2.0-beta.24:
-  version "0.2.0-beta.24"
-  resolved "https://registry.yarnpkg.com/vite-plugin-laravel/-/vite-plugin-laravel-0.2.0-beta.24.tgz#d38d1d2e818386822249a6d196ea071260e3e174"
-  integrity sha512-Kc0HZ6tT45HX/F3EOXbU/8JOJxskMotlkUUuvyZY9E+DxeeFUarv5i/+U8UZNm1LwtYxekwg8ansTFxUPa1EyA==
+vite-plugin-laravel@0.2.0-beta.27:
+  version "0.2.0-beta.27"
+  resolved "https://registry.yarnpkg.com/vite-plugin-laravel/-/vite-plugin-laravel-0.2.0-beta.27.tgz#c3b43d1990e0fa749f6a1d211974b41a9d7a5be9"
+  integrity sha512-WSLlXxLmrFqYKLDi/9L+SfMj56EFeeZz2rDMtbDswyzixv7dqbCFY6vXaHuPHn4jAh66Au/yExR/ADmoYREZ2w==
   dependencies:
-    chalk "^4.1.2"
+    chalk "4.1.2"
     debug "^4.3.4"
     defu "^6.0.0"
-    execa "^5.1.1"
+    execa "5.1.1"
 
 vite-plugin-mkcert@1.7.2:
   version "1.7.2"

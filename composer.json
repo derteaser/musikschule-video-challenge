@@ -17,7 +17,7 @@
         "cloudinary-labs/cloudinary-laravel": "2.0.1",
         "fruitcake/laravel-cors": "3.0.0",
         "guzzlehttp/guzzle": "7.4.5",
-        "innocenzi/laravel-vite": "0.2.0-beta.24",
+        "innocenzi/laravel-vite": "0.2.0-beta.27",
         "jantinnerezo/livewire-alert": "2.2.6",
         "laravel-lang/lang": "11.0.4",
         "laravel/framework": "9.19.0",

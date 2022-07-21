@@ -999,10 +999,10 @@ vite-plugin-laravel@0.2.0-beta.27:
     defu "^6.0.0"
     execa "5.1.1"
 
-vite-plugin-mkcert@1.8.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/vite-plugin-mkcert/-/vite-plugin-mkcert-1.8.1.tgz#00c212e9736fcbf5e044b0100d1145a095027845"
-  integrity sha512-dQHeFG0J1ZYUXAYPMb/AMbrydR+U/9ExCiF/+iKlzAT0fyhgNAHZMfb9Rcv9nv+x0DXndXzmTjVlm0jaEnzVug==
+vite-plugin-mkcert@1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-mkcert/-/vite-plugin-mkcert-1.9.0.tgz#894fadd4d932fb1a8face1b73009982428cfba3d"
+  integrity sha512-lKIOVJvbt1ijAMeF31TYGwEzH8iqK+Q8BiInpQRcAW543y8HYttZTRVGDAFqVaej6iE5o7XAisZ1aCg+q5tOfA==
   dependencies:
     "@octokit/rest" "^19.0.3"
     axios "^0.21.4"

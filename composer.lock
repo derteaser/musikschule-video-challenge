@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42f67ed5a1071f22e19548a125f9617a",
+    "content-hash": "3aabc22422d90434bb460019002cb7f1",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1755,16 +1755,16 @@
         },
         {
             "name": "laravel-lang/lang",
-            "version": "11.0.5",
+            "version": "11.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/lang.git",
-                "reference": "c0c6f0c7261f2742280a0075f5aa4c6aea7b4726"
+                "reference": "631e16e999af8750504e8ed8774d20f3366fe182"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/c0c6f0c7261f2742280a0075f5aa4c6aea7b4726",
-                "reference": "c0c6f0c7261f2742280a0075f5aa4c6aea7b4726",
+                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/631e16e999af8750504e8ed8774d20f3366fe182",
+                "reference": "631e16e999af8750504e8ed8774d20f3366fe182",
                 "shasum": ""
             },
             "require": {
@@ -1827,7 +1827,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2022-07-13T10:11:31+00:00"
+            "time": "2022-07-20T11:10:35+00:00"
         },
         {
             "name": "laravel/fortify",
@@ -1894,16 +1894,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.21.0",
+            "version": "v9.21.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "a8a529d371faaa38bde087aa6171a5b53a6a8760"
+                "reference": "66bfa61e61ffceddb6370b57306c76ead7667622"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/a8a529d371faaa38bde087aa6171a5b53a6a8760",
-                "reference": "a8a529d371faaa38bde087aa6171a5b53a6a8760",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/66bfa61e61ffceddb6370b57306c76ead7667622",
+                "reference": "66bfa61e61ffceddb6370b57306c76ead7667622",
                 "shasum": ""
             },
             "require": {
@@ -2070,20 +2070,20 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-07-19T14:12:19+00:00"
+            "time": "2022-07-20T18:00:32+00:00"
         },
         {
             "name": "laravel/jetstream",
-            "version": "v2.10.0",
+            "version": "v2.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/jetstream.git",
-                "reference": "ee23dac932fa3344d3a7939b7a2a8fda10e57a53"
+                "reference": "6c460a8ffff013393e3abdf635a4db5d2d776d42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/jetstream/zipball/ee23dac932fa3344d3a7939b7a2a8fda10e57a53",
-                "reference": "ee23dac932fa3344d3a7939b7a2a8fda10e57a53",
+                "url": "https://api.github.com/repos/laravel/jetstream/zipball/6c460a8ffff013393e3abdf635a4db5d2d776d42",
+                "reference": "6c460a8ffff013393e3abdf635a4db5d2d776d42",
                 "shasum": ""
             },
             "require": {
@@ -2139,7 +2139,7 @@
                 "issues": "https://github.com/laravel/jetstream/issues",
                 "source": "https://github.com/laravel/jetstream"
             },
-            "time": "2022-07-11T13:13:54+00:00"
+            "time": "2022-07-19T14:03:54+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -3847,16 +3847,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.11.6",
+            "version": "v0.11.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "3f5b5f8aaa979fbd0d1783173f4c82ad529fe621"
+                "reference": "77fc7270031fbc28f9a7bea31385da5c4855cb7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/3f5b5f8aaa979fbd0d1783173f4c82ad529fe621",
-                "reference": "3f5b5f8aaa979fbd0d1783173f4c82ad529fe621",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/77fc7270031fbc28f9a7bea31385da5c4855cb7a",
+                "reference": "77fc7270031fbc28f9a7bea31385da5c4855cb7a",
                 "shasum": ""
             },
             "require": {
@@ -3917,9 +3917,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.11.6"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.7"
             },
-            "time": "2022-07-03T16:40:23+00:00"
+            "time": "2022-07-07T13:49:11+00:00"
         },
         {
             "name": "ralouphie/getallheaders",

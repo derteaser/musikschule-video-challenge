@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a2fc85f465e0c3c21da57baa868f8b0",
+    "content-hash": "56bbfb6c8741f72f0dd05d230a352e0a",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -4140,16 +4140,16 @@
         },
         {
             "name": "rappasoft/laravel-livewire-tables",
-            "version": "v2.7.0",
+            "version": "v2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rappasoft/laravel-livewire-tables.git",
-                "reference": "60d60c2401bfd8080789e32734433ff661210cdf"
+                "reference": "e6069cd0fac4b7f8a5d492388a735a3b7351bc80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rappasoft/laravel-livewire-tables/zipball/60d60c2401bfd8080789e32734433ff661210cdf",
-                "reference": "60d60c2401bfd8080789e32734433ff661210cdf",
+                "url": "https://api.github.com/repos/rappasoft/laravel-livewire-tables/zipball/e6069cd0fac4b7f8a5d492388a735a3b7351bc80",
+                "reference": "e6069cd0fac4b7f8a5d492388a735a3b7351bc80",
                 "shasum": ""
             },
             "require": {
@@ -4199,7 +4199,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rappasoft/laravel-livewire-tables/issues",
-                "source": "https://github.com/rappasoft/laravel-livewire-tables/tree/v2.7.0"
+                "source": "https://github.com/rappasoft/laravel-livewire-tables/tree/v2.8.0"
             },
             "funding": [
                 {
@@ -4207,7 +4207,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-08T02:25:51+00:00"
+            "time": "2022-07-25T00:44:21+00:00"
         },
         {
             "name": "shrikeh/teapot",

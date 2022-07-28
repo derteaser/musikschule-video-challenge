@@ -22,7 +22,7 @@
         "laravel-lang/lang": "11.0.7",
         "laravel/framework": "9.22.1",
         "laravel/jetstream": "2.10.2",
-        "laravel/sanctum": "2.15.1",
+        "laravel/sanctum": "3.0.0",
         "laravel/tinker": "2.7.2",
         "livewire/livewire": "2.10.6",
         "rappasoft/laravel-livewire-tables": "2.8.0",

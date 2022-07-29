@@ -11,7 +11,7 @@
         "@tailwindcss/forms": "0.5.2",
         "@tailwindcss/typography": "0.5.4",
         "alpinejs": "3.10.3",
-        "autoprefixer": "10.4.7",
+        "autoprefixer": "10.4.8",
         "bigpicture": "2.6.2",
         "postcss": "8.4.14",
         "postcss-import": "14.1.0",

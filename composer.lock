@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b69db5b356fcb89c98f6c3b61616949",
+    "content-hash": "0051185334adda6aab0b942346101474",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1755,16 +1755,16 @@
         },
         {
             "name": "laravel-lang/lang",
-            "version": "11.0.7",
+            "version": "11.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/lang.git",
-                "reference": "7b9c41d06615a0a35e568979cbbd44d9431ecc55"
+                "reference": "ddd48c07bc7dee6b638661f9ade3a6903073aeba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/7b9c41d06615a0a35e568979cbbd44d9431ecc55",
-                "reference": "7b9c41d06615a0a35e568979cbbd44d9431ecc55",
+                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/ddd48c07bc7dee6b638661f9ade3a6903073aeba",
+                "reference": "ddd48c07bc7dee6b638661f9ade3a6903073aeba",
                 "shasum": ""
             },
             "require": {
@@ -1781,11 +1781,10 @@
                 "symfony/var-dumper": "^5.0 || ^6.0"
             },
             "suggest": {
-                "arcanedev/laravel-lang": "Translations manager and checker for Laravel 5",
+                "arcanedev/laravel-lang": "Translations manager and checker for Laravel",
                 "laravel-lang/attributes": "Translations for field names of the forms",
                 "laravel-lang/http-statuses": "Translations for HTTP statuses",
-                "laravel-lang/publisher": "Easy installation and update of translation files for your project",
-                "overtrue/laravel-lang": "Command to add languages in your project"
+                "laravel-lang/publisher": "Easy installation and update of translation files for your project"
             },
             "type": "library",
             "extra": {
@@ -1827,7 +1826,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2022-07-21T19:16:09+00:00"
+            "time": "2022-08-02T12:39:53+00:00"
         },
         {
             "name": "laravel/fortify",

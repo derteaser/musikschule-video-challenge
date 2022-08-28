@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8639c4fef737ad79b44eb463d3fd6487",
+    "content-hash": "b112ce322422a225cb3954f126ef26b6",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -62,16 +62,16 @@
         },
         {
             "name": "blade-ui-kit/blade-heroicons",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/blade-ui-kit/blade-heroicons.git",
-                "reference": "af9dd0c8e28799b2d09ac3f29767035f93bcb2be"
+                "reference": "b52c421f8850645f6f4ac199a80bc67f0bfc6d9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blade-ui-kit/blade-heroicons/zipball/af9dd0c8e28799b2d09ac3f29767035f93bcb2be",
-                "reference": "af9dd0c8e28799b2d09ac3f29767035f93bcb2be",
+                "url": "https://api.github.com/repos/blade-ui-kit/blade-heroicons/zipball/b52c421f8850645f6f4ac199a80bc67f0bfc6d9e",
+                "reference": "b52c421f8850645f6f4ac199a80bc67f0bfc6d9e",
                 "shasum": ""
             },
             "require": {
@@ -115,7 +115,7 @@
             ],
             "support": {
                 "issues": "https://github.com/blade-ui-kit/blade-heroicons/issues",
-                "source": "https://github.com/blade-ui-kit/blade-heroicons/tree/2.0.0"
+                "source": "https://github.com/blade-ui-kit/blade-heroicons/tree/2.0.1"
             },
             "funding": [
                 {
@@ -127,7 +127,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-08-24T13:56:14+00:00"
+            "time": "2022-08-28T09:30:28+00:00"
         },
         {
             "name": "blade-ui-kit/blade-icons",

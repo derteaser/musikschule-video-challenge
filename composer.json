@@ -19,7 +19,7 @@
         "guzzlehttp/guzzle": "7.5.0",
         "innocenzi/laravel-vite": "0.2.1",
         "jantinnerezo/livewire-alert": "2.2.6",
-        "laravel-lang/lang": "11.0.18",
+        "laravel-lang/lang": "11.0.19",
         "laravel/framework": "9.27.0",
         "laravel/jetstream": "2.11.2",
         "laravel/sanctum": "3.0.1",

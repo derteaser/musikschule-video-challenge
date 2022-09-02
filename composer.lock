@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "82828bbce9c7a15d84c20c080d6c5fbc",
+    "content-hash": "4996344da04f7283289c0d5868afa836",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1479,16 +1479,16 @@
         },
         {
             "name": "innocenzi/laravel-vite",
-            "version": "v0.2.0-beta.29",
+            "version": "v0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/innocenzi/laravel-vite.git",
-                "reference": "091928b989ad04d9763f25ac24321a9f6f8701c5"
+                "reference": "9ec139ab115d7a93def1607d4291b6ce49c5839b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/innocenzi/laravel-vite/zipball/091928b989ad04d9763f25ac24321a9f6f8701c5",
-                "reference": "091928b989ad04d9763f25ac24321a9f6f8701c5",
+                "url": "https://api.github.com/repos/innocenzi/laravel-vite/zipball/9ec139ab115d7a93def1607d4291b6ce49c5839b",
+                "reference": "9ec139ab115d7a93def1607d4291b6ce49c5839b",
                 "shasum": ""
             },
             "require": {
@@ -1544,7 +1544,7 @@
             ],
             "support": {
                 "issues": "https://github.com/innocenzi/laravel-vite/issues",
-                "source": "https://github.com/innocenzi/laravel-vite/tree/v0.2.0-beta.29"
+                "source": "https://github.com/innocenzi/laravel-vite/tree/v0.2.1"
             },
             "funding": [
                 {
@@ -1552,7 +1552,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-08-04T12:32:01+00:00"
+            "time": "2022-09-02T13:09:12+00:00"
         },
         {
             "name": "jantinnerezo/livewire-alert",

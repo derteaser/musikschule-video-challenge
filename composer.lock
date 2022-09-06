@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84511618d6f5988b602bafdc884f7529",
+    "content-hash": "118886a410153158222a44901058f8c6",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1759,16 +1759,16 @@
         },
         {
             "name": "laravel-lang/lang",
-            "version": "11.0.19",
+            "version": "12.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/lang.git",
-                "reference": "3a117d10e52534eeca179915d145b83825300945"
+                "reference": "98ee80f9c094cef0b70be2020f7980dc4b0d34be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/3a117d10e52534eeca179915d145b83825300945",
-                "reference": "3a117d10e52534eeca179915d145b83825300945",
+                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/98ee80f9c094cef0b70be2020f7980dc4b0d34be",
+                "reference": "98ee80f9c094cef0b70be2020f7980dc4b0d34be",
                 "shasum": ""
             },
             "require": {
@@ -1830,7 +1830,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2022-08-31T15:53:51+00:00"
+            "time": "2022-09-06T11:17:41+00:00"
         },
         {
             "name": "laravel/fortify",

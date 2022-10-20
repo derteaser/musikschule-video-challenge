@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "02fe1167b67bcf2d07effa49f00c431f",
+    "content-hash": "6e496f02d0d2f64c722c6b2e5769a401",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -4547,16 +4547,16 @@
         },
         {
             "name": "spatie/laravel-permission",
-            "version": "5.5.10",
+            "version": "5.5.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-permission.git",
-                "reference": "5e96846341cb883bbe74f735502b743ee9898669"
+                "reference": "81254462a93ed274d3e18159f04f5e842f813d00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/5e96846341cb883bbe74f735502b743ee9898669",
-                "reference": "5e96846341cb883bbe74f735502b743ee9898669",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/81254462a93ed274d3e18159f04f5e842f813d00",
+                "reference": "81254462a93ed274d3e18159f04f5e842f813d00",
                 "shasum": ""
             },
             "require": {
@@ -4617,7 +4617,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-permission/issues",
-                "source": "https://github.com/spatie/laravel-permission/tree/5.5.10"
+                "source": "https://github.com/spatie/laravel-permission/tree/5.5.12"
             },
             "funding": [
                 {
@@ -4625,7 +4625,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-10-19T02:25:19+00:00"
+            "time": "2022-10-19T20:26:33+00:00"
         },
         {
             "name": "symfony/console",
